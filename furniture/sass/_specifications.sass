@@ -1,0 +1,55 @@
+@import 'mixins'
+
+body
+	font-family: $def-font
+	font-weight: 300
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	color: $black
+
+p
+	line-height: 24px
+
+div, a, p, h1, h2, h3, h4, h5, h6, span, header, section, footer, main
+	box-sizing: border-box
+
+.container-fluid
+	max-width: 95% !important
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+
+.container
+	max-width: 1200px
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	padding-left: 20px
+	padding-right: 20px
+
+.gutter
+	padding-top: 50px
+	padding-bottom: 50px
+
+.title
+	font-size: 50px
+	font-family: $def-font
+	font-weight: 300
+
+.uppercase
+	text-transform: uppercase
+
+.min-title
+	text-align: center
+	font-size: 28px
+	font-family: $def-font
+	font-weight: 300
+	text-transform: uppercase
+
+.crossed
+	text-decoration: line-through
+	color: rgba($black, .5)
+
+.button-custom
+	@include button($black)

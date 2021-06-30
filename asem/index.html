@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Asem</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/hamburgers.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<!---------- CABINET POPUP ---------->
+<div class="cabinet-popup hidden-block fancybox-normalizer" id="cabinet-popup">
+	<form action="">
+		<div class="cabinet-header">
+			Вход в личный кабинет
+		</div>
+
+		<div class="cabinet-body">
+			<input type="text" placeholder="E-mail">
+			<input type="text" placeholder="Пароль">
+
+			<div class="remember-me__wrap">
+				<input type="checkbox" id="remember-me">
+				<label for="remember-me">Запомнить меня</label>
+			</div>
+
+			<div class="sign-button__wrap">
+				<button class="sign-in__button">Войти</button>
+				<button class="sign-up__button">Регистрация</button>
+			</div>
+			<a href="#" class="forgot-password">Забыли пароль?</a>
+
+			<div class="sign-social">
+				<p>Вход через:</p>
+				<div class="sign-social__wrap">
+					<a href="#"><img src="images/popup-bitrix.svg" alt=""></a>
+					<a href="#"><img src="images/popup-facebook.svg" alt=""></a>
+					<a href="#"><img src="images/popup-yandex.svg" alt=""></a>
+					<a href="#"><img src="images/popup-smile.svg" alt=""></a>
+					<a href="#"><img src="images/popup-vk.svg" alt=""></a>
+					<a href="#"><img src="images/popup-google.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<!---------- /CABINET POPUP ---------->
+
+<!---------- HOW TO BUY POPUP ---------->
+<div class="how-by-popup hidden-block" id="how-by-popup">
+	<h4>Оформление заказа</h4>
+
+	<p>
+		Оформление Заказа происходит в несколько шагов. Сложного ничего нет, потребуется всего лишь заполнить форму. Обращайте внимание на поля, обязательные для заполнения: эти сведения мы просим не из любопытства, они нужны для правильного оформления вашего Заказа и оперативной доставки.
+	</p>
+
+	<p>
+		Получив Заказ, наш продавец свяжется с вами по указанному телефону, чтобы все подтвердить и уточнить срок доставки. После чего к вам приедет наш курьер, который привезет Заказ и примет платеж.
+	</p>
+
+	<p>
+		При безналичной оплате (есть не во всех регионах) Заказа наш оператор выставит вам счет за выбранные товары. Нужно оплатить счет в течение трех банковских дней, после чего Заказ будет отправлен вам с курьером.
+	</p>
+</div>
+<!---------- /HOW TO BUY POPUP ---------->
+
+<header class="header" id="header">
+	<div class="header-blue">
+		<div class="container">
+			<div class="header-blue__flex">
+				<div class="header__location">
+					<img class="header__location-img" src="images/location.svg" alt="">
+					<select class="select-custom-bootstrap">
+						<option>Алматы</option>
+						<option>Нур-Султан</option>
+						<option>Караганда</option>
+						<option>Павлодар</option>
+					</select>
+				</div>
+
+				<div class="header-blue__phone">
+					+7 (727) 250-30-80
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header-white">
+		<div class="container">
+			<div class="header-white__flex">
+				<div class="header__logo">
+					<a href="#">
+						<img src="images/logo.svg" alt="">
+					</a>
+				</div>
+
+				<div class="header-white__right">
+					<div class="header__search">
+						<input type="text" placeholder="Поиск по товарам">
+						<button>
+							<img src="images/magnify.svg" alt="">
+						</button>
+					</div>
+
+					<div class="hamburger hamburger--spin" data-hash="header-button__wrap">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+
+					<div class="header-button__wrap" id="header-button__wrap">
+						<a href="#" class="header-button__item">
+							<img src="images/compare.svg" alt="">
+							<p>Сравнить</p>
+						</a>
+
+						<a href="#" class="header-button__item">
+							<img src="images/heart.svg" alt="">
+							<p>Избранные</p>
+						</a>
+
+						<a href="#" class="header-button__item" data-fancybox data-src="#cabinet-popup">
+							<img src="images/user.svg" alt="">
+							<p>Личный кабинет</p>
+						</a>
+
+						<a href="#" class="header-button__item shopping-cart__button">
+							<span class="quantity">7</span>
+							<img src="images/shopping-cart.svg" alt="">
+							<p>Корзина</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+
+<main class="main" id="main">
+	<section class="main-banner">
+		<div class="container">
+			<div class="row">
+				<!-- LEFT -->
+				<div class="col-lg-4 col-sm-12">
+					<a href="#all-category__content" class="all-category__button all-category__button-active content-show">
+						<span class="left">
+							<img src="images/square.svg" alt="">
+							<p>Все категории</p>
+						</span>
+						<span class="right">
+							<img src="images/arrow-down-black.svg" alt="">
+						</span>
+					</a>
+
+					<div class="all-category__content" id="all-category__content">
+						<ul class="all-category__ul">
+							<li>
+								<a href="#">
+									<img class="list-icon" src="images/paper.svg" alt="">
+									<p>Бумага и бумажная продукция</p>
+									<img class="all-cattegory__arrow-right" src="images/arrow-right-black.svg" alt="">
+								</a>
+								<ul class="sub-category">
+									<div class="sub-category__flex">
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Блокноты, тетради и записные книжки</a></p>
+												<ul>
+													<li><a href="#">Блокноты</a></li>
+													<li><a href="#">Записные книжки</a></li>
+													<li><a href="#">Телефонные алфавитные книжки</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для заметок</a></p>
+												<ul>
+													<li><a href="#">Блоки для записей</a></li>
+													<li><a href="#">Блоки для записей в подставке</a></li>
+													<li><a href="#">Блоки самоклеящиеся</a></li>
+													<li><a href="#">Закладка самоклеящиеся</a></li>
+													<li><a href="#">Постики</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для офисной техники</a></p>
+												<ul>
+													<li><a href="#">Белая бумага классов А, B, C</a></li>
+													<li><a href="#">Белая бумага премиум класса</a></li>
+													<li><a href="#">Бумага для чертежных и копировальных работ</a></li>
+													<li><a href="#">Бумага перфорированная</a></li>
+													<li><a href="#">Бумага писчая</a></li>
+													<li><a href="#">Бумага цветная</a></li>
+													<li><a href="#">Рулонная бумага</a></li>
+													<li><a href="#">Фотобумага</a></li>
+													<li><a href="#">Чековые листы</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Ежедневники</a></p>
+												<ul>
+													<li><a href="#">Ежедневники датированные</a></li>
+													<li><a href="#">Ежедневники недатированные</a></li>
+													<li><a href="#">Планинги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Книги учета, бланки</a></p>
+												<ul>
+													<li><a href="#">Бланки</a></li>
+													<li><a href="#">Бухгалтерские книги</a></li>
+													<li><a href="#">Офисные книги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Конверты, этикетки и ценники</a></p>
+												<ul>
+													<li><a href="#">Конверты</a></li>
+													<li><a href="#">Ценники</a></li>
+													<li><a href="#">Этикетки</a></li>
+												</ul>
+											</li>
+										</div>
+									</div>
+								</ul>
+							</li>
+
+							<li>
+								<a href="#">
+									<img class="list-icon" src="images/stationery.svg" alt="">
+									<p>Канцелярские товары</p>
+									<img class="all-cattegory__arrow-right" src="images/arrow-right-black.svg" alt="">
+								</a>
+
+								<ul class="sub-category">
+									<div class="sub-category__flex">
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Блокноты, тетради и записные книжки</a></p>
+												<ul>
+													<li><a href="#">Блокноты</a></li>
+													<li><a href="#">Записные книжки</a></li>
+													<li><a href="#">Телефонные алфавитные книжки</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для заметок</a></p>
+												<ul>
+													<li><a href="#">Блоки для записей</a></li>
+													<li><a href="#">Блоки для записей в подставке</a></li>
+													<li><a href="#">Блоки самоклеящиеся</a></li>
+													<li><a href="#">Закладка самоклеящиеся</a></li>
+													<li><a href="#">Постики</a></li>
+												</ul>
+											</li>
+										</div>
+									</div>
+								</ul>
+							</li>
+
+							<li>
+								<a href="#">
+									<img class="list-icon" src="images/pc.svg" alt="">
+									<p>Компьютерные аксессуары</p>
+									<img class="all-cattegory__arrow-right" src="images/arrow-right-black.svg" alt="">
+								</a>
+
+								<ul class="sub-category">
+									<div class="sub-category__flex">
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Блокноты, тетради и записные книжки</a></p>
+												<ul>
+													<li><a href="#">Блокноты</a></li>
+													<li><a href="#">Записные книжки</a></li>
+													<li><a href="#">Телефонные алфавитные книжки</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для заметок</a></p>
+												<ul>
+													<li><a href="#">Блоки для записей</a></li>
+													<li><a href="#">Блоки для записей в подставке</a></li>
+													<li><a href="#">Блоки самоклеящиеся</a></li>
+													<li><a href="#">Закладка самоклеящиеся</a></li>
+													<li><a href="#">Постики</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для офисной техники</a></p>
+												<ul>
+													<li><a href="#">Белая бумага классов А, B, C</a></li>
+													<li><a href="#">Белая бумага премиум класса</a></li>
+													<li><a href="#">Бумага для чертежных и копировальных работ</a></li>
+													<li><a href="#">Бумага перфорированная</a></li>
+													<li><a href="#">Бумага писчая</a></li>
+													<li><a href="#">Бумага цветная</a></li>
+													<li><a href="#">Рулонная бумага</a></li>
+													<li><a href="#">Фотобумага</a></li>
+													<li><a href="#">Чековые листы</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Ежедневники</a></p>
+												<ul>
+													<li><a href="#">Ежедневники датированные</a></li>
+													<li><a href="#">Ежедневники недатированные</a></li>
+													<li><a href="#">Планинги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Книги учета, бланки</a></p>
+												<ul>
+													<li><a href="#">Бланки</a></li>
+													<li><a href="#">Бухгалтерские книги</a></li>
+													<li><a href="#">Офисные книги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Конверты, этикетки и ценники</a></p>
+												<ul>
+													<li><a href="#">Конверты</a></li>
+													<li><a href="#">Ценники</a></li>
+													<li><a href="#">Этикетки</a></li>
+												</ul>
+											</li>
+										</div>
+									</div>
+								</ul>
+							</li>
+
+							<li>
+								<a href="#">
+									<img class="list-icon" src="images/for-office.svg" alt="">
+									<p>Все для офиса</p>
+									<img class="all-cattegory__arrow-right" src="images/arrow-right-black.svg" alt="">
+								</a>
+
+								<ul class="sub-category">
+									<div class="sub-category__flex">
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Блокноты, тетради и записные книжки</a></p>
+												<ul>
+													<li><a href="#">Блокноты</a></li>
+													<li><a href="#">Записные книжки</a></li>
+													<li><a href="#">Телефонные алфавитные книжки</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для заметок</a></p>
+												<ul>
+													<li><a href="#">Блоки для записей</a></li>
+													<li><a href="#">Блоки для записей в подставке</a></li>
+													<li><a href="#">Блоки самоклеящиеся</a></li>
+													<li><a href="#">Закладка самоклеящиеся</a></li>
+													<li><a href="#">Постики</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для офисной техники</a></p>
+												<ul>
+													<li><a href="#">Белая бумага классов А, B, C</a></li>
+													<li><a href="#">Белая бумага премиум класса</a></li>
+													<li><a href="#">Бумага для чертежных и копировальных работ</a></li>
+													<li><a href="#">Бумага перфорированная</a></li>
+													<li><a href="#">Бумага писчая</a></li>
+													<li><a href="#">Бумага цветная</a></li>
+													<li><a href="#">Рулонная бумага</a></li>
+													<li><a href="#">Фотобумага</a></li>
+													<li><a href="#">Чековые листы</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Ежедневники</a></p>
+												<ul>
+													<li><a href="#">Ежедневники датированные</a></li>
+													<li><a href="#">Ежедневники недатированные</a></li>
+													<li><a href="#">Планинги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Книги учета, бланки</a></p>
+												<ul>
+													<li><a href="#">Бланки</a></li>
+													<li><a href="#">Бухгалтерские книги</a></li>
+													<li><a href="#">Офисные книги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Конверты, этикетки и ценники</a></p>
+												<ul>
+													<li><a href="#">Конверты</a></li>
+													<li><a href="#">Ценники</a></li>
+													<li><a href="#">Этикетки</a></li>
+												</ul>
+											</li>
+										</div>
+									</div>
+								</ul>
+							</li>
+
+							<li>
+								<a href="#">
+									<img class="list-icon" src="images/for-school.svg" alt="">
+									<p>Товары для школы</p>
+									<img class="all-cattegory__arrow-right" src="images/arrow-right-black.svg" alt="">
+								</a>
+
+								<ul class="sub-category">
+									<div class="sub-category__flex">
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Блокноты, тетради и записные книжки</a></p>
+												<ul>
+													<li><a href="#">Блокноты</a></li>
+													<li><a href="#">Записные книжки</a></li>
+													<li><a href="#">Телефонные алфавитные книжки</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для заметок</a></p>
+												<ul>
+													<li><a href="#">Блоки для записей</a></li>
+													<li><a href="#">Блоки для записей в подставке</a></li>
+													<li><a href="#">Блоки самоклеящиеся</a></li>
+													<li><a href="#">Закладка самоклеящиеся</a></li>
+													<li><a href="#">Постики</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для офисной техники</a></p>
+												<ul>
+													<li><a href="#">Белая бумага классов А, B, C</a></li>
+													<li><a href="#">Белая бумага премиум класса</a></li>
+													<li><a href="#">Бумага для чертежных и копировальных работ</a></li>
+													<li><a href="#">Бумага перфорированная</a></li>
+													<li><a href="#">Бумага писчая</a></li>
+													<li><a href="#">Бумага цветная</a></li>
+													<li><a href="#">Рулонная бумага</a></li>
+													<li><a href="#">Фотобумага</a></li>
+													<li><a href="#">Чековые листы</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Ежедневники</a></p>
+												<ul>
+													<li><a href="#">Ежедневники датированные</a></li>
+													<li><a href="#">Ежедневники недатированные</a></li>
+													<li><a href="#">Планинги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Книги учета, бланки</a></p>
+												<ul>
+													<li><a href="#">Бланки</a></li>
+													<li><a href="#">Бухгалтерские книги</a></li>
+													<li><a href="#">Офисные книги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Конверты, этикетки и ценники</a></p>
+												<ul>
+													<li><a href="#">Конверты</a></li>
+													<li><a href="#">Ценники</a></li>
+													<li><a href="#">Этикетки</a></li>
+												</ul>
+											</li>
+										</div>
+									</div>
+								</ul>
+							</li>
+
+							<li>
+								<a href="#">
+									<img class="list-icon" src="images/household.svg" alt="">
+									<p>Хозяйственные товары</p>
+									<img class="all-cattegory__arrow-right" src="images/arrow-right-black.svg" alt="">
+								</a>
+								<ul class="sub-category">
+									<div class="sub-category__flex">
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Блокноты, тетради и записные книжки</a></p>
+												<ul>
+													<li><a href="#">Блокноты</a></li>
+													<li><a href="#">Записные книжки</a></li>
+													<li><a href="#">Телефонные алфавитные книжки</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для заметок</a></p>
+												<ul>
+													<li><a href="#">Блоки для записей</a></li>
+													<li><a href="#">Блоки для записей в подставке</a></li>
+													<li><a href="#">Блоки самоклеящиеся</a></li>
+													<li><a href="#">Закладка самоклеящиеся</a></li>
+													<li><a href="#">Постики</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для офисной техники</a></p>
+												<ul>
+													<li><a href="#">Белая бумага классов А, B, C</a></li>
+													<li><a href="#">Белая бумага премиум класса</a></li>
+													<li><a href="#">Бумага для чертежных и копировальных работ</a></li>
+													<li><a href="#">Бумага перфорированная</a></li>
+													<li><a href="#">Бумага писчая</a></li>
+													<li><a href="#">Бумага цветная</a></li>
+													<li><a href="#">Рулонная бумага</a></li>
+													<li><a href="#">Фотобумага</a></li>
+													<li><a href="#">Чековые листы</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Ежедневники</a></p>
+												<ul>
+													<li><a href="#">Ежедневники датированные</a></li>
+													<li><a href="#">Ежедневники недатированные</a></li>
+													<li><a href="#">Планинги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Книги учета, бланки</a></p>
+												<ul>
+													<li><a href="#">Бланки</a></li>
+													<li><a href="#">Бухгалтерские книги</a></li>
+													<li><a href="#">Офисные книги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Конверты, этикетки и ценники</a></p>
+												<ul>
+													<li><a href="#">Конверты</a></li>
+													<li><a href="#">Ценники</a></li>
+													<li><a href="#">Этикетки</a></li>
+												</ul>
+											</li>
+										</div>
+									</div>
+								</ul>
+							</li>
+
+							<li>
+								<a href="#">
+									<img class="list-icon" src="images/tech.svg" alt="">
+									<p>Техника</p>
+									<img class="all-cattegory__arrow-right" src="images/arrow-right-black.svg" alt="">
+								</a>
+
+								<ul class="sub-category">
+									<div class="sub-category__flex">
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Блокноты, тетради и записные книжки</a></p>
+												<ul>
+													<li><a href="#">Блокноты</a></li>
+													<li><a href="#">Записные книжки</a></li>
+													<li><a href="#">Телефонные алфавитные книжки</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для заметок</a></p>
+												<ul>
+													<li><a href="#">Блоки для записей</a></li>
+													<li><a href="#">Блоки для записей в подставке</a></li>
+													<li><a href="#">Блоки самоклеящиеся</a></li>
+													<li><a href="#">Закладка самоклеящиеся</a></li>
+													<li><a href="#">Постики</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Бумага для офисной техники</a></p>
+												<ul>
+													<li><a href="#">Белая бумага классов А, B, C</a></li>
+													<li><a href="#">Белая бумага премиум класса</a></li>
+													<li><a href="#">Бумага для чертежных и копировальных работ</a></li>
+													<li><a href="#">Бумага перфорированная</a></li>
+													<li><a href="#">Бумага писчая</a></li>
+													<li><a href="#">Бумага цветная</a></li>
+													<li><a href="#">Рулонная бумага</a></li>
+													<li><a href="#">Фотобумага</a></li>
+													<li><a href="#">Чековые листы</a></li>
+												</ul>
+											</li>
+										</div>
+
+										<div class="sub-category__item">
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Ежедневники</a></p>
+												<ul>
+													<li><a href="#">Ежедневники датированные</a></li>
+													<li><a href="#">Ежедневники недатированные</a></li>
+													<li><a href="#">Планинги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Книги учета, бланки</a></p>
+												<ul>
+													<li><a href="#">Бланки</a></li>
+													<li><a href="#">Бухгалтерские книги</a></li>
+													<li><a href="#">Офисные книги</a></li>
+												</ul>
+											</li>
+
+											<li class="sub-list">
+												<p class="sub-title"><a href="#">Конверты, этикетки и ценники</a></p>
+												<ul>
+													<li><a href="#">Конверты</a></li>
+													<li><a href="#">Ценники</a></li>
+													<li><a href="#">Этикетки</a></li>
+												</ul>
+											</li>
+										</div>
+									</div>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /LEFT -->
+
+				<!-- RIGHT -->
+				<div class="col-lg-8 col-sm-12">
+					<a href="#banner-menu__wrap" class="banner-menu__show all-category__button-active content-show">
+						<span class="left">
+							<img src="images/menu.svg" alt="">
+							<p>Меню</p>
+						</span>
+						<span class="right">
+							<img src="images/arrow-down-black.svg" alt="">
+						</span>
+					</a>
+					<div class="banner-menu__wrap" id="banner-menu__wrap">
+						<ul class="banner-menu__left">
+							<li><a href="#">Хит продаж</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Скидки</a></li>
+						</ul>
+
+						<ul class="banner-menu__right">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li>
+								<a href="#">
+									Еще 
+									<img src="images/arrow-down-black.svg" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="banner-slider__block">
+						<div class="banner-slider__wrap owl-carousel owl-theme">
+							<div class="banner-slider__item">
+								<img src="images/main-banner-1.png" alt="">
+							</div>
+
+							<div class="banner-slider__item">
+								<img src="images/main-banner-1.png" alt="">
+							</div>
+
+							<div class="banner-slider__item">
+								<img src="images/main-banner-1.png" alt="">
+							</div>
+
+							<div class="banner-slider__item">
+								<img src="images/main-banner-1.png" alt="">
+							</div>
+
+							<div class="banner-slider__item">
+								<img src="images/main-banner-1.png" alt="">
+							</div>
+						</div>
+						<a href="#" class="banner-slider-arrow__left">
+							<img src="images/banner-slider-prev.svg" alt="">
+						</a>
+						<a href="#" class="banner-slider-arrow__right">
+							<img src="images/banner-slider-next.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- /RIGHT -->
+			</div>
+		</div>
+	</section>
+
+	<section class="info-block">
+		<div class="container">
+			<div class="info__wrap">
+				<a href="#" class="info__item">
+					<div class="info-title">Вопрос-ответ</div>
+					<div class="info-text">
+						<div class="left">
+							<img src="images/info-question.svg" alt="">
+						</div>
+						<div class="right">
+							<p>Часто задаваемые вопросы</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="#how-by-popup" class="info__item" data-fancybox>
+					<div class="info-title">Как купить?</div>
+					<div class="info-text">
+						<div class="left">
+							<img src="images/info-cart.svg" alt="">
+						</div>
+						<div class="right">
+							<p>Регистрируйтесь, добовляйте товар в корзину и покупайте</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="#" class="info__item">
+					<div class="info-title">Бесплатная доставка</div>
+					<div class="info-text">
+						<div class="left">
+							<img src="images/info-truck.svg" alt="">
+						</div>
+						<div class="right">
+							<p>по городу Алматы, низкие тарифы в регионы</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="#" class="info__item">
+					<div class="info-title">Гарантия качества</div>
+					<div class="info-text">
+						<div class="left">
+							<img src="images/info-warranty.svg" alt="">
+						</div>
+						<div class="right">
+							<p>Официальная гарантия от производителей</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="#" class="info__item">
+					<div class="info-title">Удобная оплата</div>
+					<div class="info-text">
+						<div class="left">
+							<img src="images/info-pay.svg" alt="">
+						</div>
+						<div class="right">
+							<p>Наличными, картой, терминалами</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+	<!-------------- HIT SALE -------------->
+	<section class="hit-sale s-slider s-gutter">
+		<div class="container">
+			<h2 class="title">Хит продаж</h2>
+			<div class="slider-arrow__wrap">
+				<a class="slider-arrow__prev" href="#"><img src="images/s-slider-left.svg" alt=""></a>
+				<a class="slider-arrow__next" href="#"><img src="images/s-slider-right.svg" alt=""></a>
+			</div>
+
+			<div class="product__wrap owl-carousel owl-theme">
+
+				<!-- Product 1 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span>
+						<span class="uncrossed">532тг</span>
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type" type="radio" id="retail-check" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type" type="radio" id="wholesale-check" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 1 -->
+
+				<!-- Product 2 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-2" type="radio" id="retail-check-2" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-2">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-2" type="radio" id="wholesale-check-2" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-2">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 2 -->
+
+				<!-- Product 3 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-3" type="radio" id="retail-check-3" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-3">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-3" type="radio" id="wholesale-check-3" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-3">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 3 -->
+
+				<!-- Product 4 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-4" type="radio" id="retail-check-4" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-4">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-4" type="radio" id="wholesale-check-4" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-4">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 4 -->
+
+				<!-- Product 5 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-5" type="radio" id="retail-check-5" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-5">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-5" type="radio" id="wholesale-check-5" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-5">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 5 -->
+
+				<!-- Product 6 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-6" type="radio" id="retail-check-6" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-6">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-6" type="radio" id="wholesale-check-6" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-6">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 6 -->
+			</div>
+		</div>
+	</section>
+	<!-------------- /HIT SALE -------------->
+
+
+	<!-------------- NEW ITEMS -------------->
+	<section class="new-items s-slider s-gutter">
+		<div class="container">
+			<h2 class="title">Новинки</h2>
+			<div class="slider-arrow__wrap">
+				<a class="slider-arrow__prev" href="#"><img src="images/s-slider-left.svg" alt=""></a>
+				<a class="slider-arrow__next" href="#"><img src="images/s-slider-right.svg" alt=""></a>
+			</div>
+
+			<div class="product__wrap owl-carousel owl-theme">
+
+				<!-- Product 7 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-7" type="radio" id="retail-check-7" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-7">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-7" type="radio" id="wholesale-check-7" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-7">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 7 -->
+
+				<!-- Product 8 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-8" type="radio" id="retail-check-8" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-8">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-8" type="radio" id="wholesale-check-8" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-8">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 8 -->
+
+				<!-- Product 9 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-9" type="radio" id="retail-check-9" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-9">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-9" type="radio" id="wholesale-check-9" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-9">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 9 -->
+
+				<!-- Product 10 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-10" type="radio" id="retail-check-10" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-10">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-10" type="radio" id="wholesale-check-10" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-10">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 10 -->
+
+				<!-- Product 11 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-11" type="radio" id="retail-check-11" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-11">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-11" type="radio" id="wholesale-check-11" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-11">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 11 -->
+
+				<!-- Product 12 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-12" type="radio" id="retail-check-12" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-12">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-12" type="radio" id="wholesale-check-12" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-12">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 12 -->
+
+			</div>
+		</div>
+	</section>
+	<!-------------- /NEW ITEMS -------------->
+
+	<section class="stocks">
+		<div class="container">
+			<h2 class="title">Акции</h2>
+
+			<div class="stocks-slider owl-carousel owl-theme">
+
+				<!-- SLIDE 1 -->
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="stocks-slider__left">
+							<div class="stocks-slider__title custom-title">
+								Ежедневники Agent
+							</div>
+							<p class="stocks-slider__p">
+								Уважаемые клиенты, приобретайте качественные только ежедневники. В сетях магазинов Asem вы найдете долгожданные новинки
+							</p>
+							<a class="stocks-slider__button" href="#">Купить</a>
+						</div>
+					</div>
+					<div class="col-sm-6 stocks-slider__right-column">
+						<div class="stocks-slider__right">
+							<img src="images/notepad.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- /SLIDE 1 -->
+
+				<!-- SLIDE 2 -->
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="stocks-slider__left">
+							<div class="stocks-slider__title custom-title">
+								Ежедневники Agent 2
+							</div>
+							<p class="stocks-slider__p">
+								Уважаемые клиенты, приобретайте качественные только ежедневники. В сетях магазинов Asem вы найдете долгожданные новинки Lorem ipsum.
+							</p>
+							<a class="stocks-slider__button" href="#">Купить</a>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 stocks-slider__right-column">
+						<div class="stocks-slider__right">
+							<img src="images/notepad.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- /SLIDE 2 -->
+
+				<!-- SLIDE 3 -->
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="stocks-slider__left">
+							<div class="stocks-slider__title custom-title">
+								Ежедневники Agent 3
+							</div>
+							<p class="stocks-slider__p">
+								Уважаемые клиенты, приобретайте качественные только ежедневники. В сетях магазинов Asem вы найдете долгожданные новинки Lorem ipsum.
+							</p>
+							<a class="stocks-slider__button" href="#">Купить</a>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 stocks-slider__right-column">
+						<div class="stocks-slider__right">
+							<img src="images/notepad.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- /SLIDE 3 -->
+
+				<!-- SLIDE 4 -->
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="stocks-slider__left">
+							<div class="stocks-slider__title custom-title">
+								Ежедневники Agent 4
+							</div>
+							<p class="stocks-slider__p">
+								Уважаемые клиенты, приобретайте качественные только ежедневники. В сетях магазинов Asem вы найдете долгожданные новинки Lorem ipsum.
+							</p>
+							<a class="stocks-slider__button" href="#">Купить</a>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 stocks-slider__right-column">
+						<div class="stocks-slider__right">
+							<img src="images/notepad.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- /SLIDE 4 -->
+
+				<!-- SLIDE 5 -->
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="stocks-slider__left">
+							<div class="stocks-slider__title custom-title">
+								Ежедневники Agent 5
+							</div>
+							<p class="stocks-slider__p">
+								Уважаемые клиенты, приобретайте качественные только ежедневники. В сетях магазинов Asem вы найдете долгожданные новинки Lorem ipsum.
+							</p>
+							<a class="stocks-slider__button" href="#">Купить</a>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 stocks-slider__right-column">
+						<div class="stocks-slider__right">
+							<img src="images/notepad.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- /SLIDE 5 -->
+			</div>
+
+		</div>
+	</section>
+
+	<!-------------- PRODUCTS STOCK -------------->
+	<section class="products-stock s-slider s-gutter">
+		<div class="container">
+			<h2 class="title">Товары со скидкой</h2>
+			<div class="slider-arrow__wrap">
+				<a class="slider-arrow__prev" href="#"><img src="images/s-slider-left.svg" alt=""></a>
+				<a class="slider-arrow__next" href="#"><img src="images/s-slider-right.svg" alt=""></a>
+			</div>
+
+			<div class="product__wrap owl-carousel owl-theme">
+
+				<!-- Product 13 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span>
+						<span class="uncrossed">532тг</span>
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-13" type="radio" id="retail-check-13" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-13">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-13" type="radio" id="wholesale-check-13" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-13">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 13 -->
+
+				<!-- Product 14 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-14" type="radio" id="retail-check-14" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-14">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-14" type="radio" id="wholesale-check-14" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-14">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 14 -->
+
+				<!-- Product 15 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-15" type="radio" id="retail-check-15" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-15">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-15" type="radio" id="wholesale-check-15" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-15">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 15 -->
+
+				<!-- Product 16 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-16" type="radio" id="retail-check-16" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-16">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-16" type="radio" id="wholesale-check-16" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-16">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 16 -->
+
+				<!-- Product 17 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-17" type="radio" id="retail-check-17" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-17">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-17" type="radio" id="wholesale-check-17" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-17">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 17 -->
+
+				<!-- Product 18 -->
+				<div class="product__item">
+					<div class="product__top">
+						<a href="#">
+							<img src="images/compare-1.svg" alt="">
+						</a>
+						<a href="#" class="to-favorites"></a>
+					</div>
+
+					<div class="product__image">
+						<img src="images/folder.png" alt="">
+					</div>
+
+					<div class="product__title">
+						Регистратор, 7 см, синий, А4, ПВХ - одностор., 1500 гр
+					</div>
+
+					<div class="product__availability">
+						Наличие: есть в наличии
+					</div>
+
+					<div class="product__price">
+						<span class="crossed">560тг</span> 532тг
+					</div>
+
+					<div class="product__delivery-type">
+						<div class="product__retail radio__item">
+							<input name="delivery-type-18" type="radio" id="retail-check-18" data-price="532" data-crossed-price="560" data-numbers="1">
+							<label for="retail-check-18">В розницу</label>
+						</div>
+						<div class="product__wholesale radio__item">
+							<input name="delivery-type-18" type="radio" id="wholesale-check-18" data-price="495" data-crossed-price="510" data-numbers="400">
+							<label for="wholesale-check-18">Оптом</label>
+						</div>
+					</div>
+
+					<div class="product__bottom">
+						<div class="product__numbers">
+							500
+						</div>
+						<a href="#" class="product__add-cart">В корзину</a>
+					</div>
+				</div>
+				<!-- /Product 18 -->
+
+			</div>
+		</div>
+	</section>
+	<!-------------- /PRODUCTS STOCK -------------->
+
+	<!-------------- NEWS -------------->
+	<section class="news">
+		<div class="container">
+			<h2 class="title">Новости</h2>
+			<div class="row">
+				<div class="col-sm-12 col-md-7">
+					<div class="news-left">
+						<div class="news-left__title custom-title">
+							Ручки Unimax
+						</div>
+
+						<div class="news-left__descr">
+							<p class="descr__text">
+								Ручка – неотъемлемый спутник нашей жизни Современные технологии стремительно развиваются, зачастую в наше время превалирует электронная форма документов, но и без старой, доброй ручки все-таки не обойтись. Для каждодневной работы ручка должна быть приятной на ощупь, удобной, практичной, не «мазать» как чернила, оставляя след, быстро высыхать на бумаге. Согласитесь, приятно работать с красивой на вид и приятной на ощупь современной ручкой?!
+							</p>
+
+							<div class="descr__image">
+								<img src="images/unimax_ux.png" alt="">
+							</div>
+						</div>
+
+						<a href="#" class="news-left__button custom-button-blue">Купить</a>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-5">
+					<div class="news-right">
+						Нам <br>
+						28 лет
+					</div>
+				</div>
+			</div>
+
+			<div class="more-news">
+				<a href="#">Больше новостей</a>
+			</div>
+		</div>
+	</section>
+	<!-------------- /NEWS -------------->
+
+	<!-------------- PARTNERS -------------->
+	<section class="partners">
+		<div class="container">
+			<div class="partners__wrap">
+				<div class="partners__item">
+					<img src="images/partners-1.png" alt="">
+				</div>
+
+				<div class="partners__item">
+					<img src="images/partners-2.png" alt="">
+				</div>
+
+				<div class="partners__item">
+					<img src="images/partners-3.png" alt="">
+				</div>
+
+				<div class="partners__item">
+					<img src="images/partners-4.png" alt="">
+				</div>
+
+				<div class="partners__item">
+					<img src="images/partners-5.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-------------- /PARTNERS -------------->
+</main>
+
+
+	<!-------------- FOOTER -------------->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-8">
+					<div class="footer__left">
+						<ul>
+							<span class="list-title">
+								Покупателям
+							</span>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Магазины</a></li>
+							<li><a href="#">Гарантия на товар</a></li>
+						</ul>
+
+						<ul>
+							<span class="list-title">
+								Информация
+							</span>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Вопрос-ответ</a></li>
+						</ul>
+
+						<ul>
+							<span class="list-title">
+								Прочее
+							</span>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Вакансии</a></li>
+							<li><a href="#">Партнеры</a></li>
+							<li><a href="#">Помощь</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-4">
+					<div class="footer__right">
+						<span class="list-title">
+							Контакты
+						</span>
+						
+						<div class="footer__phone">
+							<p>+7 (727) 250-30-80</p>
+							<p>+7 (707) 616-55-06</p>
+						</div>
+						
+						<div class="footer__email">
+							info@asem-shop.kz
+						</div>
+
+						<div class="footer__social">
+							<a href="#">
+								<img src="images/social-instagram.svg" alt="">
+							</a>
+
+							<a href="#">
+								<img src="images/social-vk.svg" alt="">
+							</a>
+
+							<a href="#">
+								<img src="images/social-facebook.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__address">
+				Алматы, пр. Желтоксан, 112а
+			</div>
+		</div>
+	</footer>
+	<!-------------- /FOOTER -------------->
+
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

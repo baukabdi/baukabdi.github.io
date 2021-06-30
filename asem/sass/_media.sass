@@ -1,0 +1,204 @@
+/* All responsive START */
+
+@media screen and (max-width: 1024px)
+	.header
+		.header__logo
+			width: 30%
+		.header-white__right
+			justify-content: flex-start
+			flex-wrap: wrap
+			width: 70%
+		.header__search
+			max-width: none
+			margin-right: 0
+			margin-bottom: 25px
+
+	.info__wrap
+		flex-wrap: wrap
+		.info__item
+			width: 48% !important
+			margin-bottom: 20px
+			margin-left: auto
+			margin-right: auto
+
+@media screen and (max-width: 992px)
+	.header
+		.header__logo
+			margin-bottom: 25px
+			text-align: center
+			width: 100%
+		.header-white__flex
+			flex-direction: column
+		.header-white__right
+			width: 100%
+		.header-button__wrap
+			justify-content: space-between
+			width: 100%
+			a
+				margin-right: 0 !important
+
+	.main-banner 
+		.sub-category
+			position: static
+			transform: none
+			opacity: 1
+			width: 100%
+			display: none
+			transition: inherit
+			padding: 0
+		.all-category__content 
+			.all-category__ul
+				margin-bottom: 0 
+				.all-cattegory__arrow-right
+					transform: translateY(-50%) rotate(90deg)
+		.sub-category__flex
+			flex-direction: column
+	
+	.banner-menu__wrap
+		margin-top: 10px
+
+	.banner-slider__block
+		margin-top: 25px
+
+	.partners
+		padding: 25px 0
+		.partners__wrap
+			flex-wrap: wrap
+			.partners__item
+				width: 33%
+				margin-bottom: 15px
+	
+@media screen and (max-width: 768px)
+	.banner-menu__wrap
+		flex-direction: column
+		align-items: flex-start !important
+		background-color: #fff
+		padding: 20px
+		border-radius: 5px
+		ul
+			flex-direction: column
+			margin-bottom: 5px
+			li
+				margin-bottom: 10px
+	.main-banner
+		.banner-menu__show
+			display: flex
+
+	.stocks
+		&::before,
+		&::after
+			display: none
+		.stocks-slider
+			.owl-dots
+				position: static
+				margin-top: 25px !important
+		.stocks-slider__left
+			padding-right: 0
+	.stocks-slider__right-column
+		display: none
+
+	.news
+		.news-left
+			padding: 20px
+		.news-right
+			margin-top: 25px
+			font-size: 36px
+			line-height: 1.5
+			height: auto
+		.news-left__descr
+			flex-direction: column
+			.descr__image
+				width: 100%
+			.descr__text
+				width: 100%
+		.custom-button-blue
+			display: block 
+			margin-left: auto
+			margin-right: auto
+			margin-top: 15px
+
+	.partners
+		.partners__wrap
+			.partners__item
+				width: 48%
+
+	.footer
+		.footer__left
+			justify-content: space-between
+			ul
+				margin-right: 0
+
+@media screen and (max-width: 575px)
+	.header
+		.hamburger
+			display: block
+		.header-white
+			padding-bottom: 0
+			position: relative
+		.header-button__wrap
+			flex-wrap: wrap
+			display: none
+			position: absolute
+			top: 100%
+			left: 0
+			background-color: #fff
+			z-index: 22
+			padding: 0px 15px
+			a
+				width: 100%
+				border-bottom: 1px solid rgba($footer-bg, .2)
+				padding-bottom: 15px
+				img
+					width: 40px
+					margin-right: 15px !important
+				&:nth-last-child(n+2)
+					margin-bottom: 15px
+					
+		.header-white__right
+			flex-wrap: nowrap
+	
+	.info__wrap
+		flex-direction: column
+		.info__item
+			width: 100% !important
+
+	.partners
+		.partners__wrap
+			flex-direction: column
+			.partners__item
+				width: 100%
+
+@media screen and (max-width: 480px)
+	.s-slider 
+		.product__item
+			margin-right: 0
+
+	.footer
+		text-align: center
+		.footer__left
+			flex-direction: column
+		.footer__social
+			justify-content: center
+	
+	.cabinet-popup 
+		.cabinet-body 
+			.sign-button__wrap
+				flex-direction: column
+				.sign-in__button
+					margin-bottom: 15px
+				.sign-in__button,
+				.sign-up__button
+					padding: 15px 0
+			.sign-social__wrap
+				flex-wrap: wrap
+				justify-content: space-between
+				a
+					width: 30%
+					text-align: center
+
+
+@media screen and (max-width: 380px)
+	.header 
+		.header__search
+			width: 60%
+/* All responsive END */

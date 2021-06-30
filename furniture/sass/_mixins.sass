@@ -1,0 +1,94 @@
+@mixin button($color)
+	color: $color
+	font-family: $def-font
+	text-decoration: none
+	padding: 10px
+	position: relative
+	display: inline-block
+	transition: 1s ease
+	text-align: center
+	&:hover
+		&::before,
+		&::after
+			width: 100%
+		.right-line
+			height: 100%
+	&::before,
+	&::after
+		content: ''
+		height: 1px
+		width: 0
+		background-color: $color
+		display: block
+		position: absolute
+	&::before
+		top: 0
+		right: 0
+		transition: 0.5s ease
+	&::after
+		bottom: 0
+		left: 0
+		transition: 0.5s ease
+	.left-line,
+	.right-line
+		width: 1px
+		height: 0
+		display: block
+		background-color: $color
+		position: absolute
+	.left-line
+		height: 100%
+		left: 0
+		top: 0
+	.right-line
+		transition: 0.5s ease
+		right: 0
+		bottom: 0
+
+
+@mixin buttonAbsolute($color)
+	color: $color
+	font-family: $def-font
+	text-decoration: none
+	padding: 10px
+	position: absolute
+	display: inline-block
+	transition: 1s ease
+	text-align: center
+	&:hover
+		&::before,
+		&::after
+			width: 100%
+		.right-line
+			height: 100%
+	&::before,
+	&::after
+		content: ''
+		height: 1px
+		width: 0
+		background-color: $color
+		display: block
+		position: absolute
+	&::before
+		top: 0
+		right: 0
+		transition: 0.5s ease
+	&::after
+		bottom: 0
+		left: 0
+		transition: 0.5s ease
+	.left-line,
+	.right-line
+		width: 1px
+		height: 0
+		display: block
+		background-color: $color
+		position: absolute
+	.left-line
+		height: 100%
+		left: 0
+		top: 0
+	.right-line
+		transition: 0.5s ease
+		right: 0
+		bottom: 0
