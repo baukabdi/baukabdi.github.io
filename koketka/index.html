@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Koketka</title>
+
+	<!--- Сжатые и объединенные библиотеки CSS / Включить после сборки
+ 	<link rel="stylesheet" href="assets/css/libs.min.css"> -->
+
+	<!--- Библиотеки CSS / Удалить после сборки -->
+ 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/fotorama.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-multiselect.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/asRange.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/jquery.range.css">
+
+	<!--- Кастомные стили / Оставить -->
+ 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+ </head>
+
+ <body>
+
+ 		<!-- Callback -->
+ 		<form id="callback_form" class="form_custom" style="display: none;">
+ 			<div class="form_item">
+ 				<h4>Свържете се с нас</h4>
+
+ 				<label for="your-name">Вашето име</label>
+ 				<input type="text" id="your-name">
+
+ 				<label for="message">Сообщение</label>
+ 				<textarea name="message" id="message" cols="30" rows="8"></textarea>
+
+ 				<button>Отправить</button>
+ 			</div>
+
+
+ 			<div class="popup_close">
+ 				<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+ 					<line x1="18" y1="3.53553" x2="4.53553" y2="17" stroke="white" stroke-width="5" stroke-linecap="round"/>
+ 					<line x1="17.4645" y1="17" x2="4" y2="3.53554" stroke="white" stroke-width="5" stroke-linecap="round"/>
+ 				</svg>
+ 			</div>
+ 		</form>
+
+		<!-- Sign In -->
+ 		<form id="sign_in" class="form_custom form_sign_in" style="display: none;">
+ 			<div class="form_item">
+ 				<h4>Войти</h4>
+
+ 				<label class="required" for="login">Логин</label>
+ 				<input type="text" id="login">
+
+ 				<label class="required" for="password">Пароль</label>
+ 				<input type="text" id="password">
+
+				<div class="checkbox_wrap">
+					<div class="checkbox_custom">
+						<input type="checkbox" id="remember_me">
+						<label for="remember_me">Запомнить меня</label>
+					</div>
+					<div class="forgot_password">
+						<a href="#0">Забыли пароль?</a>
+					</div>
+				</div>
+
+ 				<button>Войти</button>
+ 			</div>
+
+ 			<div class="popup_close">
+ 				<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+ 					<line x1="18" y1="3.53553" x2="4.53553" y2="17" stroke="white" stroke-width="5" stroke-linecap="round"/>
+ 					<line x1="17.4645" y1="17" x2="4" y2="3.53554" stroke="white" stroke-width="5" stroke-linecap="round"/>
+ 				</svg>
+ 			</div>
+ 		</form>
+
+
+		<!-- Sign Up -->
+ 		<form id="sign_up" class="form_custom form_sign_up" style="display: none;">
+ 			<div class="form_item">
+ 				<h4>Регистрация</h4>
+
+ 				<label class="required" for="email">Ваш e-майл</label>
+ 				<input type="text" id="email">
+
+ 				<div class="checkbox_custom">
+ 					<input type="checkbox" id="privacy_politic">
+ 					<label for="privacy_politic">Вие прочетохте <a href="#">нашата политика</a> за лични данни.</label>
+ 				</div>
+
+ 				<button>Зарегистрироваться</button>
+ 			</div>
+
+
+ 			<div class="popup_close">
+ 				<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+ 					<line x1="18" y1="3.53553" x2="4.53553" y2="17" stroke="white" stroke-width="5" stroke-linecap="round"/>
+ 					<line x1="17.4645" y1="17" x2="4" y2="3.53554" stroke="white" stroke-width="5" stroke-linecap="round"/>
+ 				</svg>
+ 			</div>
+ 		</form>
+	<!-- Popup END -->
+
+
+	<!-- Header BEGIN -->
+		<header class="header" id="header">
+			<div class="container-fluid">
+
+				<div class="chat">
+					<a href="#" data-fancybox data-src="#callback_form">
+						<img src="assets/images/chat.svg" alt="Koketka">
+					</a>
+				</div>
+
+
+				<div class="header_row">
+					<div class="header_logo">
+						<a href="index.html"><img src="assets/images/logo.svg" alt="Koketka"></a>
+					</div>
+
+					<div class="header_search_wrap">
+						<form>
+							<div class="header_search">
+								<input type="text" placeholder="Поиск">
+								<button>
+									<img src="assets/images/magnify.svg" alt="Koketka">
+								</button>
+							</div>
+						</form>
+					</div>
+
+
+					<div class="header_right">
+						<div class="header_contacts">
+							<ul class="header_social">
+								<li><a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#0"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+							</ul>
+
+
+							<div class="header_phone">
+								<p class="p_title">Телефони</p>
+								<div class="p_item">
+									<a href="#0"><p>+359 889 315 972</p></a>
+									<a href="#0"><p>+359 899 44 2363</p></a>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="cart_button">
+							<a href="shopping_cart.html">
+								<img src="assets/images/shopping-cart.svg" alt="Koketka">
+								<span>Корзина</span>
+								<span class="cart_quantity">1</span>
+							</a>
+						</div>
+
+
+						<div class="sign-up_in">
+							<a href="#" data-fancybox data-src="#sign_up" class="sign_up">
+								Зарегистрироваться
+							</a>
+							<a href="#0" data-src="#sign_in" data-fancybox class="sign_in button_custom">
+								Войти
+							</a>
+						</div>
+
+
+						<div class="times_button">
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</div>
+					</div>
+
+
+					<div class="search_button">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</div>
+
+
+					<div class="hamburger_button">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</div>
+				</div>
+
+
+			</div>
+		</header>
+ 	<!-- Header END -->
+
+
+<!-- quos ego BEGIN -->
+<main>
+	<!-- Main Top BEGIN -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-3 col-lg-2">
+				<div class="sidebar_left">
+					<nav class="sidebar_category">
+						<h3 class="min_title sidebar_title">Категории продукти</h3>
+						<ul>
+							<li><a href="product_category.html">Дрехи</a></li>
+							<li class="sidebar_category_active">
+								<a href="product_category.html">
+									<span class="uppercase">Разпродажба</span>
+									<span class="quantity">38</span>
+								</a>
+							</li>
+							<li><a href="product_category.html">Козметика <span class="uppercase">Pure Paws</span></a></li>
+							<li><a href="product_category.html">Легла</a></li>
+							<li><a href="product_category.html">Чанти</a></li>
+							<li><a href="product_category.html">Нагръдници и каишки</a></li>
+							<li><a href="product_category.html">Обувки и чорапи</a></li>
+							<li><a href="product_category.html">Аксесоари</a></li>
+							<li><a href="product_category.html">Лакомства</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-9 col-lg-10">
+				<nav class="menu_wrap">
+	<div class="menu_list_wrap">
+		<div class="current_page_item"><a href="index.html">Начало</a></div>
+		<div class="menu-item"><a href="about.html">За нас</a></div>
+		<div class="menu-item menu-item-has-children">
+				<a href="#0">Магазин</a>
+				<!-- Submenu BEGIN -->
+				<div class="sub-menu">
+					<div class="left">
+						<div class="sub_list">
+							<h4 class="sub_title">КОЗМЕТИКА PURE PAWS</h4>
+							<div class="submenu-sub">
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg.jpg">Промоции</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-2.jpg">Шампоани</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-3.jpg">Балсами и спрейове</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg.jpg">Изложбена козметика</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-3.jpg">Грижа за здравето</a></div>
+							</div>
+						</div>
+
+						<div class="sub_list">
+							<h4 class="sub_title">РАЗПРОДАЖБА</h4>
+							<div class="submenu-sub">
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-2.jpg">ЛЕГЛА</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg.jpg">ЧАНТИ</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-2.jpg">ОБУВКИ</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-3.jpg">ЛАКОМСТВА</a></div>
+							</div>
+						</div>
+
+						<div class="sub_list">
+							<h4 class="sub_title">АКСЕСОАРИ</h4>
+							<div class="submenu-sub">
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-2.jpg">Изложбени поводи</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg.jpg">Панделки, шноли, фиби</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-3.jpg">Изложбени панделки</a></div>
+							</div>
+						</div>
+
+						<div class="sub_list">
+							<h4 class="sub_title">ДРЕХИ</h4>
+							<div class="submenu-sub">
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg.jpg">Зимни</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-3.jpg">Пролетно/Есенни</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg.jpg">Дъждобрани</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-2.jpg">Летни дрехи</a></div>
+							</div>
+						</div>
+
+						<div class="sub_list">
+							<h4 class="sub_title">НАГРЪДНИЦИ И КАИШКИ</h4>
+							<div class="submenu-sub">
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg.jpg">Каишки</a></div>
+								<div class="sub-menu-item"><a href="#0" data-path="assets/images/submenu-bg-2.jpg">Нагръдници</a></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="right" id="#sub_menu_right">
+						<img src="assets/images/submenu-bg.jpg" alt="Koketka">
+					</div>
+				</div>
+				<!-- Submenu END -->
+		</div>
+		<div class="menu-item"><a href="contacts.html">Контакти</a></div>
+	</div>
+</nav>
+
+				<section class="main_banner">
+					<div class="banner_arrow_prev">
+						<img src="assets/images/slide-prev.svg" alt="Koketka">
+					</div>
+					<div class="main_banner_slider">
+						<!-- Slide BEGIN -->
+						<div class="banner_item" style="background-image: url(assets/images/banner.jpg);">
+							<h1>
+								ТЕНИСКА С ЯКА 16.00 лв.
+								<del>
+									<span>
+										26.00 лв.
+									</span>
+								</del>
+							</h1>
+							<p>Памучна тениска с къс ръкав и яка на райета.</p>
+							<a href="#" class="button_custom">Купить</a>
+						</div>
+						<!-- Slide END -->
+
+						<!-- Slide BEGIN -->
+						<div class="banner_item" style="background-image: url(assets/images/banner.jpg);">
+							<h1>
+								ТЕНИСКА С ЯКА 16.00 лв.
+								<del>
+									<span>
+										26.00 лв.
+									</span>
+								</del>
+							</h1>
+							<p>Памучна тениска с къс ръкав и яка на райета.</p>
+							<a href="#" class="button_custom">Купить</a>
+						</div>
+						<!-- Slide END -->
+
+						<!-- Slide BEGIN -->
+						<div class="banner_item" style="background-image: url(assets/images/banner.jpg);">
+							<h1>
+								ТЕНИСКА С ЯКА 16.00 лв.
+								<del>
+									<span>
+										26.00 лв.
+									</span>
+								</del>
+							</h1>
+							<p>Памучна тениска с къс ръкав и яка на райета.</p>
+							<a href="#" class="button_custom">Купить</a>
+						</div>
+						<!-- Slide END -->
+					</div>
+				</section>
+
+				<section class="s-products">
+					<!-- Products new START -->
+					<ul class="products_row">
+						<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html" class="product-type_top">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-1.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+							</a>
+
+							<div class="product-type_bottom">
+								<div class="left">
+									<a href="#" class="woocommerce-loop-product__title">Дрехи</a>
+									<span class="currency price">
+										<a href="#" class="woocommerce-Price-currencySymbol">51.00 лв.</a>
+										<del class="woocommerce-Price-amount">51.00 лв.</del>
+									</span>
+								</div>
+
+								<div class="right">
+									<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+										Подробнее
+									</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html" class="product-type_top">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-2.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+							</a>
+
+							<div class="product-type_bottom">
+								<div class="left">
+									<a href="#" class="woocommerce-loop-product__title">Тениска Рибка</a>
+									<span class="currency price">
+										<a href="#" class="woocommerce-Price-currencySymbol">51.00 лв.</a>
+										<del class="woocommerce-Price-amount">51.00 лв.</del>
+									</span>
+								</div>
+
+								<div class="right">
+									<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+										Подробнее
+									</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html" class="product-type_top">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-3.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+							</a>
+
+							<div class="product-type_bottom">
+								<div class="left">
+									<a href="#" class="woocommerce-loop-product__title">Козметика PURE PAWS</a>
+									<span class="currency price">
+										<a href="#" class="woocommerce-Price-currencySymbol">51.00 лв.</a>
+										<del class="woocommerce-Price-amount">51.00 лв.</del>
+									</span>
+								</div>
+
+								<div class="right">
+									<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+										Подробнее
+									</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html" class="product-type_top">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-4.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+							</a>
+
+							<div class="product-type_bottom">
+								<div class="left">
+									<a href="#" class="woocommerce-loop-product__title">Легла</a>
+									<span class="currency price">
+										<a href="#" class="woocommerce-Price-currencySymbol">51.00 лв.</a>
+										<del class="woocommerce-Price-amount">51.00 лв.</del>
+									</span>
+								</div>
+
+								<div class="right">
+									<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+										Подробнее
+									</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html" class="product-type_top">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-5.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+							</a>
+
+							<div class="product-type_bottom">
+								<div class="left">
+									<a href="#" class="woocommerce-loop-product__title">Легла</a>
+									<span class="currency price">
+										<a href="#" class="woocommerce-Price-currencySymbol">51.00 лв.</a>
+										<del class="woocommerce-Price-amount">51.00 лв.</del>
+									</span>
+								</div>
+
+								<div class="right">
+									<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+										Подробнее
+									</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html" class="product-type_top">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-6.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+							</a>
+
+							<div class="product-type_bottom">
+								<div class="left">
+									<a href="#" class="woocommerce-loop-product__title">Легла</a>
+									<span class="currency price">
+										<a href="#" class="woocommerce-Price-currencySymbol">51.00 лв.</a>
+										<del class="woocommerce-Price-amount">51.00 лв.</del>
+									</span>
+								</div>
+
+								<div class="right">
+									<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+										Подробнее
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- Products new END -->
+					
+					<!-- Products old BEGIN -->
+					<ul class="products_row products_row_old">
+						<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-6.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+								<h2 class="woocommerce-loop-product__title">Обувки и чорапи</h2>
+								<span class="currency price">
+									<span class="woocommerce-Price-currencySymbol">51.00 лв.</span>
+									<del class="woocommerce-Price-amount">51.00 лв.</del>
+								</span>
+							</a>
+							<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+								Подробнее
+							</a>
+						</li>
+
+							<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-6.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+								<h2 class="woocommerce-loop-product__title">Обувки и чорапи</h2>
+								<span class="currency price">
+									<span class="woocommerce-Price-currencySymbol">51.00 лв.</span>
+									<del class="woocommerce-Price-amount">51.00 лв.</del>
+								</span>
+							</a>
+							<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+								Подробнее
+							</a>
+						</li>
+
+							<li class="products_item product type-product status-publish first instock product_cat-posters has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+							<a href="product_single.html">
+								<div class="favourite">
+									<img src="assets/images/favourite.png" alt="">
+								</div>
+								<img src="assets/images/product-6.png" class="woocommerce-placeholder wp-post-image" alt="Koketka">
+								<h2 class="woocommerce-loop-product__title">Обувки и чорапи</h2>
+								<span class="currency price">
+									<span class="woocommerce-Price-currencySymbol">51.00 лв.</span>
+									<del class="woocommerce-Price-amount">51.00 лв.</del>
+								</span>
+							</a>
+							<a href="#0" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
+								Подробнее
+							</a>
+						</li>
+					</ul>
+					<!-- Products old END -->
+
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- Main Top END -->
+</main>
+<!-- quos ego END -->
+
+				<!-- Footer BEGIN -->
+ 				<footer class="footer" id="footer">
+ 					<div class="container-fluid">
+ 						<div class="row">
+ 							<div class="col-sm-3">
+ 								<div class="footer_logo">
+ 									<a href="index.html">
+ 										Koketka <br>
+ 										fashion ltd
+ 									</a>
+ 								</div>
+ 							</div>
+
+ 							<div class="col-sm-3">
+ 								<nav class="footer_menu">
+ 									<h4>Информация</h4>
+ 									<ul>
+ 										<li><a href="#0">Общи условия за пазаруване</a></li>
+ 										<li><a href="#0">Декларация за поверителност</a></li>
+ 										<li><a href="#0">Груминг салони</a></li>
+ 										<li><a href="#0">Доставка</a></li>
+ 										<li><a href="#0">Връщане на поръчка</a></li>
+ 									</ul>
+ 								</nav>
+ 							</div>
+
+ 							<div class="col-sm-3">
+ 								<div class="footer_contact">
+ 									<h4>Данни за контакт</h4>
+ 									<nav>
+ 										<ul>
+ 											<li>Варна, ул. Любен каравелов 48</li>
+ 											<li>тел: +359 889 315 972 +359 899 44 23 63</li>
+ 											<li>mail: office@koketka.bg</li>
+ 										</ul>
+ 									</nav>
+ 								</div>
+ 								<div class="footer_social">
+ 									<h5>Мы в соц. сетях</h5>
+ 									<ul class="social_custom">
+ 										<li><a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+ 										<li><a href="#0"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+ 									</ul>
+ 								</div>
+ 							</div>
+ 							<div class="col-sm-3">
+ 								<div class="footer_dev">
+ 									<p><strong>Разработка сайта</strong> <a href="#">nikita.global</a></p>
+ 								</div>
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</footer>
+			<!--— Footer END -->
+
+<!--- Сжатые и объединенные библиотеки JS / Включить после сборки
+<script src="assets/js/libs.min.js"></script>
+header end -->
+
+
+<!--- Библиотеки JS / Удалить после сборки
+======================================= -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/jquery.inputmask.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.fancybox.min.js"></script>
+<script src="assets/js/fotorama.js"></script>
+<script src="assets/js/bootstrap-multiselect.js"></script>
+<script src="assets/js/jquery-asRange.min.js"></script>
+<script src="assets/js/jquery.range-min.js"></script>
+<!--- Кастомные скрипты / Оставить
+======================================= -->
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

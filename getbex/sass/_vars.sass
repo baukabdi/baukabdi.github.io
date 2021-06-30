@@ -1,0 +1,120 @@
+// ### ---------- Fonts ---------- ###
+$poppins: Poppins-regular, sans-serif
+$poppins-light: Poppins-light, sans-serif
+$poppins-medium: Poppins-medium, sans-serif
+$poppins-semibold: Poppins-semibold, sans-serif
+$poppins-bold: Poppins-bold, sans-serif
+$helvetica-light: Helvetica-light, sans-serif
+$helvetica-bold: Helvetica-bold, sans-serif
+$def-font: $poppins
+
+// ### ---------- Colors ---------- ###
+$accent: #cddb28
+$greenish-blue-bg: #006072
+$greenish-blue: #006072
+$header-top-color: #f8f8f8
+$dark-silver: #374445
+$black: #040707
+$persian-green: #00aea9
+$pale-blue: #949699
+$red: #ec501b
+$bondy: #0097b4
+
+// ### ---------- Typography ---------- ###
+$h1-size: 72px
+$def-size: 16px
+
+// ### ---------- Gutters ---------- ###
+$products-gutter: 45px
+$circle-width: 1756px
+$tab-content-gutter: 80px
+$s-gutter: 80px
+$s-gutter-min: 60px
+$sidebar-left-title: 52px 
+
+// ### ---------- Others ---------- ###
+$bd-radius: 30px
+
+
+// ### ---------- Mixins ---------- ###
+@mixin slick-dots($bg-color, $bd-color, $bottom)
+	position: absolute
+	bottom: $bottom
+	left: 50%
+	transform: translateX(-50%)
+	padding: 0
+	list-style-type: none
+	z-index: 2
+	display: flex
+	align-items: center
+	li
+		display: inline-block
+		background-color: $bg-color
+		border-radius: 50%
+		width: 10px
+		height: 10px
+		cursor: pointer
+		&:nth-last-child(n+2)
+			margin-right: 12px
+		button
+			display: none
+	.slick-active
+		width: 18px
+		height: 18px
+		border: 2px solid $bd-color
+		background: none
+
+
+@mixin button-custom($max-width)
+	background-color: $greenish-blue
+	border-radius: $bd-radius
+	color: #fff
+	padding: 10px 0 12px 0
+	text-align: center
+	max-width: $max-width
+	margin: 0 auto
+	display: block
+	font-size: 14px
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+
+@mixin button-gray($max-width)
+	background-color: #bfbfbf
+	border-radius: $bd-radius
+	color: #fff
+	padding: 10px 0
+	text-align: center
+	max-width: $max-width
+	margin: 0 auto
+	display: block
+	font-size: 14px
+	text-decoration: none
+	transition: 0.3s ease
+	&:hover
+		text-decoration: none
+		color: #fff
+		background-color: darken(#bfbfbf, 5)
+
+
+@mixin user-select
+	-moz-user-select: none
+	-webkit-user-select: none
+	user-select: none
+
+
+@mixin tl-50
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+@mixin bg-custom
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: bottom center
+
+@mixin bg-top-center
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top center

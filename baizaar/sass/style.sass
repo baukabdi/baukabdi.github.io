@@ -1,0 +1,1581 @@
+@font-face
+	font-family: 'montserrat-regular'
+	src: url('../fonts/montserrat/Montserrat-Regular.ttf')
+
+@font-face
+	font-family: 'montserrat-light'
+	src: url('../fonts/montserrat/Montserrat-Bold.ttf')
+
+@font-face
+	font-family: 'montserrat-thin'
+	src: url('../fonts/montserrat/Montserrat-Thin.ttf')
+
+@font-face
+	font-family: 'montserrat-bold'
+	src: url('../fonts/montserrat/Montserrat-Bold.ttf')
+
+@font-face
+	font-family: 'montserrat-extrabold'
+	src: url('../fonts/montserrat/Montserrat-Extrabold.ttf')
+
+@font-face
+	font-family: 'montserrat-medium'
+	src: url('../fonts/montserrat/Montserrat-Medium.ttf')
+
+@font-face
+	font-family: 'montserrat-semibold'
+	src: url('../fonts/montserrat/Montserrat-SemiBold.ttf')
+
+
+// vars
+$montserrat: 'montserrat-regular', sans-serif
+$montserratlight: 'montserrat-light', sans-serif
+$montserratthin: 'montserrat-thin', sans-serif
+$montserratbold: 'montserrat-bold', sans-serif
+$montserratextrabold: 'montserrat-extrabold', sans-serif
+$montserratmedium: 'montserrat-medium', sans-serif
+$montserratsemibold: 'montserrat-semibold', sans-serif
+
+$dark: #4d4d4d
+$orange: #fe8606
+$green: #66c428
+// vars end
+
+
+/* specifications */ 
+.body-overflow-hidden
+	overflow: hidden
+
+.container
+	max-width: 1170px
+
+.def-title
+	font-family: $montserratbold
+	text-transform: uppercase
+	font-size: 24px
+	color: #000
+	&:after
+		content: ''
+		display: block
+		background-color: $green
+		width: 57px
+		height: 6px
+		margin-top: 20px
+
+.def-btn
+	display: block
+	margin-left: auto
+	font-family: $montserratbold
+	font-size: 14px
+	color: #000
+	text-transform: uppercase
+	width: 188px
+	border: 1px solid #000
+	text-align: center
+	padding: 12px 0
+	text-decoration: none !important
+	transition: 0.1s ease
+	background-image: url('../images/small-arrow.png')
+	background-repeat: no-repeat
+	background-position: 90% center
+	z-index: 9
+	position: relative
+	&:hover
+		color: #fff
+		background-color: $green
+		border: 1px solid transparent
+
+.black-bold
+	font-family: $montserratbold
+
+.def-bold
+	font-family: $montserratbold
+
+.pos-rel
+	position: relative
+
+.z-index-2
+	z-index: 2
+/* specifications end */ 
+
+
+#particles-js
+	position: fixed
+	width: 100%
+	height: 100%
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+	top: 0
+	z-index: -1
+
+/* header */ 
+.header
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 11
+	background-color: #fff
+
+	.mobile-menu__btn
+		font-size: 15px
+		font-family: $montserratbold
+		color: #000
+		text-transform: uppercase
+		text-decoration: none
+		display: none
+		&:before
+			content: ''
+			width: 100%
+			height: 2px
+			background-color: $green
+			display: block
+			margin-bottom: 5px
+		&:after
+			content: ''
+			width: 100%
+			height: 2px
+			background-color: $green
+			display: block
+			margin-top: 5px
+
+	.mobile-menu__item
+		position: fixed
+		left: 0
+		width: 300px
+		height: 100%
+		background-color: #fff
+		z-index: 999999
+		box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.13)
+		padding: 50px 20px
+		overflow-y: auto
+		transform: translateX(-100%)
+		transition: transform 0.4s ease
+
+		.mobile-menu__close
+			width: 20px
+			height: 20px
+			display: block
+			position: absolute
+			right: 20px
+			top: 20px
+			img
+				width: 20px
+				height: 20px
+
+		.mobile-menu
+			margin: 35px 0
+			margin-left: 0
+			padding-left: 0
+			li
+				margin-bottom: 18px
+				list-style-type: none
+				a
+					display: block
+					font-family: $montserratmedium
+					color: #282a28
+					font-size: 18px
+					text-decoration: none
+					border-bottom: 1px solid $green
+					padding-bottom: 18px
+					&:hover
+						border-bottom-color: #282a28
+
+		.mobile-lang
+			font-family: $montserratbold
+			font-size: 16px
+			select
+				color: $orange
+				vertical-align: middle
+				border: none
+				appearance: none
+				cursor: pointer
+				font-family: inherit
+			option
+				color: #000
+
+	.mobile-menu__item__active
+		transform: translateX(0)
+
+	.search__wrap
+		overflow: hidden
+		position: relative
+		transition: 0.3s ease
+
+	.search__wrap__active
+		position: static
+
+	.search__item
+		position: absolute
+		left: 100%
+		width: 90%
+		height: 50%
+		display: flex
+		border: 1px solid $green
+		padding-left: 25px
+		top: 50%	
+		z-index: 999999
+		background-color: #fff
+		transition: 0.3s ease
+		transform: translateY(-50%)
+		input
+			width: 100%
+			border: none
+			outline: none
+		button
+			border: none
+			background-color: $green
+			cursor: pointer
+			outline: none
+			width: 50px
+
+	.search__item__active
+		left: 50% !important
+		transform: translate(-50%, -50%)
+
+	.cap
+		display: flex
+		align-items: center
+		padding: 20px 0
+		position: relative
+		
+		.logo
+			margin-right: 45px
+
+		.menu
+			display: flex
+			padding: 0
+			margin: 0
+			li
+				list-style-type: none
+				font-family: $montserratbold
+				font-size: 14px
+				text-transform: uppercase
+				margin-right: 36px
+				&:after
+					content: ''
+					display: block
+					background-color: $green
+					width: 0
+					height: 2px
+					transition: 0.3s ease
+				&:hover
+					&:after
+						width: 100%
+				&:last-child
+					margin-right: 0
+				a
+					color: $dark
+					text-decoration: none
+					transition: 0.3s ease
+					&:hover
+						color: $green
+
+		.search
+			width: 50px
+			text-align: center
+			border-left: 1px solid #d8dde1
+			border-right: 1px solid #d8dde1
+			margin-left: 43px
+
+		.lang
+			font-family: $montserratbold
+			font-size: 16px
+			width: 50px
+			text-align: center
+			border-right: 1px solid #d8dde1
+			position: relative
+			select
+				color: $orange
+				vertical-align: middle
+				border: none
+				appearance: none
+				cursor: pointer
+				font-family: inherit
+			option
+				font-family: inherit
+				color: #000
+			.lang__dropdown
+				position: absolute
+				top: 100%
+				width: 100%
+				z-index: 56		
+
+		.hamburger
+			display: block
+			margin-left: 20px
+			width: 27px
+			z-index: 99999
+			transition: transform 0.3s ease
+
+		.hamburger__active
+			transform: translateX(50px)
+
+.hamburger-menu__active
+	transform: translateX(0) !important
+
+.hamburger-menu__overlay
+	background-color: rgba(#000, .5)
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	display: block
+	z-index: 99999
+	transform: scale(0)
+
+.hamburger-menu__overlay__active
+	transform: scale(1)
+
+.hamburger-menu
+	position: fixed
+	width: 300px
+	height: 100%
+	overflow-y: auto
+	right: 0
+	top: 0
+	z-index: 99999
+	background-color: rgba(#fcfcfc, .9)
+	padding-left: 50px
+	padding-top: 40px
+	padding-bottom: 40px
+	margin: 0
+	overflow: -moz-scrollbars-none
+	transition: transform 0.4s ease
+	transform: translateX(100%)
+
+	&::-webkit-scrollbar
+		width: 0
+		background: none
+
+	.hamburger-menu__item
+		margin: 0
+		padding: 0
+		li
+			list-style-type: none
+			margin-bottom: 30px
+			a
+				color: #4d4d4d
+				font-family: $montserratmedium
+				font-size: 14px
+				text-transform: uppercase
+				text-decoration: none		
+				position: relative
+				&:after
+					content: ''
+					background-color: $green
+					transition: 0.3s ease
+					position: absolute
+					bottom: -10px
+					width: 0
+					height: 2px
+					display: block
+				&:hover
+					&:after
+						width: 100%
+
+	.hamburger-menu__bottom
+		margin: 50px 0
+
+	.hamburger-menu__flex
+		display: flex
+		align-items: center
+		&:first-child
+			margin-bottom: 30px
+
+	.hamburger-left__img
+		margin-right: 25px
+		img
+			width: 30px
+			height: 30px
+
+	.hamburger-right__text
+		h4
+			font-size: 16px
+			font-family: $montserrat
+			margin: 0
+		p
+			margin: 0
+			font-family: $montserratsemibold
+
+	.howtoget__text
+		a
+			color: #b4b4b4
+			font-family: $montserratsemibold
+			text-decoration: underline
+
+.open-menu__block
+	display: none
+
+.open-menu__wrap
+	position: absolute
+	left: 0
+	top: 100%
+	width: 100%
+	height: 100vh
+	overflow-y: auto
+	background-color: #fff
+	z-index: 9999
+	padding: 20px 40px
+	transition: 0.3s ease
+	display: flex
+	justify-content: flex-start
+	.open-menu__left
+		margin-right: 35px
+	.open-menu__right
+		.discount-img__bottom
+			display: flex
+			justify-content: space-between
+			margin-top: 15px
+		.right-contacts
+			margin-top: 35px
+			.right-contacts__title
+				font-family: $montserratbold
+				font-size: 24px
+				color: $green
+				margin-bottom: 20px
+			p
+				font-size: 14px
+				font-family: $montserrat
+				margin-bottom: 15px
+
+	.open-menu__list
+		margin: 0
+		margin-bottom: 38px
+		padding: 0
+		.open-menu__title
+			font-family: $montserratbold
+			font-size: 14px
+			text-transform: uppercase
+		li
+			list-style-type: none
+			line-height: 35px
+			&:after
+				display: none !important
+			a
+				color: #191919
+				position: relative
+				text-decoration: none
+				transition: all 280ms ease-in-out
+				font-family: $montserrat
+				font-size: 12px
+				display: inline
+				&:hover
+					letter-spacing: 5px
+					&:after
+						width: 100%
+				&:after
+					content: ''
+					background-color: $green
+					height: 2px
+					width: 0
+					position: absolute
+					bottom: -8px
+					left: 0
+					transition: 0.3s ease
+
+.open-menu__tab
+	display: none
+
+.open-menu__tab__active
+	display: block
+					
+
+.open-menu__flex
+	display: flex
+/* header end */
+
+/* main banner */ 
+.main-banner
+	position: relative
+	.main-banner__slide
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		height: 574px
+
+	.logo-flag
+		padding-top: 125px
+		margin-left: -45px
+		img
+			width: auto
+			max-width: 354px
+			width: 100%
+	
+	.banner-arrows
+		background-color: #fff
+		z-index: 9
+		display: block
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35)
+		position: absolute
+	.banner-arrow__left
+		background-image: url('../images/arrow-left-black.png')
+		background-position: center center
+		background-repeat: no-repeat
+		left: 4.5%
+		top: 50%
+		transform: translateY(-50%)
+		&:hover
+			background-color: $green
+			background-image: url('../images/arrow-left-white.png')
+	.banner-arrow__right
+		background-image: url('../images/arrow-right-black.png')
+		background-position: center center
+		background-repeat: no-repeat
+		right: 4.5%
+		top: 50%
+		transform: translateY(-50%)
+		&:hover
+			background-color: $green
+			background-image: url('../images/arrow-right-white.png')
+
+	.banner__items
+		margin-top: 40px
+		margin-left: 50px
+		.banner__btn
+			display: block
+			color: #000
+			font-family: $montserratbold
+			font-size: 14px
+			text-transform: uppercase
+			background-color: #fff
+			padding: 10px 0
+			width: 190px
+			text-align: center
+			transition: 0.5s ease
+			margin-top: 40px
+			text-decoration: none
+			position: relative
+			overflow: hidden
+			.button-underline__horizontal
+				&:before
+					content: ''
+					height: 5px
+					width: 100%
+					position: absolute
+					top: -100%
+					transition: 0.5s ease
+					display: block
+					background-color: $green
+				&:after
+					content: ''
+					height: 5px
+					width: 100%
+					position: absolute
+					bottom: -100%
+					transition: 0.5s ease
+					display: block
+					background-color: $green
+			.button-underline__vertical
+				&:before
+					content: ''
+					height: 100%
+					width: 5px
+					position: absolute
+					left: -100%
+					top: 0
+					transition: 0.5s ease
+					display: block
+					background-color: $green
+				&:after
+					content: ''
+					height: 100%
+					width: 5px
+					position: absolute
+					right: -100%
+					bottom: 0
+					transition: 0.5s ease
+					display: block
+					background-color: $green
+			&:hover
+				&:before
+					width: 0
+				&:after
+					width: 0
+
+				.button-underline__horizontal
+					&:before
+						top: 0
+					&:after
+						bottom: 0
+				.button-underline__vertical
+					&:before
+						left: 0
+					&:after
+						right: 0
+				.button__stroke
+					&:before
+						height: 0
+					&:after
+						height: 0
+			&:before
+				transition: 0.3s ease
+				content: ''
+				background-color: $green
+				display: block
+				position: absolute
+				width: 100%
+				height: 1px
+				top: 0
+				left: 0
+			&:after
+				transition: 0.3s ease
+				content: ''
+				background-color: $green
+				display: block
+				position: absolute
+				width: 100%
+				height: 1px
+				bottom: 0
+				right: 0
+			.button__stroke
+				display: block
+				&:before
+					transition: 0.3s ease
+					content: ''
+					background-color: $green
+					display: block
+					position: absolute
+					width: 1px
+					height: 100%
+					bottom: 0
+					left: 0
+				&:after
+					transition: 0.3s ease
+					content: ''
+					background-color: $green
+					display: block
+					position: absolute
+					width: 1px
+					height: 100%
+					top: 0
+					right: 0
+
+	.banner-utp
+		margin-top: 124px
+		h3
+			font-size: 24px
+			font-family: $montserrat
+			color: #202020
+
+.custom-dots
+	z-index: 9
+	position: absolute
+	top: 60%
+	left: 3%
+	li
+		list-style-type: none
+		cursor: pointer
+		font-family: $montserratbold
+		font-size: 18px
+		&:before
+			content: ''
+			background-color: #acacac
+			width: 11px
+			height: 11px
+			border-radius: 50%
+			display: block
+			margin-bottom: 10px
+			margin-left: 5px
+			&:last-child
+				margin-bottom: 0
+	.active
+		list-style-type: decimal-leading-zero
+		&:before
+			background-color: $green 
+
+/* main banner responsive */
+@media screen and (min-width: 1600px)
+	.main-banner
+		.banner-arrow__left
+			left: 10%
+		.banner-arrow__right
+			right: 10%
+
+		.custom-dots
+			top: 50%
+			transform: translate(-50%, -50%)
+			left: 6%
+
+/* main banner responsive end */
+
+/* main banner end */ 
+
+
+/* floor map */ 
+.floor-map
+	padding-bottom: 80px
+	.autopsy-floor-map
+		position: relative
+		z-index: 1
+		a
+			display: block
+			background-color: $green
+			height: 67px
+			text-align: center
+			display: flex
+			justify-content: center
+			align-items: center
+			text-transform: uppercase
+			color: #fff
+			font-family: $montserratbold
+			font-size: 16px
+			text-decoration: none
+			img
+				margin-right: 20px
+		.floor-map__open
+			display: none
+
+	.floor-map__wrap
+		margin-top: 60px
+
+	.floor-map__left
+		margin-top: 35px
+		.small__title
+			font-family: $montserrat
+			font-size: 18px
+
+		.floor-map-tabs__wrap
+			margin-top: 26px
+
+			.floor-map-tabs__link
+				display: flex
+				a
+					display: block
+					width: 50px
+					height: 50px
+					background-color: $green
+					text-align: center
+					color: #fff
+					font-size: 18px
+					font-family: $montserratbold
+					line-height: 50px
+					text-decoration: none
+					text-transform: uppercase
+					transition: 0.3s ease
+					border-right: 1px solid #fff
+					&:hover
+						background-color: #acacac
+						transform: translateY(-5px)
+						border: none
+						box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.19)
+
+				.floor-map-tabs__link__active
+					background-color: #acacac
+					transform: translateY(-5px)
+					border: none
+					box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.19)
+
+			.floor-map-tabs__accordion
+				max-width: 300px
+				width: 100%
+				background-color: #fff
+				margin-top: 30px
+				box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1)
+				display: none
+			.floor-map-tabs__accordion__active
+				display: block !important
+				ul
+					margin: 0
+					padding: 0
+					li
+						list-style-type: none
+						font-family: $montserratmedium
+						font-size: 14px
+						text-transform: uppercase
+						&:last-child
+							a
+								border-bottom: 1px solid transparent
+						a
+							color: #000
+							display: flex
+							justify-content: space-between
+							padding: 20px 15px
+							text-decoration: none
+							border-bottom: 1px solid rgba(#acacac, .50)
+							transition: 0.1s ease
+							&:hover
+								color: $green
+								border-bottom: 1px solid $green
+								.accordion__arrow
+									background-color: $green
+							.accordion__arrow
+								background-color: #acacac
+								width: 23px
+								height: 23px
+								display: block
+								text-align: center
+								img
+									transition: 0.3s ease
+							.accordion__arrow__rotate
+								img
+									transform: rotate(540deg)
+					.floor-map__submenu
+						padding: 24px 0
+						display: none
+						li
+							font-family: $montserrat
+							font-size: 14px
+							text-transform: capitalize
+							a
+								padding: 0 0 18px 24px
+								border: none
+								&:hover
+									text-decoration: underline
+							&:last-child
+								a
+									padding-bottom: 0
+
+	.floor-map__right
+		margin-top: 5rem
+		img
+			transition: 0.5s ease
+			width: 100%
+			display: block
+		.floor-map__zoom
+			position: absolute
+			right: 0
+			top: 0
+			.floor-map__zoom__btn
+				display: flex
+				margin-top: 20px
+			a
+				font-family: $montserratbold
+				font-size: 18px
+				color: #fff
+				text-align: center
+				text-decoration: none
+				background-color: $green
+				width: 50px
+				height: 50px
+				display: block
+				line-height: 50px
+				border-right: 1px solid #fff
+				transition: 0.3s ease
+				&:last-child
+					border-right: none
+				&:hover
+					background-color: #acacac
+					box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.19)
+					transform: translateY(-5px)
+			.floor-map__zoom__title
+				font-family: $montserrat
+				font-size: 18px
+/* floor map end */ 
+
+
+
+/* promoutions and discounts */ 
+.discounts
+	.discount-slide__wrap
+		display: flex
+		margin-top: 40px
+		&:hover
+			.discount-slide__item
+				transform: translateY(-45px)
+				&:before
+					transform: scale(1)
+				.discount__text
+					bottom: 50px
+
+	.discount-slide__item
+		width: 100%
+		height: 486px
+		background-repeat: no-repeat
+		background-size: cover
+		position: relative
+		transition: 0.4s ease
+		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			transform: scale(0)
+			background-color: rgba(0, 0, 0, .3)
+			display: block
+			transition: 0.5s ease
+		.discount-percent
+			position: absolute
+			right: 22px
+			top: 22px
+			background-color: #ff8603
+			width: 80px
+			height: 80px
+			color: #fff
+			font-family: $montserratbold
+			font-size: 13px
+			text-transform: uppercase
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			.percent__item
+				font-size: 24px
+
+		.discount__text
+			background-color: rgba(255, 255, 255, .9)
+			width: 80%
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -100%
+			padding: 24px 30px
+			transition: 0.3s ease-out
+			margin: 0 auto
+			display: block
+			font-family: $montserrat
+			font-size: 16px
+			color: #000
+			text-decoration: none
+			&:before
+				content: ''
+				display: block
+				width: 6px
+				height: 100%
+				background-color: $green
+				position: absolute
+				left: 0
+				top: 0
+/* promoutions and discounts end */ 
+
+
+/* developments */
+.developments
+	margin-top: 60px
+	.developments__text
+		margin-top: 38px
+		p
+			font-family: $montserrat
+			font-size: 18px
+	.development-slide__wrap
+		position: relative
+	.developments-slide
+		display: flex
+		justify-content: space-between
+		margin-top: 40px
+		.developments-slide__item
+			max-width: 270px
+			width: 100%
+			display: block
+			&:hover
+			.developments-slide__top
+				height: 245px
+				position: relative
+
+			.developments-slide__bottom
+				background-color: #f6f6f6
+				padding: 20px
+				transition: 0.5s ease
+				&:hover
+					color: #fff
+					.developments-slide__btn
+						color: #fff
+						&:after
+							width: 100%
+				.developments-slide__text
+					font-family: $montserrat
+					font-size: 16px
+				.developments-slide__btn
+					font-family: $montserratbold
+					font-size: 14px
+					text-transform: uppercase
+					color: #000
+					position: relative
+					text-decoration: none
+					&:after
+						transition: 0.3s ease
+						content: ''
+						background-color: #fff
+						height: 2px
+						width: 0
+						display: block
+						position: absolute
+						bottom: -8px
+
+			.developments-percent
+				width: 63px
+				height: 63px
+				background-color: #ff8603
+				color: #fff
+				font-family: $montserratbold
+				font-size: 15px
+				line-height: 1
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				position: absolute
+				left: 16px
+				top: 16px
+				.percent__item
+					font-size: 35px
+
+	.development-arrow
+		background-color: #fff
+		border: 1px solid #000
+		width: 40px
+		height: 40px
+		display: block
+		border-radius: 50%
+		background-repeat: no-repeat
+		background-position: center center
+		z-index: 9
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		&:hover
+			background-color: $green
+	.development-arrow__left
+		background-image: url('../images/arrow-left-black.png')
+		left: -70px
+		&:hover
+			background-image: url('../images/arrow-left-white.png')
+			border: none
+	.development-arrow__right
+		background-image: url('../images/arrow-right-black.png')
+		right: -70px
+		&:hover
+			background-image: url('../images/arrow-right-white.png')
+			border: none
+
+	.instagram__btn
+		margin-top: 70px
+/* developments end */
+
+
+/* about baizar */ 
+.about-baizar
+	margin-top: 40px
+	.container
+		height: 100%
+	.about-baizar__wrap
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		position: relative
+		height: 570px
+		&:before
+			content: ''
+			background-color: rgba(0, 0, 0, .5)
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+	.about-baizar__content
+		z-index: 1
+		position: relative
+		height: 100%
+		.about-slide__item
+			height: 100%
+			padding: 20% 0
+		.about-baizar__btn
+			display: block
+			position: relative
+			font-family: $montserrat
+			font-size: 20px
+			color: #fff
+			background-color: $green
+			padding: 25px 0
+			max-width: 550px
+			width: 100%
+			text-align: center
+			margin: 0 auto
+			text-decoration: none
+			transition: color 1s ease
+			&:after
+				content: ''
+				background-color: transparent
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				height: 0
+				width: 0
+				display: block
+				margin: 0 auto
+				transition: 0.8s ease
+				opacity: .5
+			&:hover
+				color: #000
+				&:after
+					border: 1px solid #fff
+					height: 130%
+					width: 110%
+			.def-bold
+				text-transform: uppercase
+
+
+	.about-arrows
+		background-color: #fff
+		z-index: 9
+		display: block
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35)
+		position: absolute
+		top: 48%
+		transform: translateY(-50%)
+		&:hover
+			background-color: $green
+	.about-arrow__left
+		background-image: url('../images/arrow-left-black.png')
+		background-position: center center
+		background-repeat: no-repeat
+		left: 10%
+		&:hover
+			background-image: url('../images/arrow-left-white.png')
+	.about-arrow__right
+		background-image: url('../images/arrow-right-black.png')
+		background-position: center center
+		background-repeat: no-repeat
+		right: 10%
+		&:hover
+			background-image: url('../images/arrow-right-white.png')
+
+/* about baizar end */ 
+
+
+/* subscribe */ 
+.subscribe
+	padding-top: 80px	
+	padding-bottom: 80px
+	.subscribe__title__wrap
+		p
+			font-family: $montserrat
+			font-size: 20px
+			margin-top: 25px
+			margin-bottom: 0
+			.def-bold
+				color: $green
+
+	.subscribe__email
+		width: 100%
+		.subscribe__input
+			display: flex
+			justify-content: space-between
+			height: 56px
+			border: 1px solid #aaaaaa
+			background-color: #fbfbfb
+			input
+				width: 100%
+				border: none
+				background: none
+				padding: 0 25px
+			button
+				display: block
+				height: 100%
+				background-color: $green
+				border: none
+				font-family: $montserratbold
+				font-size: 16px
+				max-width: 222px
+				width: 100%
+				height: 100%
+				color: #fff
+				text-transform: uppercase
+				cursor: pointer
+				&:hover
+					color: #000
+					border-left: 1px solid #aaaaaa
+
+		.subscribe__checkbox
+			user-select: none
+			margin-top: 30px
+			font-family: $montserrat
+			font-size: 13px
+			.underline
+				text-decoration: underline
+			input
+				vertical-align: middle
+				appearance: none
+				width: 16px
+				height: 16px
+				border: 1px solid #cad6df
+				&:checked
+					background-image: url('../images/check.png')
+					background-repeat: no-repeat
+					background-position: center
+			label
+				margin-bottom: 0
+				margin-left: 5px
+				display: inline
+/* subscribe end */ 
+
+
+/* partners */ 
+.partners__wrap
+	background-color: #f6f6f6
+	padding: 80px 0
+	position: relative
+
+	.owl-carousel 
+		.owl-item img
+			width: auto
+
+		.owl-stage
+			display: flex
+			align-items: center
+
+	.partners-content
+		position: relative
+
+	.partners__owl
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.partners__owl__item
+			width: 195px
+			margin-top: 35px
+			margin-left: auto
+			margin-right: auto
+			img
+				vertical-align: middle
+				margin: 0 auto
+
+
+	.partners-arrows
+		background-color: #fff
+		z-index: 9
+		display: block
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35)
+		position: absolute
+		top: 65%
+		transform: translateY(-50%)
+		&:hover
+			background-color: $green
+	.partners-arrow__left
+		background-image: url('../images/arrow-left-black.png')
+		background-position: center center
+		background-repeat: no-repeat
+		left: 2%
+		&:hover
+			background-image: url('../images/arrow-left-white.png')
+	.partners-arrow__right
+		background-image: url('../images/arrow-right-black.png')
+		background-position: center center
+		background-repeat: no-repeat
+		right: 2%
+		&:hover
+			background-image: url('../images/arrow-right-white.png')
+
+@media screen and (min-width: 1600px)
+	.partners__wrap
+		.partners-arrow__left
+			left: 10%
+		.partners-arrow__right
+			right: 10%
+/* partners end */ 
+
+
+/* footer */
+.footer
+
+	.footer-dark
+		background-color: #424242
+		padding: 57px 0
+
+		.footer-dark__top
+			border-bottom: 1px solid #686868
+			padding-bottom: 45px
+
+	.footer__item
+		display: flex
+		align-items: center
+		font-family: $montserrat
+		font-size: 16px
+		color: #fff
+		.footer__item-img
+			margin-right: 20px
+		p
+			margin-bottom: 0
+
+	.footer-v__line
+		border-right: 1px solid #686868
+		height: 100%
+
+	.footer__social
+		margin-left: auto
+		display: flex
+		justify-content: space-between
+		width: 175px
+		a
+			position: relative
+			display: block
+			transition: 0.3s ease
+			&:after
+				transition: 0.3s ease
+				content: ''
+				display: block
+				border-radius: 10px
+				background: transparent
+				height: 0
+				width: 0
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+			&:hover
+				box-shadow: 0.707px 0.707px 15.48px 2.52px rgba(102, 196, 40, 0.59);
+				&:after
+					border: 1px solid #fff
+					height: 130%
+					width: 130%
+
+	.footer-dark__bottom
+		margin-top: 44px
+
+	.footer-green
+		background-color: $green
+		padding: 32px 0
+		color: #fff
+		p
+			margin: 0
+		.footer-copyright
+			p
+				font-family: $montserrat
+				font-size: 13px
+		.footer-green__link
+			display: flex
+			a
+				display: block
+				color: #fff
+				font-family: $montserrat
+				font-size: 13px
+				margin-right: 35px
+				&:last-child
+					margin-right: 0
+
+
+	.footer__menu
+		position: relative
+		z-index: 1
+		ul
+			display: flex
+			justify-content: space-between
+			margin: 0
+			padding: 0
+			li
+				display: inline-block
+				a
+					font-family: $montserratbold
+					color: #fff
+					font-size: 16px
+					text-decoration: none
+					display: block
+					&:after
+						content: ''
+						display: block
+						background-color: #fff
+						width: 0
+						height: 2px
+						transition: 0.3s ease
+					&:hover
+						&:after
+							width: 100%
+/* footer end */
+
+
+
+/* main responsive */ 
+@media screen and (max-width: 1290px)
+	.developments
+		.development-arrow__right
+			right: -30px
+		.development-arrow__left
+			left: -42px
+	
+	.header
+		.cap
+			.hamburger__active
+				transform: none
+
+@media screen and (max-width: 1240px)
+	.custom-dots
+		left: 0
+
+	.main-banner
+		.banner-arrow__left
+			left: 1%
+		.banner-arrow__right
+			right: 1%
+
+@media screen and (max-width: 1200px)
+	.header
+		.search__item
+			position: absolute
+			height: 50px
+			left: 100%
+			width: 98%
+		.cap
+			justify-content: space-between
+
+			.mobile-menu__btn
+				display: block
+				margin-right: 20px
+
+			.logo
+				display: none
+
+			.menu
+				display: none
+
+			.search
+				width: 100%
+				height: 50px
+				margin-left: 0
+				a
+					line-height: 50px
+
+			.lang
+				display: none
+
+			.hamburger 
+				width: auto
+
+	.developments
+		.development-arrow
+			top: auto
+			bottom: -5rem
+		.development-arrow__left
+			left: 0%
+		.development-arrow__right
+			right: 0%
+		
+
+@media screen and (max-width: 992px)
+	.open-menu__right__active
+		display: none
+
+	.main-banner
+		&__slide
+			&:before
+				content: ''
+				position: absolute
+				background-color: rgba(0, 0, 0, .3)
+				display: block
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+			h3
+				color: #fff !important
+
+	.discounts
+		.discount-slide__item
+			.discount__text
+				bottom: 20px
+
+@media screen and (max-width: 880px)
+	.footer 
+		.footer__menu 
+			ul
+				justify-content: flex-start
+				flex-wrap: wrap
+				li
+					margin-right: 25px
+					margin-bottom: 20px
+
+@media screen and (max-width: 768px)
+	.subscribe
+		.subscribe__email
+			margin-top: 35px
+
+	.footer
+		.footer__item
+			margin-bottom: 35px
+		.footer__social
+			margin-left: 0
+
+@media screen and (max-width: 575px)
+	
+	.custom-dots
+		left: 50%
+		bottom: 0
+		top: auto
+		transform: translateX(-50%)
+		padding: 0
+		li
+			display: inline-block
+
+	.main-banner
+		
+		.main-banner__slide
+			height: 450px
+
+		.logo-flag
+			margin-left: 0
+			margin-top: 80px
+			padding-top: 0
+			img
+				margin: 0 auto
+
+		.banner__items
+			width: 80%
+			margin: 0 auto
+			h3
+				text-align: center
+				margin-top: 40px
+			.banner__btn
+				margin: 40px auto 0 auto
+
+		.banner-utp
+			display: none
+
+
+@media screen and (max-width: 575px)
+	.footer
+		.footer-green__flex
+			flex-direction: column
+		.footer-green
+			.footer-green__link
+				flex-direction: column
+				a
+					margin: 15px 0
+
+@media screen and (max-width: 480px)
+	.header
+		.cap
+			.search
+				a
+					display: block
+					line-height: 50px
+
+	.open-menu__flex
+		flex-direction: column
+
+	.footer 
+		.footer__menu 
+			ul
+				flex-direction: column
+
+@media screen and (max-width: 400px)
+	.subscribe
+		.subscribe__email
+			.subscribe__input
+				input
+					width: 65%
+				button
+					width: 35%
+					max-width: none
+					font-size: 12px
+/* main responsive end */ 
+
+
+.empty
+	padding: 50px 0
+	background-color: #fff
+	h1
+		text-align: center
+		font-family: $montserrat

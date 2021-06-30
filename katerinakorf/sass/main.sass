@@ -1,0 +1,588 @@
+@import 'fonts'
+@import 'vars'
+@import 'specifications'
+
+
+.preloader
+	background-color: #fff
+	position: fixed
+	width: 100%
+	height: 100%
+	z-index: 99
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	text-align: center
+
+	h2
+		font-family: $gotham
+		font-size: 30px
+		line-height: 126.5%
+		text-decoration: none
+		color: $black
+		text-transform: uppercase
+		font-weight: 300
+		margin-right: 15px
+		position: relative
+		padding-bottom: 35px
+		margin-bottom: 35px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			height: 1px
+			width: 50px
+			background-color: $black
+	p
+		font-size: 16px
+		letter-spacing: 1px
+
+/*---------- Main START ----------*/
+.content
+	padding-left: 70px
+	padding-right: 70px
+	height: 100%
+	display: flex
+	max-width: 1900px
+	margin: 0 auto
+
+.content__left
+	height: 100%
+	position: relative
+	.logo
+		padding-top: 50px
+		position: relative
+		z-index: 13
+		a
+			font-family: $gotham
+			font-size: 30px
+			line-height: 126.5%
+			text-decoration: none
+			text-transform: uppercase
+			color: $black
+			letter-spacing: 6px
+			.lts
+				letter-spacing: 4px
+
+	.menu-opened__wrap
+		display: none
+		background-color: rgba(#fff, .8)
+		padding: 70px
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 12
+	.menu-opened
+		display: flex
+		flex-direction: column
+		justify-content: center
+		height: 100%
+		.menu-list__wrap
+			position: relative
+			margin-top: 85px
+			margin-bottom: 50px
+			max-width: 300px
+		.menu-list__item
+			padding: 0
+			transition: 1s ease
+			transform: translateY(50px)
+			li
+				list-style-type: none
+				a
+					font-size: 20px
+					text-transform: uppercase
+					margin-bottom: 25px
+					display: inline-block
+					text-decoration: none
+					color: $black
+					position: relative
+					&:hover
+						&::after
+							width: 100%
+					&::after
+						content: ''
+						position: absolute
+						bottom: -5px
+						left: 0
+						transition: 0.5s ease
+						background-color: #000
+						height: 2px
+						width: 0
+		.close-menu
+			position: absolute
+			left: -40px
+			top: 43%
+			transform: translateY(-50%)
+			transition: 0.3s ease
+			&:hover
+				transform: translateY(-50%) scale(0.9)
+
+		.menu-social
+			margin-bottom: 60px
+			transform: translateY(50px)
+			justify-content: flex-start
+			flex-wrap: wrap
+			max-width: 200px
+			a
+				margin-bottom: 25px
+
+	.menu-button__wrap
+		cursor: pointer
+		position: fixed
+		width: 32px
+		height: 32px
+		top: 50%
+		transform: translateY(-50%)
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: opacity 1s ease
+		margin-top: 14px
+		&:hover
+			.menu-button__line
+				margin-bottom: 3px
+				span
+					margin-right: 3px
+
+
+	.menu-button__item
+		.menu-button__line
+			display: flex
+			margin-bottom: 8px
+			transition: 0.3s ease
+			span
+				&:last-child
+					margin-right: 0
+		span
+			width: 5px
+			height: 5px
+			background-color: $black
+			margin-right: 8px
+			transition: 0.3s ease
+
+
+.content__right
+	padding-top: 50px
+	padding-left: 50px
+	width: 100%
+
+.s-main
+	height: 100vh
+	.content__right
+		overflow: hidden
+	.main-slider
+		display: flex
+		align-items: center
+	.main-slider__wrap
+		display: flex
+		width: 100%
+		overflow: hidden
+	.main-slider__item
+		width: 90%
+		height: 100%
+		margin: 0 auto
+		overflow: hidden
+		position: relative
+		img
+			height: 100%
+			width: auto
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	.owl-item
+		height: 90vh
+			
+	.main-slider__arrow
+		cursor: pointer
+		transition: 0.3s ease-in
+		&:hover
+			transform: scale(0.9)
+
+.owl-prev,
+.owl-next
+	&:hover
+		background: none !important
+
+.main-owl-navbar
+	background: none !important
+	&:hover
+		background: none !important
+
+/*---------- Main Responsive START ----------*/
+@media screen and (max-width: 1200px)
+	.content
+		flex-direction: column
+		padding-left: 30px
+		padding-right: 30px
+	.content__left
+		padding-top: 50px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: auto
+		.menu-button__wrap
+			position: static
+			top: auto
+			left: auto
+			transform: none
+			margin-top: 4px
+		.logo
+			padding-top: 0
+
+	.s-main
+		.content__right
+			overflow: auto
+		.main-slider__wrap
+			flex-direction: column
+		.main-slider__item
+			width: 100%
+			img
+				width: 100%
+				height: auto
+				position: static
+				transform: none
+		.owl-item
+			height: auto
+
+		.main-slider__arrow
+			display: none
+/*---------- Main Responsive END ----------*/
+/*---------- Main END ----------*/
+
+
+
+/*---------- Gallery START ----------*/
+.s-gallery
+	.gallery__wrap
+		margin-top: 60px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	.gallery__item
+		width: 31.2%
+		height: 315px
+		margin-bottom: 50px
+		display: block
+		position: relative
+		overflow: hidden
+		text-decoration: none
+		color: $black
+		&:hover
+			.descr
+				opacity: 1
+			.descr-text
+				transform: none
+		img
+			height: 100%
+			position: absolute
+			right: 0
+			top: 0
+		.descr
+			position: relative
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			width: 100%
+			height: 100%
+			padding-left: 30px
+			padding-bottom: 70px
+			background-color: rgba(#fff, .7)
+			transition: 1s ease
+			opacity: 0
+			h3
+				font-size: 22px
+				font-weight: 300
+				text-transform: uppercase
+				position: relative
+				margin-bottom: 30px
+				padding-bottom: 8px
+				&::after
+					content: ''
+					width: 60px
+					height: 2px
+					display: block
+					position: absolute
+					left: 0
+					bottom: -10px
+					background-color: $black
+			.gallery-filter-link
+				font-size: 16px
+				margin-bottom: 40px
+				cursor: pointer
+				display: inline-block
+				margin-top: 0
+				text-decoration: none
+				color: $black
+				&:hover
+					text-decoration: underline
+		.descr-text
+			transform: translateY(100%)
+			transition: 0.7s ease
+
+	.filter-title
+		font-size: 20px
+		color: $black
+		text-align: center
+		margin-top: 15px
+
+	.show-all-cat
+		color: $black
+		font-size: 20px
+		text-decoration: none
+		display: flex
+		align-items: center
+		margin-bottom: 35px
+		max-width: 120px
+		&:hover
+			svg
+				transform: translateX(-10px)
+		svg
+			transition: 0.5s ease
+			margin-right: 20px
+
+	.top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 0 45px
+		.filter-title
+			position: relative
+			padding-bottom: 25px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				height: 1px
+				width: 50px
+				background-color: $black
+
+	.album-arrow__wrap
+		display: flex
+		align-items: center
+		text-decoration: none
+		color: $black
+		svg
+			transition: 0.5s ease
+		
+	.prev-album
+		&:hover
+			svg
+				transform: translateX(-10px)
+		svg
+			margin-right: 15px
+	.next-album
+		&:hover
+			svg
+				transform: translateX(10px)
+		svg
+			margin-left: 15px
+
+
+	.gallery-inner__text
+		margin-top: 30px
+		max-width: 680px
+		margin-left: auto
+		margin-right: auto
+		line-height: 133.5%
+
+	.album-images__wrap
+		max-width: 900px
+		margin-left: auto
+		margin-right: auto
+		margin-top: 50px
+
+	.album-images__item
+		margin-bottom: 60px
+		position: relative
+		display: block
+		img
+			width: 100%
+		.image__zoom
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba($black, .5)
+			transition: 0.5s ease
+			opacity: 0
+			&:hover
+				opacity: 1
+				svg
+					top: 50%
+			svg
+				position: absolute
+				left: 50%
+				top: 60%
+				transform: translate(-50%, -50%)
+				width: 70px
+				height: 70px
+				transition: 0.5s ease
+			path
+				fill: #fff
+/*---------- Gallery Responsive START ----------*/
+@media screen and (min-width: 1500px)
+	.s-gallery 
+		.gallery__item
+			height: 500px
+
+@media screen and (max-width: 992px)
+	.s-gallery 
+		.gallery__item
+			width: 48%
+
+@media screen and (max-width: 768px)
+	.s-gallery 
+		.top
+			flex-direction: column
+		.prev-album
+			order: 1
+			margin-top: 25px
+		.next-album
+			margin-top: 25px
+			order: 1
+
+@media screen and (max-width: 575px)
+	.s-gallery 
+		.gallery__item
+			width: 100%
+/*---------- Gallery Responsive END ----------*/
+/*---------- Gallery END ----------*/
+
+
+
+/*---------- About START ----------*/
+.s-about
+	.s-about__wrap
+		max-width: 900px
+		margin-left: auto
+		margin-right: auto
+
+	.about-image__wrap
+		margin-top: 60px
+		img
+			width: 100%
+
+	.about-text__wrap
+		margin-top: 50px
+	.about-text__item
+		margin-top: 25px
+		p
+			margin-bottom: 25px
+/*---------- About END ----------*/
+
+
+/*---------- Contact START ----------*/
+.s-contact
+	.contact__wrap
+		display: flex
+		justify-content: space-between
+		margin-top: 180px
+
+	.contact__email
+		margin-top: 25px
+	.social-links
+		margin-top: 25px
+
+	.contact__left
+		width: 30%
+	.contact__right
+		width: 70%
+		.form__item
+			position: relative
+		label,
+		input,
+		textarea
+			display: block
+			width: 100%
+			border: none
+		input,
+		textarea
+			padding: 10px
+			border-bottom: 1px solid #C4C4C4
+			text-transform: uppercase
+			color: #C4C4C4
+			font-weight: 300
+		input
+			padding-right: 0
+		[placeholder]
+			color: rgba(#000, .8)
+		.top
+			display: flex
+			justify-content: space-between
+			.form__item
+				width: 48%
+		.form__message
+			margin-top: 25px
+			font-family: $raleway, sans-serif
+
+		button
+			margin-top: 35px
+			box-shadow: 0px 1px 2px rgba(36, 36, 36, 0.25), 1px 0px 2px rgba(36, 36, 36, 0.25)
+			padding: 15px 35px
+			background-color: #fff
+			border: none
+			text-transform: uppercase
+			cursor: pointer
+			position: relative
+			z-index: 0
+			transition: 0.3s ease-in
+			overflow: hidden
+			display: block
+			&:hover
+				color: #fff
+				&::after
+					right: 0
+			&::after
+				transition: 1s ease
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				right: -100%
+				width: 100%
+				height: 102%
+				background-color: $black
+				z-index: -1
+
+
+/*---------- Contact Responsive START ----------*/
+@media screen and (max-width: 992px)
+	.s-contact
+		.contact__wrap
+			flex-direction: column
+			margin-top: 50px
+			text-align: center
+		.contact__left,
+		.contact__right
+			width: 100%
+		.min-title
+			&::after
+				left: 50%
+				transform: translateX(-50%)
+		.social-links
+			justify-content: center
+
+@media screen and (max-width: 480px)
+	.s-contact 
+		.contact__right 
+			.top
+				flex-direction: column
+				.form__item
+					width: 100%
+					margin-bottom: 25px
+			.form__message
+				margin-top: 0
+/*---------- Contact Responsive END ----------*/
+/*---------- Contact END ----------*/

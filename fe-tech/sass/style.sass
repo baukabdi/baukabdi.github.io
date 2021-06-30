@@ -1,0 +1,1212 @@
+// vars
+$accent: #ea893a
+$dark: #1f1f1f
+$gray: #efefef
+$gray2: #f6f6f6
+$futurabook: Futura-pt-book
+$futurabold: Futura-pt-bold
+$futurademi: Futura-pt-demi
+$futuramedium: Futura-pt-medium
+$futuralight: Futura-pt-light
+
+
+@font-face
+	src: url('../fonts/futura/FuturaPTBook.otf')
+	font-family: Futura-pt-book
+
+@font-face
+	src: url('../fonts/futura/FuturaPTBold.otf')
+	font-family: Futura-pt-bold
+
+@font-face
+	src: url('../fonts/futura/FuturaPTDemi.otf')
+	font-family: Futura-pt-demi
+
+@font-face
+	src: url('../fonts/futura/FuturaPTMedium.otf')
+	font-family: Futura-pt-medium
+
+@font-face
+	src: url('../fonts/futura/FuturaPTLight.otf')
+	font-family: Futura-pt-light
+
+
+/* specifications */ 
+.container
+	max-width: 1170px !important
+
+.aic
+	align-items: center
+
+.jcsbt
+	justify-content: space-between
+
+.jcsa
+	justify-content: space-around
+
+.accent-text
+	color: $accent
+
+.mt-50px
+	margin-top: 50px
+
+.custom-pr-0
+	padding-right: 0
+
+.custom-pl-0
+	padding-left: 0
+/* specifications end */ 
+
+.hamburger
+	display: none
+	font-family: $futurabook
+	font-size: 16px
+	color: #000
+	text-decoration: none
+	position: absolute
+	right: 25px
+	top: 38px
+	&:hover
+		text-decoration: none
+		color: #000
+
+.header__wrap
+	box-shadow: 0px 0px 8.91px 0.09px rgba(0, 0, 0, 0.13)
+	position: relative
+	z-index: 999
+
+.close
+	display: none
+
+.header-top
+	background-color: #000
+	padding: 14px 0
+
+	.heart
+		display: none
+		margin: 0 35px
+		img
+			width: 24px
+			height: 24px
+	.product-cart
+		display: none
+		a
+			color: $accent
+			font-family: $futurabook
+			font-size: 14px
+		img
+			width: 28px
+			height: 28px
+			margin-right: 8px
+
+	.header-top__soc-icons
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		height: 100%
+		a
+			display: inline-block
+
+	.header-top__loc
+		text-align: center
+		select
+			outline: none
+			appearance: none
+			background: none
+			background-image: url('../images/select-arrow-down.png')
+			background-repeat: no-repeat
+			background-position: right
+			width: 60px
+			color: $accent
+			font-family: $futurabook
+			font-size: 14px
+			border: none
+
+	.header-top__phone
+		a
+			font-family: $futurademi
+			font-size: 14px
+			color: $accent
+			text-decoration: underline
+
+	.header-top__menu
+		ul
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				a
+					color: #fff
+					font-family: $futurabook
+					font-size: 14px
+					text-decoration: none
+					&:hover
+						color: $accent
+
+	.header-top__sign
+		a
+			color: #fff
+			font-family: $futurabook
+			text-decoration: none
+			&:hover
+				color: $accent
+		span
+			color: #fff
+			font-family: $futurabook
+			color: $accent
+
+.all__popup__bg
+	background-color: rgba(#000, .50)
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow-y: auto
+
+.all__popup
+	padding: 40px 118px
+	background-color: #fff
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	.all__popup__title
+		font-family: $futurabook
+		font-size: 36px
+		color: #545454
+		text-align: center
+		margin-bottom: 30px
+	.popup__btn
+		background-color: #c47637
+		color: #fff
+		font-family: $futurabook
+		font-size: 18px
+		width: 233px
+		height: 46px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-align: center
+		text-decoration: none
+		border-radius: 5px
+		margin: 0 auto
+		transition: 0.2s ease
+		&:hover
+			background-color: lighten( #c47637, 5% )
+
+.close__popup
+	position: absolute
+	top: 30px
+	right: 30px
+
+.reg-dn
+	display: none
+
+.registration__popup
+	.registration__tabs
+		display: flex
+		justify-content: center
+		margin: 0
+		padding: 0
+		margin-bottom: 32px
+		.register__active
+			background-color: #5c4e4e
+			a
+				color: #fff
+		li
+			list-style-type: none
+			font-family: $futurabook
+			font-size: 18px
+			background-color: #fff
+			box-shadow: 0px 0px 7.2px 0.8px rgba(35, 31, 31, 0.14)
+			width: 248px
+			height: 46px
+			text-align: center
+			border-radius: 5px
+			&:first-child
+				margin-right: 30px
+			a
+				color: #545454
+				height: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				border-radius: 5px
+				text-decoration: none
+				transition: 0.3s ease
+				&:hover
+					background-color: #545454
+					color: #fff
+
+	.registration__input__item
+		margin-bottom: 30px
+		max-width: 268px
+		width: 100%
+		height: 44px
+		border: 1px solid #bdc1cc
+		padding-right: 16px
+		padding-left: 16px
+	[placeholder]
+		color: #bdc1cc
+
+	.registration__requisites
+		text-align: left
+		font-family: $futurabook
+		font-size: 24px
+		color: #545454
+		margin-bottom: 18px
+
+.login__popup__bg
+	display: none
+	.login__popup
+		.login__popup__item
+			margin-bottom: 30px
+			width: 340px
+			height: 50px
+			border: 1px solid #bdc1cc
+			padding-left: 16px
+			padding-right: 16px
+			display: block
+			margin-left: auto
+			margin-right: auto
+		[placeholder]
+			color: #bdc1cc
+		
+		.login__bottom
+			display: flex
+			justify-content: space-between
+			.remember__me
+				vertical-align: middle
+			.remember__me__label
+				font-family: $futuralight
+				font-size: 16px
+				user-select: none
+				vertical-align: middle
+				margin: 0 0 0 5px
+				padding: 0
+			.login__bottom__right
+				a
+					font-family: $futurabook
+					font-size: 16px
+					color: #545454
+					text-decoration: underline
+
+		.forgot__password
+			margin: 0 auto
+			display: block
+			text-align: center
+			width: 110px
+			font-family: $futurabook
+			font-size: 16px
+			color: #ea893a
+			margin-top: 22px
+			text-decoration: underline
+
+.header-bottom
+	padding: 20px 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	.catalog__btn
+		margin: 0 30px
+		a
+			font-family: $futurabook
+			font-size: 16px
+			color: #000
+			text-decoration: none
+		img
+			margin-right: 5px
+
+	.search
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		background-color: $gray
+		border-radius: 23px
+		position: relative
+		max-width: 565px
+		width: 100%
+		.search__item
+			width: 100%
+			border: 1px solid transparent
+			background-color: $gray
+			padding: 10px 0
+			border-radius: 23px
+			padding-left: 25px
+			outline: none
+		.search__btn
+			display: inline-block
+			position: absolute
+			right: 28px
+			top: 8px
+
+	.heart
+		display: inline-block
+		margin: 0 35px
+		img
+			width: 24px
+			height: 24px
+	.product-cart
+		a
+			color: $accent
+			font-family: $futurabook
+			font-size: 14px
+		img
+			width: 28px
+			height: 28px
+			margin-right: 8px
+
+.catalog__menu
+	background-image: url('../images/wawe.png')
+	background-repeat: no-repeat
+	background-position: 400% 17%
+	position: absolute
+	top: 178px
+	z-index: 99
+	background-color: #fff
+	width: 100%
+	padding-top: 25px
+	display: none
+	.catalog__menu__left
+		margin: 0
+		padding: 0
+		border-right: 1px solid $accent
+		height: 100%
+		li
+			font-family: $futurabook
+			font-size: 16px
+			list-style-type: none
+			text-transform: uppercase
+			line-height: 48px
+			a
+				color: $accent
+	.catalog__menu__right
+		.right__link
+			margin-bottom: 30px
+			.right__title
+				color: $accent
+				font-family: $futurabook
+				font-size: 16px
+				line-height: 25px
+			a
+				display: block
+				color: #000
+				line-height: 30px
+	.gray__block
+		background-color: #dcdcdc
+		height: 3px
+		margin-bottom: 32px
+		.red__block
+			background-color: $accent
+			height: 100%
+			width: 70px
+
+
+.main-banner
+	.main-banner__slider
+		background-image: url('../images/main-bg.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+		padding: 140px 0
+		height: 532px
+	.banner__title
+		font-family: $futuramedium
+		color: #fff
+		font-size: 36px
+		line-height: 48px
+	.banner__btn
+		display: block
+		background-color: $accent
+		width: 177px
+		border-radius: 23px
+		color: #fff
+		text-align: center
+		text-decoration: none
+		height: 46px
+		line-height: 46px
+		font-family: $futuralight
+		font-size: 16px
+		margin-top: 45px
+
+	.custom-dots__wrap
+		position: absolute
+		bottom: 50px
+		z-index: 99
+		.custom-dots
+			color: #fff
+			margin: 0
+			padding: 0
+			user-select: none
+			li
+				display: inline-block
+				cursor: pointer
+				font-family: $futuralight
+				font-size: 15px
+				position: relative
+				margin-right: 33px
+				&::before
+					content: ''
+					display: inline-block
+					background-color: #fff
+					width: 3px
+					height: 3px
+					vertical-align: middle
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					left: 290%
+				&:last-child
+					&::before
+						display: none
+
+			.active
+				border: 1px solid #fff
+				width: 38px
+				height: 38px
+				line-height: 38px
+				text-align: center
+				border-radius: 50%
+				&::before
+					left: 150%
+
+
+.all-title
+	font-family: $futurabook
+	font-size: 36px
+	color: #545454
+	vertical-align: middle
+
+
+.hit__sells__catalog
+	display: none
+
+.tab-block__active
+	display: block
+
+
+.hit-sells
+	padding-top: 70px
+.hit-title
+	&::after
+		content: ''
+		background-color: $accent
+		height: 1px
+		width: 80%
+		display: inline-block
+		top: 50%
+		transform: translateY(-50%)
+		margin-left: 35px
+
+.tabs__block
+	margin-top: 63px
+
+.tabs__arrow
+	display: block
+	border-radius: 50%
+	text-align: center
+	width: 32px
+	height: 32px
+	position: relative
+	background-color: rgba(#d0d0d0, .90)
+	transition: 0.3s ease
+	&:hover
+		background-color: rgba($accent, .90)
+	img
+		width: 7px
+		height: 12px
+		margin-top: 3px
+	
+	
+	img
+		margin-left: 2px
+
+.tabs__wrap
+	.tabs-links
+		margin: 0
+		padding: 0
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		text-align: center
+		&::before
+			content: ''
+			background-color: $accent
+			height: 1px
+			width: 106px
+			display: inline-block
+			margin-right: 5px
+			vertical-align: middle
+		.tabs-active
+			a
+				color: $accent
+
+		li
+			display: inline-block
+			font-family: $futuralight
+			font-size: 18px
+			a
+				margin-right: 30px
+				color: #000
+				text-decoration: none
+				&:hover
+					color: $accent
+
+.catalog__item
+	margin-top: 45px
+	.catalog-photo
+		position: relative
+		background-color: $gray2
+		height: 350px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		overflow: hidden
+		&:hover
+			.catalog__btn__wrap
+				bottom: 0
+	.new
+		position: absolute
+		background-color: $accent
+		color: #fff
+		left: 8px
+		top: 18px
+		width: 76px
+		text-align: center
+		border-radius: 10px
+
+	.catalog__btn__wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		width: 100%
+		position: absolute
+		bottom: -100%
+		transition: 0.2s ease
+		.catalog__btn
+			width: 78%
+			background-color: $accent
+			background-image: url('../images/shopping-cart-white.png')
+			background-repeat: no-repeat
+			background-size: 24px 24px
+			background-position: 25% center
+			height: 45px
+			text-decoration: none
+			color: #fff
+			font-family: $futurabook
+			font-size: 16px
+			line-height: 45px
+			border-radius: 5px
+			padding-left: 88px
+		.add__feature
+			background-image: url('../images/heart-white.png')
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: 24px 21px
+			border-radius: 5px
+			width: 20%
+			background-color: $accent
+			img
+				width: 24px
+				height: 21px
+
+.rating
+	margin: 15px 0
+	a
+		margin-right: 7px
+
+.product__name
+	font-family: $futurabook
+	font-size: 17px
+	margin: 10px 0
+.product__price
+	font-family: $futurademi
+	color: $accent
+	font-size: 18px
+	margin: 28px 0
+
+.show__all
+	text-decoration: underline
+	color: $accent
+	font-family: $futurabook
+	font-size: 20px
+	display: block
+	margin-top: 30px
+	&:hover
+		color: $accent
+
+.new-products
+	padding-top: 70px
+	background-image: url('../images/wawe.png')
+	background-repeat: no-repeat
+	background-position: 322% top
+
+
+.product-catalog
+	padding-top: 70px
+	.catalog__title
+		&::after
+			content: ''
+			background-color: $accent
+			height: 1px
+			width: 73.5%
+			display: inline-block
+			top: 50%
+			transform: translateY(-50%)
+			margin-left: 35px
+	.product-catalog__item
+		padding-top: 40px
+		padding-left: 40px
+		background-color: #f3f3f3
+		height: 248px
+		margin-bottom: 4px
+		border-radius: 5px
+		transition: 0.3s ease
+		&:hover
+			box-shadow: 0px 4px 39.56px 3.44px rgba(116, 116, 116, 0.35)
+
+		.product-catalog__title
+			width: 145px
+			line-height: 30px
+			font-family: $futurabook
+			font-size: 24px
+		a
+			display: flex
+			color: #000
+			font-family: $futurabook
+			font-size: 18px
+			text-decoration: none
+			margin-top: 15px
+
+			.link__bg
+				width: 32px
+				height: 32px
+				border: 1px solid #c2c2c2
+				border-radius: 50%
+				display: inline-block
+				background-image: url('../images/product-catalog-arrow-right.png')
+				background-repeat: no-repeat
+				background-size: 7px 11px
+				background-position: center center
+				margin-left: 24px
+
+
+	.product-catalog__item1
+		background-repeat: no-repeat
+		background-position: 110% bottom
+		background-size: 176px 132px
+
+
+	.product-catalog__item2
+		background-repeat: no-repeat
+		background-position: right bottom
+		background-size: 150px 201px
+
+	.product-catalog__item3
+		background-repeat: no-repeat
+		background-position: 175% 78%
+		background-size: 270px 160px
+
+	.product-catalog__item4
+		background-repeat: no-repeat
+		background-position: 132% 212%
+		background-size: 215px 221px
+
+	.product-catalog__item5
+		height: 100%
+		background-repeat: no-repeat
+		background-position: -141% 141%
+		background-size: 426px 392px
+
+
+.partners
+	padding-top: 70px
+	.partners__title
+		&::after
+			content: ''
+			background-color: $accent
+			height: 1px
+			width: 53%
+			display: inline-block
+			top: 50%
+			transform: translateY(-50%)
+			margin-left: 35px
+
+	.brands
+		background-color: #1f1f1f
+		padding: 74px 0
+		margin-top: 58px
+
+	.brands-arrow
+		border: 1px solid #fff
+		border-radius: 50%
+		width: 32px
+		height: 32px
+		display: block
+		transition: 0.3s ease
+		background-size: 7px 11px
+		&:hover
+			background-color: rgba($accent, .90)
+			border: none
+
+	.brands-arrow__left
+		background-image: url('../images/main-tabs-arrow_left.png')
+		background-repeat: no-repeat
+		background-position: center center
+	.brands-arrow__right
+		background-image: url('../images/main-tabs-arrow_right.png')
+		background-repeat: no-repeat
+		background-position: center center
+
+	.partners-slide
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		.item
+			width: 170px
+			text-align: center
+			a
+				display: inline-block
+				vertical-align: middle
+				img
+					vertical-align: middle
+
+		.owl-stage
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+.clients
+	padding-top: 70px
+	.clients-title-wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+	.clients__title
+		display: flex
+		align-items: center
+		width: 100%
+		&::after
+			content: ''
+			background-color: $accent
+			height: 1px
+			width: 67%
+			display: inline-block
+			top: 50%
+			transform: translateY(-50%)
+			margin-left: 35px
+
+	.clients-arrow__wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 82px
+
+	.clients-arrow
+		background-size: 7px 11px
+		background-color: #d5d5d5
+		border-radius: 50%
+		width: 32px
+		height: 32px
+		display: block
+		transition: 0.3s ease
+		&:hover
+			background-color: rgba($accent, .90)
+
+	.clients-arrow__left
+		background-image: url('../images/main-tabs-arrow_left.png')
+		background-repeat: no-repeat
+		background-position: center center
+	.clients-arrow__right
+		background-image: url('../images/main-tabs-arrow_right.png')
+		background-repeat: no-repeat
+		background-position: center center
+
+	.clients-blocks
+		margin-top: 55px
+		.clients-block
+			position: relative
+			overflow: hidden
+			transition: 0.3s ease
+			&:hover
+				.descr
+					top: 0
+		.descr
+			transition: 0.3s ease
+			color: #fff
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			height: 100%
+			width: 100%
+			background-color: rgba(#131313, .83)
+			position: absolute
+			top: 100%
+			h1
+				font-family: $futurabook
+				font-size: 18px
+
+	.clients__item__left
+		height: 398px
+		background-image: url('../images/clients-1.png')
+		background-position: center center
+		border-radius: 5px
+		background-size: cover
+
+	.clients__item__right
+		height: 196px
+		margin-bottom: 5px
+		border-radius: 5px
+		background-size: cover
+		background-repeat: no-repeat
+
+	.clients__item__right1
+		background-image: url('../images/clients-2.png')
+
+	.clients__item__right2
+		background-image: url('../images/clients-3.png')
+
+	.clients__item__right3
+		background-image: url('../images/clients-4.png')
+
+	.clients__item__right4
+		background-image: url('../images/clients-5.png')
+
+.features
+	margin-top: 70px
+	.features__title
+		&::after
+			content: ''
+			background-color: $accent
+			height: 1px
+			width: 68%
+			display: inline-block
+			top: 50%
+			transform: translateY(-50%)
+			margin-left: 35px
+	.features__item
+		text-align: center
+		margin-top: 61px
+		.features__img
+			height: 75px
+		h3
+			text-transform: uppercase
+			font-family: $futuramedium
+			font-size: 16px
+			margin: 28px 0
+		p
+			width: 292px
+			margin: 0 auto
+			font-family: $futurabook
+			font-size: 16px
+			color: #000
+
+	.main-arrow__up
+		background-image: url('../images/red-arrow-up.png')
+		background-size: 11px 7px
+		background-color: #fff
+		border: 1px solid #b8b8b8
+		border-radius: 50%
+		background-repeat: no-repeat
+		background-position: center center
+		width: 53px
+		height: 53px
+		display: block
+		transition: 0.3s ease
+		margin-left: auto
+		margin-top: 46px
+		margin-bottom: 20px
+		&:hover
+			background-image: url('../images/white-arrow-up.png')
+			background-color: rgba($accent, .90)
+
+
+.footer
+	background-color: #1f1f1f
+	padding-top: 40px
+	.footer-logo
+		img
+			width: 210px
+	.footer__menu
+		ul
+			padding: 0
+			margin: 0
+			li
+				list-style-type: none
+				line-height: 30px
+				font-family: $futurabook
+				font-size: 14px
+				a
+					color: #fff
+	.footer__address
+		ul
+			padding: 0
+			margin: 0
+			li
+				list-style-type: none
+				line-height: 30px
+				font-family: $futurabook
+				font-size: 14px
+				color: #fff
+	.footer__right
+		.footer__right__text
+			color: #fff
+			line-height: 30px
+			font-family: $futurabook
+			font-size: 14px
+		.footer__right__search
+			position: relative
+			width: 232px
+			input
+				width: 100%
+				background-color: #fff
+				border: none
+				height: 28px
+				padding-left: 28px
+				border-radius: 14px
+			.footer__right__search__btn
+				background-image: url('../images/main-tabs-arrow_right.png')
+				background-size: 7px 11px
+				background-repeat: no-repeat
+				background-position: center center
+				display: block
+				border-radius: 50%
+				width: 28px
+				height: 28px
+				background-color: $accent
+				border: none
+				cursor: pointer
+				position: absolute
+				top: 0
+				right: 0
+				&:hover
+					background-color: #cc7a36
+
+	.footer-top
+		padding-bottom: 24px
+	
+	.footer-bottom
+		border-top: 1px solid #fff
+		padding: 28px 0
+
+	.footer-social__icons
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		height: 100%
+		a
+			display: inline-block
+	.footer__copyright
+		color: #afafaf
+		font-family: $futuralight
+		font-size: 14px
+		margin: 0
+	.footer__by
+		text-decoration-color: #afafaf
+
+/* main responsive */ 
+
+@media screen and (max-width: 1148px)
+	.all-title
+		&::after
+			margin-left: 0 !important
+			width: 100% !important
+
+@media screen and (max-width: 1164px)
+	.tabs__wrap 
+		.tabs-links
+			&::before
+				display: none
+
+@media screen and (max-width: 1097px)
+	.catalog__menu
+		top: 13.1rem
+
+@media screen and (max-width: 992px)
+	.hamburger
+		display: block
+	.catalog__menu
+		top: 15rem
+	.header-top
+		padding: 20px 50px
+		padding-top: 48px
+		background-color: #000
+		position: fixed
+		right: -100%
+		z-index: 99
+		height: 100%
+		overflow-y: auto
+		transition: 0.3s ease
+		.aic
+			flex-direction: column
+			align-items: flex-start
+
+		.header-top__loc
+			margin: 20px 0
+			text-align: left
+
+		.header-top__phone
+			margin-bottom: 20px
+
+		.header-top__menu
+			ul
+				flex-direction: column
+				li
+					line-height: 3
+
+		.header-top__sign
+			margin-top: 20px
+
+		.heart,
+		.product-cart
+			display: block
+			margin: 0
+		.heart
+			margin: 20px 0
+
+	.header-top__active
+		right: 0
+
+	.header-bottom
+		flex-direction: column
+		align-items: flex-start
+
+		.logo
+			margin-bottom: 25px
+
+		.catalog__btn
+			order: 1
+			margin-top: 25px
+
+		.heart,
+		.product-cart
+			display: none
+
+		.search
+			margin-right: 26px
+			width: 100%
+			max-width: none
+
+	.close
+		display: block
+		position: absolute
+		top: 25px
+		right: 25px
+		width: 20px
+		height: 20px
+		img
+			width: 100%
+			height: 100%
+
+@media screen and (max-width: 768px)
+	.product-catalog__wrap
+		.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8,
+			padding-right: 15px !important
+
+	.footer
+		text-align: center
+		.footer-social__icons
+			margin: 25px 0
+			justify-content: space-around
+		.icons__responsive
+			margin: 0 auto
+		.footer__right__search
+			margin: 0 auto
+
+	.hit-sells,
+	.new-products
+		.catalog__btn__wrap
+			bottom: 0
+			.catalog__btn
+				text-align: center
+				padding-left: 0
+				background-position: 90% center
+
+	.clients
+		.custom-pl-0
+			padding-left: 15px
+		.custom-pr-0
+			padding-right: 15px
+		.clients__item__left
+			margin-bottom: 5px
+		.descr
+			position: static !important
+
+	.product-catalog
+		.product-catalog__item1,
+		.product-catalog__item2,
+		.product-catalog__item3,
+		.product-catalog__item4,
+		.product-catalog__item5
+			background-position: 90%
+		.product-catalog__item5
+			height: 248px
+			background-size: 250px 270px
+
+@media screen and (max-width: 582px)
+	.main-banner
+		.custom-dots__wrap
+			bottom: 0
+
+@media screen and (max-width: 436px)
+	.main-banner
+		.custom-dots__wrap
+			bottom: -3rem
+
+@media screen and (max-width: 345px)
+	.main-banner
+		.main-banner__slider
+			height: 600px
+		.custom-dots__wrap
+			bottom: -6rem
+/* main responsive end */ 

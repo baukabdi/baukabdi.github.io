@@ -1,0 +1,5505 @@
+@import 'fonts'
+@import 'vars'
+@import 'spec'
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	transition: 0.8s ease-out
+	background-color: $greenish-blue-bg
+	z-index: 9999
+	> 
+		div
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 100%
+			padding-left: 35px
+			padding-right: 35px
+			img
+				max-width: 280px
+				width: 100%
+
+.preloader_active
+	transform: translateY(-100%)
+	opacity: 0
+
+/*--------- Header START ---------*/
+.header_top
+	background-color: $header-top-color
+	padding: 14px 0
+	.header_top_ul
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		margin: 0
+		padding: 0 10px
+		>
+			li
+				display: flex
+				align-items: center
+				color: $dark-silver
+				&:nth-last-child(n+2)
+					a
+						margin-right: 30px
+				a	
+					font-family: $poppins-medium
+					font-size: 13px
+					transition: 0.3s ease
+					color: #374445
+					&:hover
+						color: $persian-green
+						svg
+							path
+								fill: $persian-green
+					>			
+						svg
+							max-width: 14px
+							max-height: 14px
+							margin-right: 4px
+							margin-top: -3px
+							path
+								fill: $pale-blue
+								transition: 0.3s ease
+
+.profile_dropdown
+	position: absolute
+	max-width: 344px
+	width: 100%
+	border-radius: $bd-radius
+	box-shadow: 0px 12px 17.04px 6.96px rgba(19, 19, 20, 0.14)
+	background-color: #fff
+	z-index: 100
+	top: 0
+	right: 0
+	padding-top: 25px
+	overflow: hidden
+	ul
+		list-style-type: none
+		padding: 0
+		>
+			li
+				display: flex
+				align-items: center
+				.user_icon
+					width: 35px
+					height: 35px
+					background-image: url('../images/user-icon.svg')
+					background-repeat: no-repeat
+					background-position: center center
+					background-size: 26px
+					overflow: hidden
+					border-radius: 50%
+					img
+						width: 100%
+				a
+					font-family: $poppins-semibold
+					font-size: 14px
+					display: flex
+					justify-content: space-between
+					width: 100%
+					span
+						transition: none
+					&:hover
+						color: $persian-green
+						svg
+							path
+								fill: $persian-green
+				*
+					transition: 0.3s ease
+				.pd_close
+					position: relative
+					padding: 0
+					display: block
+					width: 30px
+					height: 30px
+					margin-left: auto
+					cursor: pointer
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: 0
+						width: 12px
+						height: 2px
+						background-color: #a7a7a7
+				.right
+					color: #949699
+				&:first-child
+					color: $persian-green
+					font-family: $poppins-bold
+					font-size: 15px
+					margin-bottom: 20px
+					padding-bottom: 20px
+					padding-left: 25px
+					padding-right: 25px
+					border-bottom: 5px solid #f8f8f8
+					svg
+						width: 26px
+						height: 27px
+						path
+							fill: $persian-green
+				&:nth-last-child(n+3)
+					a
+						border-bottom: 5px solid #f8f8f8
+						padding-bottom: 20px
+				&:nth-last-child(n+2)
+					a
+						margin-bottom: 20px
+						padding-left: 25px
+						padding-right: 25px
+				svg
+					max-width: 26px
+					max-height: 28px
+				span
+					&:first-child
+						margin-right: 12px
+			.off_button
+				a
+					background-color: #f8f8f8
+					padding: 22px 0
+					color: $red
+					text-align: center
+					font-size: 14px
+					display: block
+					font-family: $poppins
+					&:hover
+						background-color: $persian-green
+						color: #fff
+
+.header_navbar
+	background-color: #fff
+	position: relative
+	.logo
+		transition: 0.4s ease-out
+		&:hover
+			opacity: 0.7
+		img
+			max-width: 180px
+			width: 100%
+
+	.header_menu
+		display: flex
+		li
+			display: inline-block
+			color: $black
+			&:nth-last-child(n+2)
+				a
+					margin-right: 45px
+			.open_header_menu
+				display: none
+				cursor: pointer
+				img
+					height: 10px
+			a
+				font-family: $poppins-bold
+				font-size: 15px
+				padding: 30px 0 30px 0
+				display: block
+				position: relative
+				text-decoration: none
+				transition: 0.3s ease-out
+				&:hover
+					color: $persian-green
+				&::after
+					content: ''
+					display: block
+					width: 48px
+					height: 22px
+					background-image: url('../images/menu-triangle.png')
+					position: absolute
+					bottom: -5px
+					left: 50%
+					transform: translateX(-80%)
+					visibility: hidden
+					opacity: 0
+					z-index: 13
+					transition: 0.5s ease
+		.menu_list_active
+			a
+				&::after
+					transform: translateX(-50%)
+					visibility: visible
+					opacity: 1
+					
+		.submenu
+			position: absolute
+			left: 0
+			top: 100%
+			width: 100%
+			z-index: 12
+			background-color: #fff
+			padding-left: 15px
+			padding-top: 35px
+			transition: 0.5s ease
+			transform: translateY(40px)
+			opacity: 0
+			visibility: hidden
+			box-shadow: 0px 6px 14.4px 1.6px rgba(19, 19, 20, 0.05)
+			border-top: 5px solid #00aba7
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				background-color: #fff
+				left: -100%
+				top: 0
+				width: 100%
+				height: 100%
+				box-shadow: 0px 6px 14.4px 1.6px rgba(19, 19, 20, 0.05)
+				z-index: -1
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				background-color: #fff
+				right: -100%
+				top: 0
+				width: 100%
+				height: 100%
+				box-shadow: 0px 6px 14.4px 1.6px rgba(19, 19, 20, 0.05)
+				z-index: -1
+			.left
+				display: flex
+				flex-wrap: wrap
+				border-bottom: 1px solid #eeeeee
+				margin-bottom: 40px
+				.submenu_list_wrap
+					margin-bottom: 25px
+			h4
+				font-size: 14px
+				font-family: Arial
+				font-weight: 700
+				color: $black
+				margin-bottom: 20px
+			li
+				vertical-align: top
+				margin-right: 50px
+			.submenu_row
+				display: flex
+				justify-content: space-between
+				z-index: 0
+				*
+					z-index: 1
+				&::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					background-color: #fff
+					top: 0
+					left: 0
+					display: block
+				.right
+					border-radius: $bd-radius
+					overflow: hidden
+					height: 100%
+			.submenu_partners
+				a
+					display: inline-block
+					transition: 0.3s ease
+					padding-top: 0
+					margin-right: 30px
+					&:hover
+						opacity: .7
+					img
+						max-width: 70px	
+					&::before,
+					&::after
+						display: none
+			ul
+				padding: 0
+				li
+					display: block
+					margin-right: 0
+					a
+						font-size: 14px
+						font-family: $poppins
+						padding: 0
+						padding-bottom: 8.3px
+						&::before,
+						&::after
+							display: none
+	.header_elements_column
+		display: flex
+		align-items: center
+	.header_elements
+		padding: 0 10px 0 0
+		display: flex
+		justify-content: space-between
+		margin-left: auto
+		li
+			display: inline-block
+			&:nth-last-child(n+3)
+				margin-right: 34px						
+			a
+				transition: 0.3s ease-out
+				border-bottom: 1px solid transparent
+				&:hover
+					svg
+						path
+							fill: $persian-green
+		svg
+			max-width: 31px
+			path
+				fill: #949699
+				transition: 0.3s ease
+		img
+			width: 28px
+
+.shopping_card_opened
+	position: absolute
+	background-color: #fff
+	top: 0
+	right: 0
+	z-index: 100
+	padding: 25px 25px
+	border-radius: $bd-radius
+	box-shadow: 0px 12px 17.04px 6.96px rgba(19, 19, 20, 0.14)
+	max-width: 345px
+	width: 100%
+	li
+		display: flex
+		a
+			border-radius: none
+			padding: 0
+	.shopping_card_price
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		padding-bottom: 20px
+		border-bottom: 5px solid #f8f8f8
+		.left
+			p
+				font-family: $poppins-medium
+				font-size: 15px
+				color: #a5a5a5
+				margin-bottom: 0
+				.bold
+					font-family: $poppins-bold
+					color: $persian-green
+					margin-right: 5px
+				svg
+					margin-right: 12px
+					vertical-align: top
+					path
+						fill: $persian-green
+		.right
+			.cr_close
+				position: relative
+				padding: 0
+				display: block
+				width: 30px
+				height: 30px
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					right: 0
+					width: 12px
+					height: 2px
+					background-color: #a7a7a7
+.shopping_card_list
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 10px
+	margin-right: 0 !important
+	border-bottom: 5px solid #f8f8f8
+	padding-bottom: 20px
+	.right
+		a
+			padding: 0
+			&:hover
+				svg
+					path
+						fill: $red
+		svg
+			min-width: 12px
+			max-width: 12px
+			path
+				transition: 0.2s ease
+
+.shopping_card_show_all
+	color: $greenish-blue
+	justify-content: center
+	text-align: center
+	font-size: 15px
+	margin-top: 10px
+
+.shopping_card_button
+	.add_cart
+		border-radius: $bd-radius
+		background-color: $greenish-blue
+		max-width: 100%
+		margin-top: 15px
+		height: auto
+		padding: 14px 0
+		&:hover
+			background-color: $persian-green
+		svg
+			width: 25px
+			margin-right: 11px
+			display: inline-block
+			path
+				fill: #fff
+
+
+.lang_button
+	.dropdown
+		button
+			background: none
+			border: none
+			outline: none
+			color: #374445
+			font-size: 13px
+			padding: 0
+			margin-right: 30px
+			z-index: 3
+			position: relative
+			svg
+				margin-right: 8px
+				max-width: 18px
+				max-height: 18px
+				path
+					fill: #949699
+					transition: 0.3s ease
+			&:hover
+				svg
+					path
+						fill: $persian-green
+		.dropdown-menu
+			transform: none !important
+			z-index: 2
+			border-radius: 0 0 $bd-radius $bd-radius
+			padding-top: 50px
+			top: -16px !important
+			left: -20px !important
+			padding-bottom: 0
+			overflow: hidden
+			.dropdown-item
+				display: flex
+				align-items: center
+			a
+				padding: 10px 25px
+				transition: background 0.3s ease
+				&:first-child
+					border-top: 2px solid transparent
+					position: relative
+					&::before
+						content: ''
+						display: block
+						width: 0
+						height: 1px
+						position: absolute
+						top: -2px
+						left: 50%
+						transform: translateX(-50%)
+						background-color: #dadada
+				&:last-child
+					padding-bottom: 15px
+				&:hover
+					background-color: $persian-green
+					color: #fff
+				&:active,
+				&:focus
+					background-color: $persian-green
+					color: #fff
+	.flag_icon
+		display: inline-block
+		width: 18px
+		line-height: 0
+		margin-right: 8px
+		img
+			width: 100%
+	
+	.dropdown_opened
+		.dropdown-menu
+			a
+				&:first-child
+					&::before
+						width: 100%
+						transition: 0.3s ease
+
+.header_menu_overlay
+	&::before
+		content: ''
+		position: absolute
+		right: 0
+		top: 0
+		width: 82%
+		height: 100%
+		background-color: #fff
+		display: block
+		z-index: 1
+
+.submenu_close
+	position: absolute
+	top: auto
+	margin-top: 20px
+	right: 40px
+	z-index: 13
+	&:hover
+		img
+			transform: scale(1.3)
+	img
+		width: 11px
+		transition: 0.2s ease
+		cursor: pointer
+
+.submenu_close_active
+	display: block
+
+
+.search_opened
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 13
+	background-color: rgba(#fff, .8)
+	border-radius: $bd-radius $bd-radius 0 0
+	border-color: #dbdbdb
+	width: 100%
+	max-width: 885px
+	padding-left: 230px
+	transition: 0.5s ease
+	form
+		display: flex
+		justify-content: space-between
+		width: 100%
+		height: 100%
+		margin-left: auto
+		margin-right: auto
+		border-radius: $bd-radius $bd-radius 0 0
+	input
+		border: none
+		font-size: 30px
+		font-family: $poppins-light
+		width: 88%
+		color: $dark-silver
+		background: transparent
+	[placeholder]
+		color: #000
+	button
+		background: none
+		border: none
+		width: 12%
+		outline: none
+		img,
+		svg
+			width: 35px
+			height: auto
+	.search_opened_hints
+		position: absolute
+		left: 0
+		top: 100%
+		width: 100%
+		background: #fff
+		border-radius: 0 0 $bd-radius $bd-radius
+		.sr_row
+			display: flex
+			padding: 0 0 0 30px
+			border-top: 5px solid #f8f8f8
+			border-radius: 0 0 $bd-radius $bd-radius
+			box-shadow: 0px 3px 6.51px 0.49px rgba(19, 19, 20, 0.07)
+			.sr_left
+				border-right: 5px solid #f8f8f8
+				padding: 20px 0 28px 0
+				width: 50%
+				ul
+					padding: 0
+					list-style-type: none
+					li
+						a
+							font-family: $poppins-light
+							font-size: 18px
+							color: #a5a5a5
+							margin-bottom: 10px
+							display: inline-block
+							&:hover
+								color: $persian-green
+			.sr_right
+				width: 50%
+				padding: 20px 35px 66px 28px
+				position: relative
+				.sr_products
+					&:nth-last-child(n+2)
+						margin-bottom: 15px
+				.more_results
+					position: absolute
+					bottom: 0
+					right: 0
+					display: block
+					background-color: #f8f8f8
+					color: $greenish-blue
+					width: 100%
+					padding: 21px 0 21px 34px
+					transition: 0.3s ease
+					border-radius: 0 0 $bd-radius 0
+					&:hover
+						color: #fff
+						background-color: $persian-green
+
+.search_active
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 15
+	background-color: #fff
+	border: 1px solid #dbdbdb
+	transition: 0.5s ease
+	border-radius: $bd-radius $bd-radius 0 0
+	width: 100%
+	max-width: 885px
+	padding-left: 30px
+
+.search_close
+	position: absolute
+	right: 40px
+	top: 0
+	cursor: pointer
+	z-index: 15
+	img
+		width: 11px
+		position: absolute
+		@include tl-50
+
+.sr_products
+	display: flex
+	.discount
+		position: absolute
+		left: -10px
+		top: 0
+		width: 40px
+		height: 40px
+		font-size: 12px
+	.cr_thumb
+		position: relative
+		padding-left: 12px
+		padding-top: 12px
+		margin-right: 18px
+		img
+			width: auto !important
+			max-height: 65px
+	.cr_title_price
+		.cr_title
+			font-size: 14px
+			font-family: $poppins-semibold
+			line-height: 1.5
+			margin-top: 8px
+			margin-bottom: 0
+			display: block
+		.cr_price
+			font-size: 14px
+			font-family: $poppins-bold
+			color: $red
+			del
+				margin-right: 10px
+				color: #a5a5a5
+
+.hamburger_button
+	text-align: right
+	margin-left: 0
+	a
+		outline: none
+		transition: 0.3s ease
+		display: block
+		width: 27px
+		height: 22px
+		margin-left: auto
+		position: relative
+		span
+			display: block
+			width: 100%
+			height: 3px
+			border-radius: 3px
+			background-color: #93979a
+			position: absolute
+			transition: 0.5s ease
+			&:first-child
+				top: 5px
+			&:last-child
+				top: 15px				
+	.active
+		transform: rotate(90deg)
+		span
+			background-color: $persian-green
+
+.pd_open_mobile
+	display: none !important
+
+.header_add_mobile
+	flex-direction: column
+	padding-left: 0
+	padding-left: 28px
+	padding-right: 28px
+	list-style-type: none
+	margin-top: 55px
+	display: none
+	li
+		border-bottom: 5px solid #f8f8f8
+		outline: none
+		.open_header_menu
+			display: inline-block
+		a
+			padding: 15px 5px
+			width: 100%
+			outline: none
+			display: inline-block
+			font-family: $poppins-bold
+			font-size: 15px
+			&::before,
+			&::after
+				display: none
+			&:hover
+				svg
+					path
+						fill: $persian-green
+		.he_icon
+			margin-right: 14px
+			display: inline-block
+			width: 30px
+			text-align: center
+	.submenu
+		top: 54px
+		left: 0
+		padding: 20px
+		border-top: none
+		list-style-type: none
+		position: fixed
+		transform: translateX(-50px)
+		width: 100%
+		height: 100%
+		background-color: #fff
+		visibility: hidden
+		opacity: 0
+		transition: 0.5s ease
+		overflow: auto
+		li
+			a
+				font-family: $poppins
+		.submenu_arrow_back
+			display: flex
+			align-items: center
+			border-width: 2px
+			a
+				font-family: $poppins-medium
+			img
+				width: 10px
+				margin-right: 10px
+
+.header_add_mobile.header_mobile_lang
+	li
+		margin-bottom: 0
+		a
+			display: flex
+			align-items: center
+	.flag_icon
+		width: 15px
+		margin-right: 8px
+		display: inline-block
+		line-height: 0
+		img
+			width: 100%
+			
+
+.submenu_active
+	visibility: visible !important
+	opacity: 1 !important
+	transform: none !important
+
+.submenu_add_active
+	visibility: visible !important
+	opacity: 1 !important
+	transform: none !important
+
+
+.header_mobile_lang
+	li
+		border-bottom: 5px solid #f8f8f8
+		margin-bottom: 60px
+	.he_icon
+		svg,
+		img
+			max-width: 30px
+
+.header_menu_column
+	position: static
+
+/*--------- Header Responsive ---------*/
+@media screen and(max-width: 1200px)
+	.search_close
+		top: 0
+		right: 0
+		height: 100%
+		width: 8%
+
+
+@media screen and(max-width: 1100px)
+	.header_navbar 
+		.header_elements
+			padding: 0
+
+@media screen and(max-width: 1130px)
+	.header_navbar
+		.header_menu
+			padding-left: 0
+		.header_elements 
+			li
+				&:nth-last-child(n+2)
+					margin-right: 20px
+
+
+@media screen and(max-width: 992px)
+	.header_menu_overlay
+		&::before
+			display: none
+	.logo_column
+		max-width: none
+	.hamburger_button
+		max-width: none
+	.header_add_mobile
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	.header_row
+		padding: 8px 0
+		flex-wrap: nowrap
+	.header_navbar
+		background-color: #f8f8f8
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 99
+		.logo
+			img
+				max-width: 125px
+		.header_elements_column
+			padding-right: 0
+			margin-left: auto
+			max-width: none
+			width: auto
+			flex: inherit
+		.header_elements
+			.viewed_button,
+			.favourite_button
+				display: none
+	.pd_open_mobile
+		display: inline-block !important
+	.header_top
+		display: none
+	.search_opened
+		padding-right: 50px
+		background-color: #fff
+		padding-left: 25px
+		.search_opened_hints
+			left: -1px
+			width: 100.5%
+			.sr_row
+				padding: 0
+				.sr_right
+					display: none
+				.sr_left
+					border: none
+					border-radius: none
+					width: 100%
+					padding: 20px 20px 28px 20px
+	.search_close
+		background-color: #fff
+	.header_row
+		padding: 15px 0
+	.header_menu_column
+		padding-top: 25px
+		position: fixed
+		background: #fff
+		box-shadow: 0px 2px 4.65px 0.35px rgba(0, 0, 0, 0.21)
+		top: 57px
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 13
+		overflow-y: auto
+		>
+			ul
+				&:last-child
+					margin-bottom: 120px
+	.header_navbar 
+		.header_menu
+			flex-direction: column
+			padding-left: 0
+			padding-left: 28px
+			padding-right: 28px
+			.menu_list_stocks
+				display: none
+			li
+				border-bottom: 5px solid #f8f8f8
+				outline: none
+				.open_header_menu
+					display: inline-block
+				a
+					padding: 15px 5px
+					width: 100%
+					outline: none
+					display: inline-block
+					margin-right: 0 !important
+					&::before,
+					&::after
+						display: none
+			.submenu
+				top: 0
+				padding: 20px
+				border-top: none
+				overflow-y: auto
+				overflow-x: hidden
+				position: fixed
+				height: 100%
+				top: 57px
+				.submenu_row
+					.left
+						flex-direction: column
+						width: 100%
+						.submenu_list_wrap
+							border-bottom: 0
+						li
+							margin-right: 0
+							a
+								padding: 10px 0
+							ul
+								margin-bottom: 25px
+					.right
+						display: none
+				.submenu_partners
+					display: none
+	.submenu_close
+		right: 20px
+
+	.has-submenu
+		background-image: url('../images/open-header-menu.svg')
+		background-repeat: no-repeat
+		background-position: 99% center
+		background-size: 10px
+
+	.shopping_card_opened,
+	.profile_dropdown
+		top: -56px
+
+
+
+@media screen and(max-width: 768px)
+	.search_close
+		background: none
+
+// @media screen and(max-width: 575px)
+// 	.search_opened,
+// 	.search_close
+// 		top: 50%
+// 		height: 50%
+// 	.search_opened
+// 		padding-right: 60px
+// 	.search_close
+// 		min-width: 50px
+	
+
+@media screen and(max-width: 480px)
+	.header_top 
+		ul
+			justify-content: space-between
+			li
+				a
+					img,
+					svg
+						width: 20px
+				span
+					display: none
+	.search_opened
+		input
+			font-size: 24px
+		button 
+			img,
+			svg
+				width: 25px
+		.search_opened_hints
+			.sr_row 
+				.sr_left 
+					ul 
+						li 
+							a
+								font-size: 16px
+	.search_close
+		min-width: 45px
+
+
+@media screen and(max-width: 400px)
+	.header_navbar 
+		.header_menu
+			padding: 0
+	.header_add_mobile
+		padding: 0
+/*--------- Header END ---------*/
+
+
+/*--------- Main Banner START ---------*/
+.main_banner
+	overflow: hidden
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		width: 100%
+		height: 5px
+		background-color: $persian-green
+	.main_banner_wrapper
+		.slick-list
+			*
+				z-index: 2
+				position: relative
+				-moz-user-select: text !important
+	.main_banner_item
+		padding: 267px 0 165px 222px
+		background-size: cover
+		background-position: bottom center
+		position: relative
+		h1
+			color: $accent
+			margin-bottom: 0
+			line-height: 1.13
+		p
+			color: #fff
+			margin-bottom: 20px
+		.banner_button
+			color: #fff
+			padding: 8px 28px
+			border: 1px solid #fff
+			border-radius: $bd-radius
+			font-size: 15px
+			text-decoration: none
+			transition: 0.4s ease-out
+			display: inline-block
+			&:hover
+				background-color: #fff
+				color: $persian-green
+
+	.slick-dots
+		@include slick-dots(#fff, #fff, 48px)
+
+
+/*--------- Main Banner Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-main
+		margin-top: 57.7px
+
+@media screen and(max-width: 768px)
+	.main_banner 
+		.main_banner_item
+			padding: 100px 20px
+			text-align: center
+			h1
+				font-size: 60px
+
+
+@media screen and(max-width: 480px)
+	.main_banner
+		.main_banner_item 
+			h1
+				font-size: 50px
+				line-height: 1
+				margin-bottom: 20px
+			p
+				font-size: 15px
+/*--------- Main Banner END ---------*/
+
+
+/*--------- Products START ---------*/
+.s-products
+	padding: $products-gutter 0
+	.s-products_container
+		max-width: 1230px !important
+		left: 15px
+	.aside_title
+		margin-bottom: 20px
+	.product_list_select
+		display: none
+		margin-top: 25px
+	.product_list_top
+		display: flex
+	.product_list_circle
+		display: flex
+		margin-left: auto
+		padding: 0
+		z-index: 2
+		.dropdown
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 40px !important
+			height: 40px
+			text-decoration: none
+			transition: 0.2s ease-out
+			padding: 0
+			outline: none
+			position: relative
+			z-index: 1
+			&:nth-last-child(n+2)
+				margin-right: 12px
+			&:active,
+			&:focus
+				outline: none !important
+			&:hover
+				border-color: $persian-green
+			button
+				border-radius: 50%
+				width: 100%
+				height: 100%
+				outline: none !important
+				background-color: #fff
+				padding: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				color: $black
+				border: none
+				position: relative
+				border: 5px solid #f1f1f1
+				z-index: 1
+				&:active,
+				&:focus
+					outline: none !important
+					box-shadow: none
+					border-color: $persian-green
+				&::after
+					display: none
+				span
+					display: flex
+					align-items: center
+					img
+						max-height: 15px
+			img
+				vertical-align: baseline
+				max-height: 14px
+		.dropdown-menu
+			padding: 0
+			border-radius: $bd-radius
+			overflow: hidden
+			top: -10px !important
+			left: 50% !important
+			transform: translateX(-50%) !important
+			min-width: auto
+			padding-top: 48px
+			z-index: 0
+			.dropdown-item
+				padding: 5px 18px
+				&:last-child
+					padding-bottom: 15px
+
+
+	.products_list_title
+		font-size: 36px
+		font-family: $poppins-bold
+		color: $greenish-blue
+		margin-bottom: 40px
+	.product_partners
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding-left: 0
+		li
+			display: inline-block
+			margin-right: 30px
+			margin-bottom: 30px
+			img
+				max-width: 55px
+				width: 100%
+	.column_left
+		max-width: 22%
+	.column_right
+		max-width: 78%
+	.products_sidebar
+		padding-top: $sidebar-left-title
+	.products_list
+		padding-left: 85px
+		list-style-type: none
+		li
+			white-space: nowrap
+			a
+				font-size: 14px
+				text-decoration: none
+				margin-bottom: 5px
+				display: inline-block
+		.active
+			color: $persian-green
+	.product_cart_slider
+		.slick-slide
+			>
+				div
+					display: flex
+					justify-content: space-between
+					flex-wrap: wrap
+					&:nth-child(1)
+						padding: 20px 20px 0 20px
+					padding: 0 20px 20px 20px
+
+	.slick-dots-container
+		padding: 0 25px
+		.slick-dots
+			display: flex !important
+			flex-wrap: wrap
+			justify-content: center
+			&:nth-child(n+2)
+				display: none !important
+	.products_cart
+		position: relative
+		text-align: center
+		transition: 0.3s ease-out
+		padding: 20px
+		border-radius: $bd-radius
+		overflow: hidden
+		width: 32% !important
+		&:nth-child(3n+3)
+			margin-right: 0
+		&:hover
+			box-shadow: 5px 0 20px 5px rgba(0,0,0,.1)
+			.quantity_cart
+				.quantity,
+				.add_cart
+					transform: none
+		.products_thumb
+			height: 200px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		
+		.products_favourite
+			position: absolute
+			right: 0
+			top: 0
+
+		.products_cart_top
+			position: relative
+			padding-top: 24px
+			padding-bottom: 18px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			img
+				max-height: 220px
+		.top_row
+			display: flex
+			justify-content: space-between
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+		.products_discount
+			font-size: 14px
+			color: #fff
+			width: 55px
+			height: 55px
+			border-radius: 50%
+			font-family: $poppins-bold
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+		.product_descr
+			.top
+				text-align: left
+			.product_title
+				font-size: 17px
+				font-family: $poppins-bold
+				text-align: left
+				color: $black
+				line-height: 1.2
+				display: inline
+				text-decoration: none
+				transition: 0.3s ease
+				&:hover
+					color: $persian-green
+
+		.price
+			font-size: 11px
+			text-align: left
+			font-family: $poppins
+			display: flex
+			align-items: center
+			.price_accent
+				font-size: 25px
+				font-family: $poppins-bold
+				margin-left: 5px
+				margin-right: 11px
+			del
+				color: #a5a5a5
+				font-size: 18px
+				font-family: $poppins-bold
+
+		.quantity_cart
+			display: flex
+			justify-content: space-between
+			padding-top: 14px
+			transition: 0.3s ease
+		.quantity
+			transform: translateX(-130%)
+		.add_cart
+			transform: translateX(130%)
+	.products_banner
+		padding: 0
+		a
+			display: block
+			img
+				height: 100%
+				margin-left: 50%
+				transform: translateX(-50%)
+
+	.banner_adversting
+		padding: 0
+		img
+			height: 100%
+	.s-products-bottom
+		display: flex
+		justify-content: center
+		align-items: center
+	.slick-dots
+		@include slick-dots($greenish-blue, $persian-green, 0)
+		position: static
+		transform: none
+	.cat_link
+		font-size: 15px
+		color: $greenish-blue-bg
+		transition: color 0.2s ease-out
+		&:hover
+			color: $persian-green
+
+	.product_description
+		margin-bottom: 50px
+		.more_info
+			display: none
+		.product_text_opened
+			.more_dots
+				display: none
+			.more_info
+				display: inline
+			.more_info_button
+				&:hover
+					background-color: $persian-green
+
+.s-products-last
+	padding-bottom: 180px
+
+.s-products-title-image
+	padding-top: 100px
+
+.s-products-lists
+	position: relative
+	.product_cart_slider
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	.products_cart
+		margin-bottom: 25px
+	.column_left
+		position: static
+
+.filter_top_wrapper
+	background-color: #f8f8f8
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	color: #696969
+	font-size: 14px
+	z-index: 13
+	.filter_top_wrapper_row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 8px !important
+		padding-bottom: 8px !important
+		.filter_top_left
+			text-align: left
+			a
+				white-space: nowrap
+				text-overflow: ellipsis
+		.filter_top_center
+			text-align: center
+		.filter_top_right
+			text-align: right
+			display: flex
+			justify-content: flex-end
+			align-items: center
+					
+		a
+			font-size: 14px
+			&:hover
+				svg
+					path
+						fill: $persian-green
+		.back_home_link
+			svg
+				margin-right: 10px
+		svg
+			max-height: 40px
+			max-width: 40px
+			path
+				fill: #696969
+		.filter_button_active
+			svg
+				path
+					fill: $persian-green
+		.filter_fill
+			transition: 0.5s ease
+			transform: translateX(100%)
+		.filter_fill_active
+			transform: none
+		.filter_unfill
+			transition: 0.5s ease
+		.filter_unfill_active
+			transform: translateY(100%)
+
+		.view_button_wrap
+			display: flex
+			.view_button_item
+				position: relative
+				width: 22px
+				height: 22px
+				display: block
+				margin-right: 10px
+				a
+					&:hover
+						svg
+							path,
+							rect
+								fill: $persian-green
+				svg
+					position: absolute
+					left: 0
+					top: 0
+					transition: 0.5s ease
+					path
+						stroke: #696969
+						stroke-width: 10px
+						fill: transparent
+					rect
+						transition: 0.5s ease
+						fill: #696969
+			.view_button_active
+				svg
+					path,
+					rect
+						fill: $persian-green
+						stroke: $persian-green
+
+.products_filter_wrapper_fixed
+	position: fixed !important
+	.products_filter_wrapper_inner
+		margin-bottom: 150px
+
+
+.filter_mobile_title
+	font-size: 24px
+	font-family: $poppins-bold
+	color: $greenish-blue
+	margin-top: 25px
+	display: none
+/*--------- Products Responsive ---------*/
+@media screen and(max-width: 1200px)
+	.s-products
+		display: flex
+		padding-bottom: 0
+		.s-products_container
+			left: 0
+			max-width: 1200px !important
+		.products_cart
+			width: 48.5% !important
+			margin-bottom: 22px
+			&:hover
+				box-shadow: none
+			.quantity_cart 
+				.quantity,
+				.add_cart
+					transform: none
+				.quantity
+					max-width: 120px
+		.products_sidebar
+			padding-top: 0
+		.product_cart_slider 
+			.slick-slide 
+				> 
+					div
+						padding: 0 !important
+	.s-products-last
+		padding-bottom: 80px
+	.s-products-title-image
+		padding-top: 80px
+
+@media screen and(max-width: 768px)
+	.filter_top_wrapper
+		display: block !important
+	.rotate_title
+		writing-mode: horizontal-tb
+		transform: none
+		position: static
+		margin-bottom: 10px
+		img
+			transform: none
+			position: static
+	.s-products
+		padding-top: 80px
+		.products_list
+			display: none
+			a
+				margin-right: 15px
+		.product_list_select
+			display: block
+		.products_cart 
+			.quantity_cart
+				.quantity,
+				.add_cart
+					max-width: 50%
+				.quantity
+					max-width: 40%
+				.add_cart
+					max-width: 60%
+		.product_list_top 
+			.product_list_circle
+				display: none !important
+				
+	
+		.column_left,
+		.column_right
+			max-width: 100%
+		.slider-container
+			padding: 0 15px 0 5px
+
+	.s-products-has-slider
+		.column_right
+			padding: 0
+	
+	.s-products-lists
+		.products_filter_wrapper
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			overflow-y: auto
+			z-index: 15
+			background-color: #fff
+			padding: 0 20px
+			transform: translateX(100%)
+			transition: 0.5s ease
+			opacity: 0
+		.products_filter_fixed
+			top: 55px
+			position: fixed
+
+		.filter_wrapper_opened
+			transform: none
+			opacity: 1
+		.product_list_circle
+			z-index: 11
+			position: relative
+			margin-top: 35px
+			display: flex !important
+	.filter_mobile_title
+		display: block
+
+@media screen and(max-width: 575px)
+	.s-products
+		.products_cart
+			width: 100% !important
+			margin-right: 0
+		.products_banner 
+			a 
+				img
+					margin-left: 0
+					width: 100%
+					height: auto
+					transform: none
+	.filter_top_wrapper 
+		.filter_top_wrapper_row 
+			.view_button_wrap
+				display: none
+
+@media screen and(max-width: 480px)
+	.rotate_title
+		text-align: center
+	.s-products 
+		.products_list
+			flex-direction: column
+			text-align: center
+		.product_list_top
+			flex-direction: column
+			align-items: center
+			.products_list_title
+				margin-bottom: 25px
+				text-align: center
+			.product_list_circle
+				margin-left: 0
+				margin-bottom: 25px
+		.s-products-bottom
+			flex-direction: column
+			.slick-dots-container
+				margin-bottom: 15px
+				margin-right: 0
+		.product_partners
+			justify-content: center
+			li
+				margin-right: 25px
+
+@media screen and(max-width: 370px)
+	.s-products
+		.products_cart 
+			.quantity_cart
+				flex-wrap: wrap
+				.quantity,
+				.add_cart
+					max-width: 100%
+					height: 45px
+				.quantity
+					margin-bottom: 12px
+				.add_cart
+					margin-left: 0
+/*--------- Products END ---------*/
+
+/*--------- Category START ---------*/
+.s-category
+	padding-top: 60px
+	.category_top
+		border-radius: $bd-radius $bd-radius 0 0
+		padding: 185px 7%
+		background-color: $greenish-blue
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: top center
+		margin-bottom: 10px
+		ul
+			display: flex
+			justify-content: space-between
+			padding: 0
+			li
+				display: inline-block
+				padding: 15px
+				a
+					color: #fff
+					font-size: 36px
+					font-family: $poppins-bold
+					text-decoration: none
+					transition: 0.3s ease
+					&:hover
+						color: $persian-green
+						svg
+							path
+								fill: $persian-green
+					svg
+						path
+							transition: 0.3s ease
+				svg
+					height: 50px
+					display: block
+					margin-left: auto
+					margin-right: auto
+					path
+						fill: #fff
+				span
+					display: block
+					padding-top: 8px
+	.category_square_row
+		>
+			div
+				&:nth-child(1)
+					padding-right: 0
+					.category_square
+						border-radius: 0 0 0 $bd-radius
+				&:nth-child(2n)
+					.category_square
+						border-radius: 0 0 $bd-radius 0
+	.category_square
+		padding: 168px 0 140px 0
+		background-color: $greenish-blue
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: top center
+		height: 100%
+		svg
+			max-height: 66px
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 15px
+			path
+				fill: #d0dee3
+		.category_square_title
+			font-size: 72px
+			color: #fff
+			font-family: $poppins-bold
+			text-align: center
+			display: block
+			text-decoration: none
+			transition: 0.3s ease
+			line-height: 1
+			margin-bottom: 12px
+			&:hover
+				color: $persian-green
+		ul
+			padding: 0
+			display: flex
+			justify-content: center
+			li
+				list-style-type: none
+				&:nth-last-child(n+2)
+					a
+						margin-right: 22px
+				a
+					color: #fff
+					font-size: 20px
+					font-family: $poppins-bold
+					text-decoration: none
+					transition: 0.3s ease
+					&:hover
+						color: $persian-green
+
+
+/*--------- Category Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-category 
+		.category_top
+			padding: 185px 20px
+			ul 
+				li 
+					a
+						font-size: 24px
+
+@media screen and(max-width: 768px)
+	.s-category 
+		.category_top
+			padding: 100px 20px
+			ul
+				flex-wrap: wrap
+				li
+					width: 48%
+					text-align: center
+					margin-bottom: 30px
+
+		.category_square_row 
+			> 
+				div:nth-child(1)
+					padding-right: 15px
+					.category_left
+						border-radius: 0
+			.category_left 
+				margin-bottom: 10px
+				padding: 100px 0
+			.category_right
+				border-radius: 0 0 $bd-radius $bd-radius !important
+				padding: 100px 0
+
+@media screen and(max-width: 420px)
+	.s-category 
+		.category_top
+			ul
+				li
+					width: 100%
+		.category_square 
+			.category_square_title
+				font-size: 50px
+			ul 
+				li
+					&:nth-last-child(n+2) 
+						a
+							margin-right: 15px
+					a
+						font-size: 16px
+/*--------- Category END ---------*/
+
+
+/*--------- Partners START ---------*/
+.s-partners
+	margin-top: 65px
+	.partners_row
+		display: flex
+		padding: 0
+		justify-content: space-between
+		list-style-type: none
+		padding-bottom: 65px
+		border-bottom: 5px solid $persian-green
+	a
+		text-align: center
+		display: block
+		width: 100%
+	img
+		max-width: 176px
+		height: 30px
+		transition: 0.3s ease
+		&:hover
+			opacity: .8
+
+
+/*--------- Partners Responsive ---------*/
+@media screen and(max-width: 1024px)
+	.s-partners 
+		.partners_row
+			flex-wrap: wrap
+			justify-content: center
+			padding-bottom: 25px
+			li
+				width: 30%
+				margin-bottom: 35px
+
+
+@media screen and(max-width: 575px)
+	.s-partners 
+		.partners_row
+			justify-content: space-between
+			li
+				width: 48%
+				a
+					img
+						max-width: 100%
+/*--------- Partners END ---------*/
+
+
+
+/*--------- Features START ---------*/
+.s-features
+	padding-bottom: 120px
+	.features_row
+		display: flex
+		justify-content: space-between
+		padding-left: 0
+		padding-top: 52px
+		li
+			list-style-type: none
+			display: flex
+			align-items: center
+			font-family: $poppins-medium
+			font-weight: 500
+			font-size: 14px
+			color: $greenish-blue
+			svg
+				max-width: 66px
+				max-height: 42px
+				margin-right: 10px
+				path
+					fill: $greenish-blue
+
+/*--------- Features Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-features
+		padding-bottom: 25px
+		.features_row
+			flex-wrap: wrap
+			li
+				width: 30%
+				margin-bottom: 35px
+
+@media screen and(max-width: 575px)
+	.s-features
+		.features_row
+			justify-content: center
+			text-align: center
+			li
+				width: 100%
+				flex-direction: column
+				&:last-child
+					margin-bottom: 0
+				img,
+				svg
+					margin-bottom: 20px
+/*--------- Features END ---------*/
+
+
+
+/*--------- Quote START ---------*/
+.s-quote
+	padding: 375px 0
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+
+blockquote
+	color: #fff
+	font-size: 44px
+	font-family: $poppins-bold
+	text-align: center
+	max-width: 700px
+	margin-left: auto
+	margin-right: auto
+	line-height: 1
+	.ssmall_text
+		font-size: 40px
+	.smedium_text
+		font-size: 50px
+	.medium_text
+		font-size: 56px
+	.big_text
+		font-size: 60px
+	.large_text
+		font-size: 72px
+	.quote_author
+		display: block
+		color: $accent
+		margin-top: 18px
+		font-size: 24px
+/*--------- Quote Responsive ---------*/
+@media screen and(max-width: 992px)
+	blockquote
+		.medium_text
+			font-size: 48px
+		.big_text
+			font-size: 52px
+		.large_text
+			font-size: 60px
+		.quote_author
+			font-size: 16px
+
+
+@media screen and(max-width: 768px)
+	.s-quote
+		padding: 180px 0
+		blockquote
+			line-height: 0.9
+			.large_text,
+			.quote_text,
+			.medium_text,
+			.big_text
+				font-size: 36px
+			.quote_author
+				font-size: 22px
+/*--------- Quote END ---------*/
+
+/*--------- Blog section START ---------*/
+.s-blog
+	background-color: $greenish-blue-bg
+	background-image: url('../images/blog-top-circle.png')
+	background-repeat: no-repeat
+	background-size: $circle-width
+	background-position: bottom center
+	color: #fff
+	border-top: 5px solid $persian-green
+	padding-bottom: 244px
+	position: relative
+	z-index: 1
+	.s_blog_title
+		color: $persian-green
+	.blog_logo
+		text-align: center
+		margin-top: 85px
+		img
+			max-width: 510px
+			width: 100%
+	.blog_tabs
+		display: flex
+		justify-content: space-between
+		padding-left: 0
+		padding-top: 55px
+		margin-bottom: 67px
+		max-width: 1060px
+		margin-left: auto
+		margin-right: auto
+		li
+			list-style-type: none
+			a
+				font-family: $poppins-semibold
+				font-size: 18px
+				text-decoration: none
+				transition: 0.2s ease
+		.active
+			a
+				color: $persian-green
+	.blog_tabs_select
+		display: none
+	.blog_cards_row
+		padding-left: 32px
+		padding-right: 32px
+		padding-bottom: 50px
+		a
+			display: block
+			border-radius: $bd-radius
+			transition: 0.3s ease
+			text-decoration: none
+			color: #fff
+			&:hover
+				.blog_thumb
+					&::after
+						opacity: 1
+				h2
+					color: $persian-green
+	.blog_cards_column
+		margin-bottom: 25px
+	.blog_thumb
+		background-color: $persian-green
+		border-radius: $bd-radius
+		position: relative
+		overflow: hidden
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-image: url('../images/blog-card-overlay.png')
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			transition: 0.3s ease
+			opacity: 0
+		img
+			width: 100%
+	.blog_title
+		color: $accent
+		font-size: 18px
+		font-family: $poppins-bold
+		margin-top: 18px
+		line-height: 1.3
+	.blog_descr
+		font-size: 15px
+
+	.blog_blockquote
+		margin-top: 160px
+		blockquote
+			font-size: 72px
+			max-width: 750px
+			line-height: 0.8
+		.quote_author
+			font-size: 0.56em
+			margin-top: 60px
+	.button_custom
+		margin-top: 110px
+		z-index: 1
+		position: relative
+		max-width: 130px
+		transition: 0.3s ease
+		&:hover
+			background-color: $persian-green
+			color: #fff
+
+/*--------- Blog section Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-blog 
+		.blog_logo
+			margin-top: 50px
+		.blog_tabs
+			flex-wrap: wrap
+			justify-content: center
+			li
+				margin-right: 25px
+		.blog_cards_row
+			justify-content: center
+		.blog_cards_column
+			display: block !important
+			margin: 0 auto !important
+
+@media screen and(max-width: 575px)
+	.s-blog
+		.blog_tabs
+			display: none
+		.blog_logo
+			margin-bottom: 35px
+			img
+				max-width: 70%
+		.blog_tabs_select
+			display: block
+			padding: 0 12px
+		.blog_blockquote 
+			blockquote
+				font-size: 50px
+		.blog_thumb
+			height: 400px
+/*--------- Blog section END ---------*/
+
+
+/*--------- News description START ---------*/
+.s-news_subscription
+	background-color: $persian-green
+	color: #fff
+	padding: 30px 0
+	position: relative
+	z-index: 0
+	overflow: hidden
+	&::before
+		content: ''
+		display: block
+		background-image: url("../images/footer-circle.png")
+		background-size: cover
+		position: absolute
+		top: -21rem
+		left: 50%
+		z-index: 11111
+		height: 1277px
+		width: 1271px
+		background-repeat: no-repeat
+		transform: translateX(-50%)
+		z-index: -1
+	form
+		max-width: 670px
+		margin: 0 auto
+	.ns_title
+		font-size: 24px
+		font-family: $poppins-bold
+		line-height: 1
+		span
+			font-size: 30px
+	.ns_p
+		font-size: 15px
+		font-family: $poppins-medium
+		margin-bottom: 8px
+	.ns_input
+		display: flex
+		justify-content: center
+		input
+			background-color: #c9eeed
+			border-radius: $bd-radius
+			padding: 15px 25px
+			border: none
+			width: 100%
+			font-size: 17px
+		button
+			border-radius: 50%
+			background-color: $greenish-blue
+			border: none
+			min-width: 55px
+			min-height: 55px
+			padding-left: 11px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin-left: 14px
+			transition: 0.3s ease
+			outline: none
+			&:hover
+				background-color: darken($greenish-blue, 5)
+				svg
+					path
+						fill: $persian-green
+			img,
+			svg
+				height: 31px
+			svg
+				path
+					transition: 0.3s ease
+					fill: #fff
+
+
+/*--------- News subscr popup START ---------*/
+.ns_popup
+	padding: 25px !important
+	.modal-dialog
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		height: 100%
+		width: 100%
+		max-width: none
+		margin: 0
+	.modal-content
+		border-radius: $bd-radius
+		padding: 70px
+		background-color: $persian-green
+		background-image: url('../images/ns-modal-bg.png')
+		background-size: cover
+		background-repeat: no-repeat
+		max-width: 535px
+		border: none
+		.close
+			position: absolute
+			right: 30px
+			top: 30px
+			font-size: 0
+			opacity: 1
+			outline: none
+			img
+				filter: invert(1)
+				width: 11px
+				height: 11px
+				opacity: 1
+		.form_send
+			padding: 14px 20px
+	.ns_popup_title
+		color: #fff
+		font-size: 24px
+		font-family: $poppins-bold
+		.ns_title_big
+			font-size: 30px
+	.ns_popup_undertitle	
+		color: #fff
+		font-size: 14px
+		margin-bottom: 26px
+/*--------- News subscr popup END ---------*/
+
+/*--------- News description Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-news_subscription
+		padding: 80px 0px
+
+@media screen and(max-width: 575px)
+	.ns_popup
+		.modal-content
+			padding: 40px 30px
+
+@media screen and(max-width: 480px)
+	.s-news_subscription 
+		.ns_input
+			button
+				position: absolute
+				right: 15px
+
+@media screen and(max-width: 400px)
+	.ns_popup
+		.modal-content
+			padding: 40px 20px
+
+@media screen and(max-height: 635px)
+	.ns_popup
+		.modal-dialog
+			margin: 4rem 0
+/*--------- News description END ---------*/
+
+
+/*--------- Bottom section START ---------*/
+.s-bottom_section
+	background-color: $bondy
+	.s-features
+		background: none
+		color: #fff
+		border-bottom: 5px solid #53b0c2
+		padding-bottom: 0
+		.features_row
+			padding-bottom: 48px
+			li
+				color: #fff
+				svg
+					path
+						fill: #fff
+
+	.bottom_menu
+		display: flex
+		justify-content: space-between
+		color: #fff
+		padding-bottom: 52px
+		h4
+			font-size: 17px
+			font-family: $poppins-bold
+			margin-bottom: 8px
+		li
+			list-style-type: none
+			a
+				font-size: 14px
+				font-family: $poppins-light
+				margin-bottom: 6px
+				display: inline-block
+				text-decoration: none
+				transition: color 0.2s ease-out
+				&:hover
+					color: $black
+		.bottom_menu_social
+			margin-top: 15px
+			display: flex
+			a
+				background-color: #fff
+				min-width: 40px
+				height: 40px
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				&:hover
+					transition: 0.4s ease
+					transform: rotate(360deg)
+					background-color: $persian-green
+					svg
+						path
+							fill: #fff
+				&:nth-last-child(n+2)
+					margin-right: 17px
+				svg
+					path
+						fill: #049ebc
+						transition: fill 0.8s ease-out
+		.mobile_social
+			display: none
+		ul
+			padding: 0
+
+	.ways-of-payment
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		max-width: 496px
+		margin-left: auto
+		margin-right: auto
+		padding-bottom: 30px
+		a
+			margin-bottom: 15px
+			&:nth-last-child(n+2)
+				margin-right: 16px
+		svg
+			max-width: 108px
+			max-height: 25px
+			path,
+			polygon
+				fill: #fff
+
+/*--------- Bottom section Responsive ---------*/
+@media screen and(max-width: 768px)
+	.s-bottom_section 
+		.bottom_menu
+			flex-wrap: wrap
+			justify-content: flex-start
+			padding-top: 35px
+			padding-bottom: 0
+			li
+				width: 33%
+				margin-bottom: 25px
+				ul
+					li
+						margin: 0
+						width: auto
+			.desktop_social
+				display: none
+			.mobile_social
+				display: inline-block
+
+@media screen and(max-width: 480px)
+	.s-bottom_section 
+		.bottom_menu
+			li
+				width: 50%
+
+@media screen and(max-width: 400px)
+	.s-bottom_section 
+		.bottom_menu
+			justify-content: center
+			text-align: center
+			li
+				width: 100%
+		.bottom_menu_social
+			justify-content: center
+/*--------- Bottom section END ---------*/
+
+
+/*--------- Products single START ---------*/
+$sharing-top: 44px
+$sharing-transition: 0.4s ease
+
+.sharing
+	padding: $sharing-top 40px 0 0
+	position: relative
+	top: -3px
+	right: -5px
+	overflow: hidden
+	z-index: 10
+	min-height: 80px
+	.sharing_button
+		margin-left: auto
+		max-width: 27px
+		position: relative
+		z-index: 1
+		img,
+		svg
+			max-height: 26px
+			transition: 0.3s ease-out
+		svg
+			&:hover
+				path
+					fill: $persian-green
+			path
+				fill: $pale-blue
+				transition: 0.3s ease
+	.sharing_button_opened
+		img,
+		svg
+			transform: rotate(-135deg)
+	.sharing_social
+		position: absolute
+		top: 38px
+		right: 0
+		transition: 0.3s ease
+		transform: translateX(100%)
+		display: flex
+		a
+			width: 40px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			transition: $sharing-transition
+			margin-right: 15px
+			&:hover
+				background-color: $greenish-blue
+				svg
+					transition: $sharing-transition
+					transform: rotate(360deg) scale(1.3)
+					path
+						fill: #fff
+		svg
+			max-height: 16px
+			max-width: 16px
+			path
+				fill: #888888
+	.sharing_social_opened
+		transform: translateX(-100px)
+	.sharing_close
+		&:hover
+			img
+				transform: scale(1.2)
+				filter: invert(1)
+		img
+			transition: $sharing-transition
+			width: 9px
+			height: 9px
+
+/*--------- Products single top START ---------*/
+.s-product-single_top
+	padding-top: 0
+	position: relative
+	z-index: 1
+	.product_slider_thumb
+		text-align: center
+		height: auto
+		position: relative
+		img
+			max-height: 540px
+			max-width: 100%
+	.product_slider_thumb_logo
+		text-align: left
+		display: block
+		padding-top: 10px
+		img
+			max-width: 135px
+	.product_slider_wrapper
+		display: flex
+		justify-content: flex-start
+		padding: 20px 0 0 0
+		text-align: center
+		li
+			cursor: pointer
+			list-style-type: none
+			padding: 10px 0
+			border-radius: 10px
+			-webkit-user-select: none
+			-moz-user-select: none
+			user-select: none
+			width: 18%
+		img
+			max-width: 100%
+			height: 66px
+		.product_slider_more
+			display: flex
+			align-items: center
+			img
+				height: 9px
+
+	.product_right_title
+		text-align: left
+		font-family: $poppins-bold
+		.star_rating
+			position: relative
+			top: -5px
+		.product_title_category
+			font-size: 17px
+			color: $pale-blue
+			margin-bottom: 10px
+			display: inline-block
+			width: 100%
+		.product_titile_big
+			font-size: 36px
+			color: $black
+			line-height: 1.2
+			display: inline
+
+	.fl_wrapper
+		justify-content: space-between
+		margin-top: 30px
+		padding-bottom: 18px
+		border-bottom: 5px solid #f8f8f8
+		padding-right: 128px
+
+	.product_choose_color
+		padding-top: 20px
+	.ch_color_wrap
+		padding: 0
+		list-style-type: none
+		margin-top: 15px
+		li
+			cursor: pointer
+			display: inline-block
+			width: 60px
+			text-align: center
+			padding: 10px 0
+			border: 1px solid #dadada
+			border-radius: 5px
+			transition: 0.3s ease-out
+			margin-bottom: 8px
+			&:nth-last-child(n+2)
+				margin-right: 8px
+			&:hover
+				border-color: $persian-green
+			img
+				max-height: 43px
+		.active
+			border-color: $persian-green
+	.product_choose_size
+		margin-top: 10px
+	.ch_size_wrap
+		padding: 0
+		list-style-type: none
+		margin-top: 10px
+		li
+			display: inline-block
+			margin-bottom: 12px
+			&:nth-last-child(n+2)
+				a
+					margin-right: 12px
+			a
+				text-decoration: none
+				font-size: 14px
+				color: $black
+				border: 1px solid #dadada
+				padding: 5px 10px
+				border-radius: 5px
+				transition: 0.2s ease-out
+				&:hover
+					border-color: $persian-green
+					color: $persian-green
+		.active
+			a
+				border-color: $persian-green
+				color: $persian-green
+
+	.discount
+		position: absolute
+		left: 0
+		top: 0
+
+	.product_buy_action
+		margin-top: 10px
+		padding-top: 15px
+		border-top: 5px solid #f8f8f8
+		.pr_top
+			display: flex
+			align-items: center
+		.product_price
+			display: flex
+			align-items: center
+			border-right: 1px solid #dadada
+			padding-right: 28px
+			margin-right: 28px
+			.price_left
+				font-size: 12px
+				color: #a5a5a5
+				del
+					font-size: 18px
+					font-family: $poppins-bold
+			.price_right
+				font-size: 36px
+				font-family: $poppins-bold
+				margin-left: 20px
+				color: $red
+		.product_save
+			color: $red
+			font-size: 12px
+			display: flex
+			align-items: center
+			span
+				&:first-child
+					margin-right: 5px
+			.currency_text
+				font-family: $poppins-bold
+				font-size: 18px
+			.discount_text
+				background-color: $red
+				padding: 2px 0
+				font-size: 14px
+				text-align: center
+				width: 55px
+				color: #fff
+				border-radius: 15px
+				margin-left: 8px
+		.quantity_cart
+			display: flex
+			margin-top: 15px
+			border-bottom: 5px solid #f8f8f8
+			padding-bottom: 25px
+			.quantity
+				padding: 0
+				max-width: 110px
+				margin-right: 15px
+				height: auto
+				input
+					height: 48px
+					width: 48px
+					max-width: none
+
+			.add_cart
+				background-color: $greenish-blue
+				margin-left: 0
+				margin-right: 15px
+				height: auto
+				svg
+					max-width: 25px
+					width: 100%
+					margin-right: 10px
+					path
+						fill: #fff
+				&:hover
+					background-color: $persian-green
+					color: #fff
+			.products_favourite
+				a
+					background-color: #f8f8f8
+					width: 50px
+					height: 50px
+					border-radius: 50%
+					display: flex
+					justify-content: center
+					align-items: center
+					transition: 0.3s ease
+					svg
+						width: 23px
+				.favourite_fill
+					background-color: $persian-green
+					svg
+						transform: none
+						path
+							&:first-child
+								fill: transparent !important
+							&:last-child
+								fill: #fff !important
+
+	.product_discount_slider
+		margin-top: 25px
+		display: flex
+		a
+			display: block
+			padding: 15px
+			border-radius: 25px
+			transition: border 0.2s ease
+			position: relative
+			text-align: center
+			&:nth-last-child(n+2)
+				margin-right: 20px
+			&:hover
+			.discount
+				width: 45px
+				height: 45px
+				font-size: 14px
+			img
+				max-height: 118px
+		.slick-prev
+			display: none !important
+		.slick_next
+			min-width: 55px
+			height: 55px
+			border-radius: 50%
+			border: none
+			max-width: none
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: -30px
+			transition: 0.3s ease
+			padding-left: 10px
+			outline: none
+			&:hover
+				background-color: $greenish-blue
+			img
+				height: 62%
+
+	.delivery_info
+		padding: 25px
+		background-color: #f8f8f8
+		border-radius: $bd-radius
+		margin-top: 25px
+		p
+			display: flex
+			align-items: center
+			font-size: 14px
+			color: #949699
+			margin-bottom: 0
+			&:nth-last-child(n+2)
+				margin-bottom: 15px
+			.delivery_info_icon
+				width: 38px
+				margin-right: 12px
+				display: inline-block
+				text-align: center
+			img,
+			svg
+				max-width: 37px
+				max-height: 25px
+			svg
+				path
+					fill: #949699
+
+/*--------- Products single top Responsive ---------*/
+@media screen and(max-width: 1300px)
+	.s-product-single_top 
+		.product_discount_slider 
+			.slick_next
+				right: 0
+
+@media screen and(max-width: 992px)
+	.sharing
+		overflow: visible
+		padding-right: 0
+		.sharing_social_opened
+			transform: translateX(-20px)
+
+@media screen and(max-width: 768px)
+	.s-product-single_top 
+		.product_slider_wrapper 
+			.slick_next
+				transform: none
+		.fl_wrapper
+			padding-right: 0
+	.s-product_single
+		.product_right
+			margin-top: 25px
+
+@media screen and(max-width: 575px)
+	.s-product-single_top 
+		.product_buy_action 
+			.pr_top
+				flex-direction: column
+				>
+					div
+						width: 100%
+						margin-bottom: 15px
+			.product_price
+				margin-right: 0
+				padding-right: 0
+				border-right: none
+				border-bottom: 1px solid #dadada
+			.quantity_cart 
+				font-size: 14px
+		.product_discount_slider 
+			.slick_next
+				min-width: 42px
+				height: 42px
+				img
+					vertical-align: top
+
+@media screen and(max-width: 480px)
+	.s-product-single_top 
+		.product_slider_wrapper
+			flex-wrap: wrap
+			li,
+			.product_slider_more
+				width: 33%
+			.product_slider_more
+				img
+					margin: 0 auto
+	.sharing
+		.sharing_social
+			background-color: #fff
+			flex-wrap: wrap
+			border-radius: $bd-radius
+			box-shadow: 5px 0 20px 5px rgba(0, 0, 0, 0.1)
+			padding: 15px
+			max-width: 350px
+			width: 100%
+			transform: translateY(20px)
+			opacity: 0
+			visibility: hidden
+			a
+				width: 15%
+				margin-right: 2px
+				&:hover
+					background: none
+					svg
+						path
+							fill: $persian-green
+			.sharing_close
+				position: absolute
+				right: 0
+				top: 0
+				&:hover
+					img
+						filter: none
+		.sharing_social_opened
+			transform: translate(-20px 0)
+			visibility: visible
+			opacity: 1
+			top: 80%
+		.sharing_button_opened
+			svg
+				transform: rotate(-190deg)
+
+@media screen and(max-width: 400px)
+	.s-product-single_top 
+		.product_buy_action 
+			.quantity_cart 
+				.quantity
+					max-width: 95px
+					input
+						width: 35px
+						height: 35px
+/*--------- Products single top END ---------*/
+
+
+/*--------- Products character START ---------*/
+.s-product_character
+	margin-top: 80px
+	.product_character_top
+		border-bottom: 5px solid #dadada
+		position: relative
+		z-index: 1
+	.nav-tabs
+		padding: 0
+		border: none
+		.nav-item
+			list-style-type: none
+			display: inline-block
+			.nav-link
+				font-family: $poppins-medium
+				font-size: 15px
+				text-decoration: none
+				color: $black
+				margin-right: 45px
+				transition: 0.2s ease
+				border: none
+				border-radius: 0
+				position: relative
+				padding-left: 0
+				padding-right: 0
+				padding-bottom: 16px
+				&::after
+					content: ''
+					display: block
+					background-color: $greenish-blue
+					height: 5px
+					width: 0
+					position: absolute
+					bottom: -4px
+					left: 50%
+					transform: translateX(-50%)
+					transition: 0.3s ease
+				&:hover
+					color: #006072
+			.nav-link.active
+				background-color: transparent
+				&::after
+					width: 100%
+
+	.tab-content
+		color: $black
+		background-color: #f8f8f8
+	.tab-panel
+		display: none
+		position: relative
+		z-index: 0
+		&::after
+			content: ''
+			background-image: url('../images/tab-content-bg.png')
+			background-position: right bottom
+			background-repeat: no-repeat
+			display: block
+			width: 938px
+			height: 345px
+			position: absolute
+			bottom: -$s-gutter
+			right: 0
+			z-index: -1
+		h2.tab_title
+			font-size: 36px
+			font-family: $poppins-bold
+			margin-bottom: 25px
+		.tab_list
+			p
+				&:last-child
+					margin-bottom: 0
+				&:nth-last-child(n+2)
+					border-bottom: 2px solid #dadada
+					margin-bottom: 12px
+					padding-bottom: 12px
+		h3.r_title
+			font-size: 24px
+			font-family: $poppins-bold
+			margin-bottom: 25px
+		p
+			font-size: 14px
+			color: $black
+		.r_item
+			&:nth-last-child(n+2)
+				margin-bottom: 35px
+		.r_list
+			p
+				margin-bottom: 5px
+	.tab-panel.active
+		display: block
+
+
+/*--------- Products character Responsive ---------*/
+@media screen and(max-width: 768px)
+	.s-product_character
+		margin-top: 40px
+		.nav-tabs 
+			.nav-item 
+				.nav-link
+					padding-bottom: 4px
+					padding-left: 15px
+					padding-right: 15px
+					margin-bottom: 8px
+					margin-right: 0
+		.tab-panel
+			&::after
+				bottom: -$s-gutter-min
+			.tab_list
+				margin-bottom: 35px
+
+@media screen and(max-width: 480px)
+	.s-product_character 
+		.nav-tabs
+			display: flex
+			justify-content: center
+/*--------- Products character START ---------*/
+
+
+/*--------- Products description START ---------*/
+.s-product_description
+	background-color: $persian-green
+	background-image: url('../images/product-description-bg.png')
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: cover
+	background-attachment: fixed
+	color: #f8f8f8
+	.descr_title
+		font-family: $poppins-bold
+		font-size: 36px
+		margin-bottom: 22px
+	.rotate_title
+		left: -140px
+	.descr_min_title
+		font-size: 24px
+		font-family: $poppins-bold
+	p
+		margin-bottom: 60px
+		font-size: 14px
+		line-height: 2
+		font-family: $poppins-light
+	.descr_content
+		img
+			width: 100%
+	.descr_item
+		margin-bottom: 75px
+		a
+			max-width: 540px
+			position: relative
+			display: block
+			&:hover
+				&::before
+					opacity: 1
+			&::before
+				content: ''
+				background-color: rgba($black, .5)
+				background-image: url('../images/magnify.png')
+				background-size: 50px
+				background-position: center center
+				background-repeat: no-repeat
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				opacity: 0
+				transition: 0.3s ease
+
+/*--------- Products description Responsive ---------*/
+@media screen and(max-width: 1510px)
+	.s-product_description 
+		.rotate_title
+			left: -80px
+
+
+@media screen and(max-width: 1300px)
+	.s-product_description 
+		.rotate_title
+			display: none
+
+@media screen and(max-width: 768px)
+	.s-product_description 
+		.descr_item 
+			a
+				max-width: none
+		.descr_item
+			margin-bottom: 20px
+		p
+			margin-bottom: 25px
+/*--------- Products description END ---------*/			
+.s-video
+	padding-bottom: 30px
+	background-color: #f8f8f8
+	.def_title
+		text-align: center
+		color: $greenish-blue
+		margin-bottom: 45px
+	.video_item
+		iframe
+			margin: 0 auto
+			display: block
+			max-width: 660px
+			width: 100%
+			min-height: 421px
+	.slick-dots
+		@include slick-dots($greenish-blue, $persian-green, auto)
+		margin-top: 30px
+		position: static
+		transform: none
+		justify-content: center
+	.video_logo
+		text-align: right
+		margin-top: 35px
+		img
+			max-width: 170px
+/*--------- Products single END ---------*/
+
+
+/*--------- Related goods START ---------*/
+.related-goods
+	padding-top: 75px
+	.related_wrapper
+		margin-bottom: 95px
+	.products_cart
+		max-width: 24%
+		margin-bottom: 0
+	.def_title
+		text-align: center
+		color: $greenish-blue
+	.product_cart_slider 
+		.slick-slide 
+			> 
+				div
+					padding: 20px !important
+	.s-products-bottom
+		transform: translateY(-20px)
+
+/*--------- Related goods Responsive ---------*/
+@media screen and(max-width: 1200px)
+	.related-goods
+		.container
+			padding-left: 0
+			padding-right: 0
+		.products_cart
+			max-width: 32%
+			margin-bottom: 25px !important
+
+@media screen and(max-width: 992px)
+	.related-goods
+		.products_cart
+			max-width: 48%
+
+@media screen and(max-width: 575px)
+	.related-goods
+		.products_cart
+			max-width: 100%
+			width: 100%
+			margin-right: 0
+/*--------- Related goods END ---------*/
+
+
+/*--------- Ask START ---------*/
+.s-ask
+	background-color: #f8f8f8
+	.def_title
+		text-align: center
+		color: $greenish-blue
+		margin-bottom: 40px
+
+/*--------- Ask Responsive ---------*/
+@media screen and(max-width: 420px)
+	.form-section 
+		.re-captha
+			flex-direction: column
+			.left
+				margin-bottom: 15px
+/*--------- Ask END ---------*/
+/*--------- Products single END ---------*/
+
+
+/*--------- About START ---------*/
+.s-about-main
+	@include bg-custom
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		background-image: url('../images/about-main-overlay.png')
+		@include bg-custom
+		width: 100%
+		height: 100%
+	.a_main_content
+		display: flex
+		justify-content: center
+		padding: 247px 0 416px 0
+		.a_main_title
+			color: $accent
+			font-size: 36px
+			font-family: $poppins-bold
+			margin-right: 45px
+			.upper
+				font-size: 60px
+		.a_main_social
+			list-style-type: none
+			padding: 0
+			li
+				display: inline-block
+				a
+				&:nth-last-child(n+2)
+					a
+						margin-right: 32px
+				a
+					&:hover
+						svg
+							path
+								fill: $persian-green
+				svg
+					max-width: 75px
+					max-height: 75px
+					path
+						fill: $accent
+						transition: 0.3s ease
+
+.s-overview
+	.overview_logo
+		text-align: center
+		img
+			max-width: 398px
+			width: 100%
+			margin-bottom: 60px
+		blockquote
+			color: $persian-green
+			margin-bottom: 108px
+			line-height: 0.85
+			font-size: 72px
+	.overview_row
+		.overview_left
+			padding-right: 47px
+			word-break: break-all
+		.o_text_title
+			font-size: 24px
+			font-family: $poppins-bold
+			margin-bottom: 24px
+		p
+			font-size: 16px
+			margin-bottom: 22px
+		.overview_right
+			max-width: 445px
+		.image_radius
+			border-radius: $bd-radius
+			overflow: hidden
+		.read_more
+			margin-top: 28px
+
+.s-overview-first
+	padding: 128px 0 50px 0
+	background-color: #f8f8f8
+	.overview_right
+		padding-top: 323px
+		p
+			&:first-child
+				padding-top: 32px
+				border-top: 5px solid $persian-green
+
+.s-overview-second
+	padding: 75px 0 170px 0
+	.overview_row
+		.overview_left
+			width: 100%
+
+
+.s-about-partners
+	padding: 130px 0 175px 0
+	border-top: 5px solid $persian-green
+	.sa_partners_title
+		text-align: center
+		color: $persian-green
+		font-family: $poppins-bold
+		font-size: 76px
+		max-width: 618px
+		margin-left: auto
+		margin-right: auto
+		line-height: 0.88
+		margin-bottom: 126px
+	.image_radius
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba($greenish-blue, .2)
+		&:hover
+			.sa_logo
+				box-shadow: 0px 6px 22.33px 6.67px rgba(0, 0, 0, 0.19)
+	.sa_logo
+		position: absolute
+		@include tl-50
+		background-color: rgba(#fff, .8)
+		border-radius: 50%
+		width: 295px
+		height: 295px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		transition: 0.3s ease
+		img
+			max-width: 192px
+	.overview_row
+		&:nth-last-child(n+2)
+			margin-bottom: 90px
+			&::after
+				content: ''
+				display: block
+				height: 5px
+				max-width: 502px
+				width: 100%
+				margin-left: auto
+				margin-right: auto
+				margin-top: 90px
+				background-color: $persian-green
+
+/*--------- About Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-about-main 
+		.a_main_content
+			padding: 150px 0 150px 0
+	.s-overview-first
+		padding: 50px 0
+		.overview_logo
+			img
+				width: 60%
+	.s-overview 
+		.overview_row 
+			.overview_left
+				padding-right: 0
+
+@media screen and(max-width: 768px)
+	.s-about-main 
+		.a_main_content
+			flex-direction: column
+			align-items: center
+			.a_main_title
+				margin-right: 0
+				text-align: center
+				margin-bottom: 15px
+	.s-overview
+		.overview_row
+			&:nth-last-child(n+2)
+				margin-bottom: 40px
+				&::after
+					margin-top: 40px
+			.image_radius
+				margin-bottom: 25px
+				max-width: 500px
+				margin-left: auto
+				margin-right: auto
+				img
+					width: 100% 
+			.overview_right
+				max-width: none
+			.o_text_title
+				text-align: center
+			.read_more
+				margin-left: auto
+				margin-right: auto
+	.s-overview-first 
+		.overview_right
+			padding-top: 0
+
+@media screen and(max-width: 575px)
+	.s-about-main 
+		.a_main_content 
+			.a_main_social 
+				li 
+					svg
+						max-width: 50px
+	.s-overview
+		padding: 40px 0
+	.s-overview-first
+		.overview_logo
+			img
+				margin-bottom: 40px
+
+	.s-overview 
+		.overview_logo 
+			blockquote
+				font-size: 50px
+				margin-bottom: 40px
+
+	.s-about-partners 
+		.sa_partners_title
+			font-size: 50px
+			margin-bottom: 40px
+/*--------- About END ---------*/
+
+/*--------- Blog page START ---------*/
+.s-blog-menu
+	background-color: $greenish-blue
+	color: #fff
+	.blog_menu
+		padding: 52px 0 28px 0
+		list-style-type: none
+		text-align: center
+		li
+			display: inline-block
+			&:nth-last-child(n+2)
+				a
+					margin-right: 32px
+			a
+				font-family: $poppins-semibold
+				font-size: 18px
+				transition: 0.2s ease
+
+.s-blog-grid
+	padding-bottom: 138px
+	border-bottom: 5px solid $accent
+	.s_blog_title
+		margin-bottom: 65px
+	.blog_item
+		overflow: hidden
+		margin-bottom: 46px
+		a
+			transition: 0.3s ease
+			&:hover
+				.blog_title_s
+					color: $greenish-blue
+				.blog_thumb
+					img
+						transform: scale(1.1)
+		.blog_thumb
+			border-radius: $bd-radius
+			margin-bottom: 22px
+			overflow: hidden
+			max-height: 362px
+			height: 100%
+			position: relative
+			img
+				transition: 0.5s ease-out
+				width: 100%
+				object-fit: cover
+
+
+		.blog_title_s
+			font-size: 18px
+			font-family: $poppins-bold
+			margin-bottom: 13px
+			line-height: 1.4
+			transition: 0.3s ease
+		.blog_descr_s
+			font-size: 15px
+			line-height: 1.62
+	.read_more
+		margin-top: 66px
+		margin-right: auto
+		margin-left: auto
+		max-width: 390px
+		padding: 14px 0 16px 0
+		font-size: 15px
+
+.s-blog-category
+	.s_blog_title
+		font-size: 40px
+	.s_blog_cat_title
+		color: $persian-green
+		font-size: 64px
+		font-family: $poppins-bold
+		text-align: center
+		margin-top: 50px
+		margin-bottom: 40px
+
+/*--------- Blog page Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-blog-grid 
+		.blog_item
+			margin-bottom: 25px
+		.read_more
+			margin-top: 25px
+/*--------- Blog page END ---------*/
+
+
+/*--------- Blog category page START ---------*/
+.s-blog-single
+	border-bottom: 5px solid $accent
+	padding-bottom: 60px
+	.blog_single_left
+		padding-right: 62px
+	h3
+		font-size: 24px
+		font-family: $poppins-bold
+		margin-bottom: 30px
+	.blog_single_thumb
+		border-radius: $bd-radius
+		overflow: hidden
+		margin-bottom: 44px
+		img
+			width: 100%
+	p
+		margin-bottom: 35px
+	.p_14
+		line-height: 1.7
+	.mb_15
+		margin-bottom: 15px
+	h4
+		font-family: $poppins-bold
+		font-size: 17px
+		margin-bottom: 5px
+	.blog_discount_products
+		display: flex
+		justify-content: space-between
+		margin-bottom: 55px
+		.slick-dots
+			@include slick-dots($greenish-blue, $persian-green, -40px)
+		.sr_products
+			display: block !important
+			text-align: center
+			max-width: 172px
+			transition: 0.3s ease
+			margin: 0 auto
+			.slick-dots
+			.discount
+				font-size: 14px
+				width: 48px
+				height: 48px
+				left: 18%
+				top: 12px
+			.cr_title_price
+				text-align: left
+			.cr_title
+				font-size: 15px
+				line-height: 1.4
+				margin-top: 0
+			.cr_thumb
+				margin-bottom: 28px
+				margin-right: 0
+				padding-left: 0
+				padding-top: 30px
+				img
+					max-height: 120px
+	.s-products
+		padding-right: 15px
+		padding-left: 15px
+		.products_cart
+			max-width: none
+			width: auto !important
+
+/*--------- Blog category page Responsive ---------*/
+@media screen and(max-width: 1200px)
+	.s-blog-single
+		.blog_single_left
+			padding-right: 15px
+
+@media screen and(max-width: 768px)
+	.s-blog-single 
+		.blog_discount_products
+			flex-wrap: wrap
+
+@media screen and(max-width: 575px)
+	.s-blog-single 
+		.s-products
+			display: block
+			.products_cart
+				max-width: 100%
+				margin-right: 0
+				&:last-child
+					margin-bottom: 0
+
+@media screen and(max-width: 480px)
+	.s-blog-category 
+		.s_blog_cat_title
+			font-size: 14vw
+/*--------- Blog category page END ---------*/
+
+/*--------- Contacts page START ---------*/
+.s-min-section
+	padding: 70px 0 70px 0
+	background-color: $greenish-blue
+	@include bg-custom
+	position: relative
+	// &::before
+	// 	content: ''
+	// 	display: block
+	// 	background-image: url('../images/contacts-bg-overlay.png')
+	// 	left: 0
+	// 	top: 0
+	// 	position: absolute
+	// 	width: 100%
+	// 	height: 100%	
+	.c_main_title
+		font-size: 36px
+		font-family: $poppins-bold
+		color: #fff
+		text-align: center
+		span
+			&:first-child
+				display: block
+				margin-bottom: 10px
+				img
+					max-height: 67px
+
+.s-contacts-info
+	padding: 100px 0
+	background-color: #f8f8f8
+	.ci_item
+		margin-bottom: 24px
+		line-height: 1.8
+		max-width: 233px
+		.ci_location
+			display: block
+			margin-bottom: 15px
+			img
+				max-height: 75px
+		.ci_title
+			font-size: 24px
+			font-family: $poppins-semibold
+			margin-bottom: 25px
+		p
+			font-size: 14px
+			margin-bottom: 0
+		a
+			color: $greenish-blue
+			&:hover
+				color: $persian-green
+		.write_to_us
+			color: $greenish-blue
+			font-size: 14px
+			font-family: $poppins-semibold
+			display: inline-block
+			margin-top: 15px
+			span,
+			img
+				vertical-align: bottom
+			span
+				margin-bottom: -6px
+				display: inline-block
+			img
+				max-height: 35px
+	.ci_social
+		margin-top: 30px
+		a
+			&:hover
+				svg
+					path
+						fill: $persian-green
+			&:nth-last-child(n+2)
+				margin-right: 15px
+			svg
+				max-width: 34px
+				max-height: 34px
+				path
+					transition: 0.3s ease
+					fill: $greenish-blue
+	.ci_image
+		border-radius: $bd-radius
+		overflow: hidden
+		position: relative
+		height: 346px
+		max-width: 270px
+		margin-left: auto
+		img
+			height: 100%
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			background-image: url('../images/contacts-right-img-overlay.jpg')
+			background-repeat: no-repeat
+			background-size: cover
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+	.contacts_loc_row
+		padding-top: 106px
+
+.s-contacts-form
+	padding: 130px 0
+	background-image: url('../images/contacts-ask-bg.jpg')
+	@include bg-custom
+	.def_title
+		color: #fff
+		text-align: center
+		margin-bottom: 25px
+	.re-captha
+		background-color: #f9f9f9
+	.form_send
+		background-color: transparent
+		border: 1px solid #fff
+		&:hover
+			border-color: $greenish-blue
+
+.s-map
+	.map_wrapper
+		height: 974px
+		border-top: 5px solid $persian-green
+		iframe
+			width: 100%
+			height: 100%
+			padding: 0
+			margin: 0
+
+/*--------- Contacts page Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-map
+		.map_wrapper
+			height: 500px
+
+
+@media screen and(max-width: 768px)
+	.s-contacts-info
+		padding: 40px 0
+		.contacts_info_row
+			justify-content: center
+			text-align: center
+		.contact_info_right
+			margin-top: 35px
+		.ci_image
+			margin-left: auto
+			margin-right: auto
+		.ci_item
+			margin-left: auto
+			margin-right: auto
+		.contacts_loc_row
+			padding-top: 40px
+			text-align: center
+	.s-contacts-form
+		padding: 40px 0
+/*--------- Contacts page END ---------*/
+
+/*--------- Help page START ---------*/
+.s-help-row
+	padding: 66px 0 5px 0
+	.help_item
+		text-align: center
+		margin-bottom: 50px
+		max-width: 335px
+		display: block
+		transition: 0.3s ease
+		&:hover
+			.more_info
+				transform: none
+				opacity: 1
+				max-width: 125px
+		.help_icon
+			height: 60px
+			display: flex
+			justify-content: center
+			align-items: flex-end
+			margin-bottom: 15px
+			img
+				max-height: 100%
+				vertical-align: top
+		.help_min_title
+			font-size: 24px
+			font-family: $poppins-bold
+			margin-bottom: 18px
+		.help_descr
+			font-size: 15px
+		.more_info
+			background-color: $persian-green
+			color: #fff
+			padding: 10px 0
+			border-radius: $bd-radius
+			font-size: 14px
+			max-width: 0
+			width: 100%
+			text-align: center
+			opacity: 0
+			display: inline-block
+			transition: 0.3s ease
+
+.s-help-contacts
+	background-color: $greenish-blue
+	@include bg-top-center
+	padding: 162px 0
+	.sh_item
+		margin-bottom: 30px
+		img
+			max-height: 84px
+	.sh_row
+		display: flex
+		justify-content: space-around
+		align-items: center
+		text-align: center
+		font-family: $poppins-bold
+		color: #fff
+		.sh_left_column
+			padding: 72px 170px 72px 0
+			border-right: 5px solid $persian-green
+		.sh_left
+		.sh_right
+			max-width: 450px
+		.sh_26
+			font-size: 26px
+		.sh_24
+			font-size: 24px
+		.sh_30
+			font-size: 30px
+			line-height: 1
+		.sh_40
+			font-size: 40px
+			line-height: 1.2
+		.sh_img
+			margin-bottom: 28px
+		.sh_accent
+			color: $accent
+			font-size: 36px
+			line-height: 1.6
+		.sh_ask_button
+			border: 1px solid #fff
+			max-width: 130px
+			width: 100%
+			padding: 9px 0
+			border-radius: $bd-radius
+			font-size: 14px
+			font-family: $poppins
+			display: block
+			margin-left: auto
+			margin-right: auto
+			transition: 0.5s ease
+			&:hover
+				background-color: #fff
+
+.s-help-inner
+	padding: 70px 0 105px 0
+	.shi_row
+		display: flex
+		.left
+			max-width: 310px
+			width: 100%
+			padding: 0
+			list-style-type: none
+			li
+				&:nth-last-child(n+2)
+					margin-bottom: 25px
+				a
+					display: flex
+					align-items: center
+					font-size: 14px
+					font-family: $poppins-semibold
+					color: $black
+					transition: 0.3s ease
+					&:hover
+						color: $persian-green
+						svg
+							path
+								color: $persian-green
+				.help_sidebar_icon
+					width: 50px
+					display: inline-block
+					margin-right: 10px
+					text-align: center
+					img,
+					svg
+						max-width: 40px
+					svg
+						path
+							transition: 0.3s ease
+		.right
+			max-width: 745px
+			width: 100%
+/*--------- Help page Responsive ---------*/
+@media screen and(max-width: 1024px)
+	.s-help-contacts
+		padding: 50px 0
+		.sh_row
+			flex-direction: column
+			.sh_left_column
+				padding-right: 0
+				padding-bottom: 25px
+				margin-bottom: 25px
+				border-right: none
+				border-bottom: 5px solid $persian-green
+				max-width: 100%
+				width: 100%
+
+@media screen and(max-width: 992px)
+	.s-help-row 
+		.help_item 
+			.more_info
+				max-width: 125px
+				opacity: 1
+	.s-help-inner 
+		.shi_row 
+			.left
+				max-width: 250px
+
+@media screen and(max-width: 768px)
+	.s-help-inner 
+		.shi_row
+			flex-direction: column
+			.left
+				max-width: none
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				margin-bottom: 25px
+				li
+					&:nth-last-child(n+2)
+						margin-right: 25px
+
+@media screen and(max-width: 575px)
+	.s-help-row 
+		.help_item
+			max-width: 100%
+/*--------- Help page END ---------*/
+
+
+/*--------- Environment page START ---------*/
+.s-environment
+	padding: 100px 0 150px 0
+	background-color: #f8f8f8
+	.env_sidebar
+		padding: 0
+		margin-top: 108px
+		li
+			list-style-type: none
+			display: inline-block
+			margin-bottom: 21px
+			color: $greenish-blue
+			font-size: 14px
+			font-family: $poppins-semibold
+			&:hover
+				svg
+					path
+						fill: $persian-green !important
+			.env_sidebar_icon
+				margin-right: 20px
+				display: inline-block
+				width: 32px
+				text-align: center
+				img,
+				svg
+					max-width: 30px
+					path
+						transition: 0.3s ease
+						fill: $greenish-blue
+	.env_title
+		font-size: 36px
+		font-family: $poppins-bold
+		color: $greenish-blue
+		text-align: center
+		margin-bottom: 17px
+	.my_data_input_wrapper
+		a
+			color: $greenish-blue
+			font-size: 14px
+			display: inline-block
+			&:hover
+				color: $persian-green
+		.my_data_input_block
+			background-color: #fff
+			border-radius: $bd-radius
+			padding: 68px 112px 80px 112px
+			max-width: 612px
+			margin: 0 auto
+			position: relative
+			top: -42px
+		.env_avatar_wrapper
+			position: relative
+			z-index: 1
+			text-align: center
+			top: 45px
+			input
+				display: block
+				width: 100%
+				height: 100%
+				opacity: 0
+			label
+				margin-top: 20px
+				text-align: center
+				display: block
+				color: $greenish-blue
+				cursor: pointer
+				transition: 0.3s ease
+				font-size: 14px
+				&:hover
+					color: $persian-green
+			.env_avatar_thumb
+				width: 177px
+				height: 177px
+				margin-left: auto
+				margin-right: auto
+				border: 8px solid #f2f2f2
+				background-color: #f8f8f8
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				z-index: 1
+				position: relative
+				overflow: hidden
+				background-image: url('../images/env-avatar-center.svg')
+				background-position: center center
+				background-size: 77px 80px
+				background-repeat: no-repeat
+			.downloaded_avatar
+				img
+					width: auto
+					height: 120%
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					top: 0
+		.change_password
+			margin-top: 10px
+			margin-left: 22px
+	.env-form-section
+		margin-top: 53px
+		.input_item
+			font-size: 14px
+			&:first-child
+				margin-bottom: 32px
+	.select_item
+		.dropdown-toggle
+			font-size: 14px
+	.select_row
+		display: flex
+		justify-content: space-between
+		border-bottom: 5px solid #f2f2f2
+		margin-bottom: 25px
+		.select_item
+			width: 100%
+			&:nth-child(1)
+				max-width: 160px
+			&:nth-child(2)
+				max-width: 112px
+			&:nth-child(3)
+				max-width: 105px
+			&:nth-last-child(n+2)
+				margin-right: 6px
+	.input_row
+		display: flex
+		justify-content: space-between
+	.input_cp
+		.input_item
+			&:nth-child(1)
+				max-width: 255px
+				margin-right: 6px
+			&:nth-child(2)
+				max-width: 130px
+	.env_postcode_link
+		margin-top: 15px
+		margin-left: 22px	
+	.input_check_item
+		display: flex
+		align-items: center
+		padding: 20px 22px
+		font-size: 14px
+		border-radius: 5px
+		position: relative
+		input
+			min-width: 26px
+			width: 26px
+			height: 26px
+			display: inline-block
+			border-radius: 5px
+			padding: 0
+			margin-right: 10px
+			position: relative
+			z-index: 1
+		label
+			margin-bottom: 0
+			-moz-user-select: none
+			-webkit-user-select: none
+			user-select: none
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			padding: 22px 0 22px 58px
+			transition: 0.4s ease
+			&:hover
+				background-color: #f2f2f2
+
+	.form_send
+		margin-top: 20px
+		padding: 15px 0
+
+	.my_favourite_products
+		.fav_title_m
+			text-align: left
+			margin-left: 130px
+		.fav_wrapper
+			ul
+				padding: 0
+			li
+				display: flex
+				align-items: center
+				justify-content: space-between
+					padding-bottom: 20px
+					margin-bottom: 20px
+				span
+					display: inline-block
+			.fav_thumb
+				margin-right: 27px
+				text-align: center
+				min-width: 55px
+				img
+					max-height: 67px
+			.fav_thumb_title
+				display: flex
+				align-items: center
+				max-width: 298px
+				width: 100%
+				transition: 0.3s ease
+			.fav_title
+				max-width: 220px
+				font-size: 14px
+				font-family: $poppins-semibold
+			.fav_price_discount
+				display: flex
+				align-items: center
+			.fav_price
+				font-family: $poppins-bold
+				font-size: 14px
+				.fav_red
+					color: $red
+				.fav_gray
+					color: #a5a5a5
+				span
+					display: block
+			.fav_favourite
+				svg
+					path
+						fill: $persian-green
+						max-width: 26px
+						max-height: 24px
+			.fav_discount
+				background-color: $red
+				min-width: 40px
+				height: 40px
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #fff
+				font-size: 12px
+				margin-right: 12px
+			.fav_add_cart
+				background-color: $greenish-blue
+				border-radius: $bd-radius
+				padding: 8px 0 10px 0
+				color: #fff
+				text-decoration: none
+				transition: 0.3s ease
+				max-width: 145px
+				margin-left: 10px
+				width: 100%
+				height: 42px
+				text-align: center
+				font-size: 14px
+				display: flex
+				justify-content: center
+				align-items: center
+				&:hover
+					background-color: $persian-green
+					color: #fff
+					text-decoration: none
+				img,
+				svg
+					width: 20px
+					margin-right: 8px
+					display: inline-block
+				svg
+					path
+						fill: #fff
+	
+	#viewed_products
+		.add_favourite
+			svg
+				path
+					transition: 0.3s ease
+					&:first-child
+						fill: transparent
+
+	.env_table
+		background-color: #fff
+		padding: 45px 60px
+		border-radius: $bd-radius
+		max-width: 790px
+		margin: 54px auto 0 auto
+		box-shadow: 0px 3px 3.96px 0.04px rgba(19, 18, 18, 0.05)
+		ul
+			li
+				&:nth-last-child(n+2)
+					border-bottom: 5px solid #f8f8f8
+					margin-bottom: 25px
+					padding-bottom: 25px
+	.inv_wrapper
+		ul
+			padding: 0
+		li
+			display: flex
+			justify-content: space-between
+			align-items: center
+			font-size: 14px
+			&:nth-last-child(n+2)
+				padding-bottom: 26px
+				margin-bottom: 26px
+		.inv_pdf
+			img,
+			svg
+				max-height: 40px
+				max-width: 33px
+				min-width: 33px
+		.inf_pay
+			display: inline-block
+			background-color: $persian-green
+			color: #fff
+			max-width: 140px
+			padding: 10px 0
+			border-radius: $bd-radius
+			width: 100%
+			text-align: center
+			transition: 0.3s ease
+			&:hover
+				background-color: darken($persian-green, 5)
+
+.my_env_hidden
+	display: none
+
+
+.s-environment-05
+	padding-bottom: 135px
+	padding-top: 58px
+	background-color: #f8f8f8
+	.my_env5_wrapper
+		text-align: center
+	.env5_list_wrapper
+		text-align: left
+	.env5_avatar
+		border-radius: 50%
+		overflow: hidden
+		width: 116px
+		height: 116px
+		position: relative
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 14px
+		img
+			width: 100%
+	.env5_title
+		font-family: $poppins-bold
+		font-size: 36px
+		color: $greenish-blue
+	.env5_undertitle
+		font-family: $poppins-bold
+		font-size: 36px
+		color: #949699
+	.env5_list_wrapper
+		list-style-type: none
+		padding: 0 40px
+		max-width: 460px
+		margin-left: auto
+		margin-right: auto
+		margin-top: 65px
+		.env_sidebar_icon
+			width: 80px
+			display: inline-block
+			text-align: center
+			img
+				max-width: 60px
+				transition: 0.3s ease
+		a
+			font-family: $poppins-bold
+			font-size: 17px
+			color: $greenish-blue
+			border-bottom: 5px solid #f2f2f2
+			display: block
+			padding: 16px 22px
+			position: relative
+			transition: 0.3s ease
+			z-index: 0
+			.env_quantity
+				color: $persian-green
+				position: absolute
+				right: 22px
+				top: 50%
+				transform: translateY(-50%)
+				transition: 0.3s ease
+				z-index: 0
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				width: 110%
+				height: 110%
+				border-radius: 55px
+				background-color: $persian-green
+				z-index: -1
+				transition: 0.3s ease-out
+				opacity: 0
+			&:hover
+				color: #fff
+				border-color: transparent
+				&::after
+					opacity: 1
+				img
+					filter: brightness(0) invert(1)
+				.env_quantity
+					color: #fff
+					font-family: $poppins
+
+	.off_button
+		text-align: center
+		padding-top: 32px
+		a
+			color: $red
+			font-size: 14px
+			transition: 0.3s ease
+			&:hover
+				color: $persian-green
+
+/*--------- Environment page Responsive ---------*/
+@media screen and(max-width: 992px)
+	.s-environment
+		padding: 50px 0
+		.env_sidebar
+			margin-top: 0
+			max-width: 220px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 35px
+			li
+				display: block	
+	.s-environment 
+		.my_favourite_products
+			.fav_title_m
+				margin-left: 0
+				text-align: center
+
+@media screen and(max-width: 768px)
+	.s-environment 
+		.my_favourite_products
+			.fav_thumb_title,
+			.fav_price_discount
+				margin-right: 15px
+			.fav_wrapper
+				display: block
+				overflow: auto
+				padding: 30px 25px
+
+@media screen and(max-width: 720px)
+	.s-environment 
+		.my_favourite_products
+			ul
+				width: 600px
+
+@media screen and(max-width: 645px)
+	.s-environment 
+		.my_data_input_wrapper 
+			.my_data_input_block
+				padding: 80px 25px 80px 25px
+
+@media screen and(max-width: 480px)
+	.s-environment
+		.my_data_input_wrapper 
+			.my_data_input_block
+				padding: 80px 25px 40px 25px
+		.select_row
+			flex-direction: column
+			.select_item
+				max-width: 100% !important
+		.input_row
+			flex-direction: column
+			.input_item
+				max-width: 100% !important
+	.s-environment-05 
+		.env5_list_wrapper
+			padding: 0
+			a
+				font-size: 14px
+				padding-left: 0
+				padding-right: 0
+				.env_quantity
+					position: static
+					transform: none
+					margin-left: 8px
+			.env_sidebar_icon 
+				img
+					max-width: 40px
+
+@media screen and(max-width: 400px)
+	.s-environment 
+		.my_data_input_wrapper 
+			.my_data_input_block
+				padding: 80px 15px 40px 15px
+/*--------- Environment page END ---------*/
+
+
+/*--------- Login/Signup START ---------*/
+.page_back
+	font-size: 14px
+	color: #a5a5a5
+	position: absolute
+	right: 0
+	padding-right: 62px
+	top: 54px
+	transition: 0.5s ease-out
+	z-index: 0
+	&:hover
+		font-size: 15px
+		color: #fff
+		img
+			transform: translateX(-5px)
+			filter: brightness(0) invert(1)
+		&::after
+			transform: translateY(-50%)
+	&::after
+		content: ''
+		background-color: $persian-green
+		height: 50px
+		width: 150px
+		display: block
+		position: absolute
+		right: 0
+		top: 50%
+		z-index: -1
+		border-radius: $bd-radius 0 0 $bd-radius
+		transition: 0.5s ease
+		transform: translateY(-50%) translateX(100%)
+	img
+		transition: 0.5s ease-out
+		margin-right: 6px
+
+
+.s-login
+	background-color: #f8f8f8
+	padding-top: 140px
+	padding-bottom: 25px
+	position: relative
+	min-height: 100vh
+	&::after
+		content: ''
+		background-image: url("../images/tab-content-bg.png")
+		background-position: right bottom
+		background-repeat: no-repeat
+		display: block
+		width: 938px
+		height: 345px
+		position: absolute
+		bottom: 0
+		right: -11rem
+		z-index: 0
+	>
+		*
+			z-index: 1
+	.login_rotate_title
+		transform: rotate(180deg) translateY(50%)
+		margin: 0
+		font-family: $poppins-bold
+		font-size: 72px
+		writing-mode: vertical-lr
+		position: absolute
+		top: 50%
+		left: 50px
+		color: #dadada
+		white-space: nowrap
+	.login_logo
+		max-width: 180px
+		display: block
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 35px
+		img
+			width: 100%
+	.form-section
+		max-width: 390px
+		margin-left: auto
+		margin-right: auto
+	.input_checkbox
+		display: flex
+		align-items: center
+		font-size: 14px
+		margin-bottom: 20px
+		padding-left: 22px
+		input
+			min-width: 26px
+			width: 26px
+			height: 26px
+			border-radius: 3px
+			background-color: #fff
+			padding: 0
+		label
+			-moz-user-select: none
+			-webkit-user-select: none
+			user-select: none
+			margin-bottom: 0
+			margin-left: 9px
+	.send_button
+		display: block
+		background-color: $greenish-blue
+		border-radius: $bd-radius
+		color: #fff
+		padding: 14px 0 14px 0
+		text-align: center
+		width: 100%
+		display: block
+		font-size: 15px
+		text-decoration: none
+		overflow: hidden
+		position: relative
+		border: none
+		z-index: 0
+		margin-bottom: 25px
+		transition: 0.3s ease
+		&:hover
+			text-decoration: none
+			background-color: $persian-green
+	.forgot_password
+		text-align: center
+		font-size: 14px
+		margin-bottom: 38px
+		a
+			color: #040707
+	
+	.login_or
+		.or_line
+			position: relative
+			display: flex
+			align-items: center
+			margin-bottom: 34px
+			span
+				background-color: #f8f8f8
+				padding-left: 12px
+				padding-right: 12px
+				color: #a5a5a5
+				font-size: 14px
+				font-family: $poppins-bold
+			&::before
+				content: ''
+				display: block
+				height: 5px
+				width: 100%
+				background-color: #fff
+			&::after
+				content: ''
+				display: block
+				height: 5px
+				width: 100%
+				background-color: #fff
+		.or_social_links
+			a
+				display: block
+				border-radius: $bd-radius
+				color: #fff
+				padding: 14px 0 14px 0
+				text-align: center
+				font-size: 15px
+				text-decoration: none
+				overflow: hidden
+				position: relative
+				border: none
+				transition: 0.3s ease
+				svg
+					margin-right: 5px
+					path
+						fill: #fff
+				&:nth-last-child(n+2)
+					margin-bottom: 25px
+			.sign_facebook
+				background-color: #3a589b
+				&:hover
+					background-color: darken(#3a589b, 5)
+			.sign_up
+				background-color: #ec501b
+				&:hover
+					background-color: darken(#ec501b, 5)
+			.sign_login
+				background-color: #bfbfbf
+				margin-bottom: 150px
+				&:hover
+					background-color: darken(#bfbfbf, 5)
+.copyright_inner
+	margin-top: 200px
+	p
+		font-size: 14px
+		text-align: center
+		max-width: 614px
+		margin: 0 auto
+		line-height: 1.8
+		color: #848484
+		strong
+			font-size: 16px
+		img
+			max-width: 63px
+
+.s-forgot-password
+	.copyright_inner
+		margin-top: 280px
+
+.s-signup
+	.copyright_inner
+		margin-top: 280px
+
+@media screen and(max-height: 890px)
+	.s-signup
+		.copyright_inner
+			margin-top: 200px
+
+@media screen and(max-height: 860px)
+	.s-signup
+		.copyright_inner
+			margin-top: 150px
+
+@media screen and(max-height: 810px)
+	.s-signup
+		.copyright_inner
+			margin-top: 100px
+
+/*--------- Login/Signup Responsive ---------*/
+@media screen and(max-width: 900px)
+	.s-login
+		padding-top: 80px
+		.login_rotate_title
+			display: none
+/*--------- Login/Signup END ---------*/
+
+.footer
+	background-color: $black
+	color: #dadada
+	padding: 50px 0
+	p
+		font-size: 15px
+		text-align: center
+		max-width: 914px
+		margin: 0 auto
+		line-height: 1.8
+		img
+			max-width: 63px
+		a
+			transition: 0.3s ease
+			&:hover
+				svg
+					path
+						fill: $persian-green
+		svg
+			path
+				fill: #fff
+				transition: 0.3s ease
+
+
+/*--------- Cart step START ---------*/
+.s-cart-step
+	background-color: #f8f8f8
+	position: relative
+	padding-bottom: 85px
+	z-index: 0
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		background-image: url('../images/cart-step-bottom.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: bottom center
+		width: 1000px
+		height: 317px
+		z-index: -1
+	.cart_step_container
+		margin-top: -38px
+		margin-left: auto
+		margin-right: auto
+		max-width: 1080px
+	.rotate_title
+		color: #dadada
+		transform: rotate(180deg) translateY(50%)
+		white-space: nowrap
+		top: 50%
+		padding-right: 30px
+	.def_title
+		text-align: center
+		color: $greenish-blue
+		margin-top: 55px
+	.cart_step_logo
+		max-width: 175px
+		display: block
+		padding-top: 73px
+		margin-left: 62px
+		img
+			max-width: 100%
+
+	.cart_step_numbers
+		display: flex
+		justify-content: center
+		span
+			font-size: 36px
+			font-family: $poppins-bold
+			color: #dadada
+			border: 6px solid #dadada
+			border-radius: 50%
+			min-width: 73px
+			height: 73px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			&:nth-last-child(n+2)
+				margin-right: 37px
+		.num_active
+			border-color: $persian-green
+			color: $greenish-blue
+
+	.cart_step_table
+		background-color: #fff
+		padding: 50px
+		border-radius: 55px
+		margin: 54px auto 0 auto
+		box-shadow: 0px 3px 3.96px 0.04px rgba(19, 18, 18, 0.05)
+		ul
+			padding: 0
+			li
+				list-style-type: none
+
+		.table_header
+			font-size: 14px
+			color: #a5a5a5
+			border-bottom: 5px solid $persian-green
+			display: flex
+			justify-content: space-between
+			padding-right: 85px
+			>
+				li
+					font-weight: 400
+					padding-bottom: 20px
+					&:nth-child(1)
+						width: 50%
+					&:nth-child(n+2)
+						padding-left: 25px
+
+				
+		.table_body
+			>
+				li
+					display: flex
+					justify-content: space-between
+					align-items: center
+			li
+				>
+					div
+						padding-top: 20px
+						padding-bottom: 25px
+						&:nth-last-child(n+2)
+							padding-right: 25px
+						span
+							display: inline-block
+			.fav_thumb
+				margin-right: 30px
+				text-align: center
+				min-width: 55px
+				img
+					max-width: 70px
+					max-height: 70px
+			.fav_thumb_title
+				display: flex
+				align-items: center
+				max-width: 450px
+				width: 100%
+				transition: 0.3s ease
+			.fav_title
+				font-size: 14px
+				font-family: $poppins-semibold
+				.title_top
+					color: #000
+					font-family: $poppins-semibold
+				.title_bottom
+					color: #a5a5a5
+					font-family: $poppins-semibold
+			.fav_price_discount
+				display: flex
+				align-items: center
+				max-width: 122px
+				padding-left: 52px
+				position: relative
+
+			.fav_price
+				font-family: $poppins-bold
+				font-size: 14px
+				white-space: nowrap
+				.fav_gray
+					color: #a5a5a5
+				span
+					display: block
+			.fav_discount
+				min-width: 42px
+				height: 42px
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #fff
+				font-size: 12px
+				margin-right: 12px
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+			.quantity
+				width: 95px
+				max-width: none
+		.cs_delete
+			img
+				width: 11px
+				height: 11px
+	.cart_total
+		margin-top: 45px
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		font-family: $poppins-bold
+		>
+			span
+				display: block
+				max-width: 390px
+				margin-left: auto
+		.total_del
+			color: #a5a5a5
+			font-size: 18px
+		.total_accent
+			font-size: 36px
+	.cart_step_bottom
+		max-width: 1080px
+		display: flex
+		justify-content: space-between
+		margin-top: 15px
+		margin-right: auto
+		margin-left: auto
+		.button_gray,
+		.add_cart
+			margin: 0
+			padding: 14px 0
+			max-width: 390px
+			width: 100%
+			height: auto
+		.button_gray
+			margin-right: 25px
+		.add_cart
+			img,
+			svg
+				width: 25px
+
+	.features_row
+		display: flex
+		justify-content: space-between
+		padding-left: 0
+		padding-top: 52px
+		margin-top: 180px
+		li
+			list-style-type: none
+			display: flex
+			align-items: center
+			font-family: $poppins-medium
+			font-weight: 500
+			font-size: 12px
+			line-height: 14px
+			color: #a5a5a5
+			transition: 0.3s ease
+			&:hover
+				color: $persian-green
+				svg
+					path
+						fill: $persian-green
+			svg
+				max-width: 38px
+				max-height: 22px
+				margin-right: 10px
+				path
+					fill: #a5a5a5
+					transition: 0.3s ease
+	
+	.copyright_inner
+		margin-top: 85px
+
+.s-cart-step-custom
+	.table_body
+		>
+			li
+				&:nth-last-child(n+2)
+					border-bottom: 5px solid #f8f8f8
+				&:last-child
+					div
+						padding-bottom: 0
+
+.s-cart-step-2
+	.cart_step_table
+		padding: 50px 50px 25px 50px
+		position: relative
+		ul
+			padding: 0
+			list-style-type: none
+		.table_header
+			display: flex
+			justify-content: space-between
+			padding-bottom: 18px
+			li
+				&:nth-child(1)
+					width: 70%
+				&:nth-child(2)
+					width: 15%
+				&:nth-child(3)
+					width: 15%
+				&:nth-child(n+2)
+					padding-left: 0
+				&:nth-child(2)
+					padding-left: 35px
+		.table_body
+			label
+				display: block
+				cursor: pointer
+				&:hover
+					.fav_thumb_title
+						span
+							color: $persian-green !important
+				>
+					ul
+						display: flex
+						justify-content: space-between
+						transition: 0.3s ease
+						margin: 0
+						>
+							li
+								display: flex
+								flex-direction: column
+								justify-content: center
+								&:nth-child(1)
+									width: 70%
+								&:nth-child(2)
+									width: 15%
+									margin-right: 35px
+								&:nth-child(3)
+									width: 15%
+								&:last-child
+									position: relative
+									input
+										position: absolute
+										right: 0
+										top: 50%
+										transform: translateY(-50%)
+								>
+									div
+										padding: 30px 0
+						input
+							border-radius: 50%
+							border-width: 4px
+							cursor: pointer
+				.fav_thumb_title
+					span
+						transition: 0.3s ease
+				.fav_price_discount,
+				.fav_price
+					span
+						transition: 0.3s ease
+			>
+				label
+					margin-bottom: 0
+					&:nth-last-child(n+2)
+						border-bottom: 5px solid #f8f8f8
+	
+	.cart_step_form
+		.csf_row
+			display: flex
+			flex-wrap: wrap
+		.csf_item
+			width: 40%
+			margin-right: 25px
+		.csf_button
+			background-color: $greenish-blue
+			color: #fff
+			padding: 12px 20px 12px 20px
+			border-radius: $bd-radius
+			display: block
+			text-align: center
+			transition: 0.3s ease
+			font-size: 15px
+			margin-bottom: 25px
+			&:hover
+				background-color: $persian-green
+		.csf_postal_code
+			.csf_postal_code_find
+				background-color: #e8e8e8
+				position: absolute
+				right: 0
+				top: 0
+				height: 100%
+				border-radius: $bd-radius
+				padding: 0px 25px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				color: #a5a5a5
+				font-size: 14px
+				transition: 0.3s ease
+				&:hover
+					background-color: $persian-green
+					color: #fff
+		.textarea_item
+			width: 83%
+
+	.free_delivery_info
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 40px
+		svg
+			margin-right: 12px
+			path
+				fill: $greenish-blue
+		p
+			font-family: $poppins-bold
+			color: $greenish-blue
+			margin-right: 12px
+			margin-bottom: 0
+		.delivery_price
+			font-size: 24px
+			font-family: $poppins-bold
+			color: $persian-green
+				
+.cart_step_map
+	background-color: #fff
+	position: absolute
+	top: 40px
+	left: 50%
+	width: 100%
+	transform: translateX(-50%) translateY(-150px) scale(0.5)
+	opacity: 0
+	visibility: hidden
+	border-radius: $bd-radius
+	overflow: hidden
+	box-shadow: 0px 0px 16.8px 7.2px rgba(19, 18, 18, 0.09)
+	max-width: 1010px
+	width: 100%
+	transition: 0.3s ease-out
+	.csm_close
+		position: absolute
+		right: 15px
+		top: 15px
+		cursor: pointer
+		transition: 0.3s ease
+		border-radius: 50%
+		width: 35px
+		height: 35px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&:hover
+			background-color: $greenish-blue
+			img
+				filter: invert(1)
+		img
+			width: 12px
+			height: 12px
+			transition: 0.3s ease
+	.csm_header
+		box-shadow: 0px 8px 14.88px 1.12px rgba(19, 18, 18, 0.27)
+		padding-top: 40px
+	h2
+		font-size: 36px
+		font-family: $poppins-bold
+		text-align: center
+		color: $greenish-blue
+		margin-bottom: 38px
+	.csm_row
+		display: flex
+		padding: 45px 45px 15px 45px
+	.csm_left
+		width: 45%
+		margin-right: 30px
+	.csm_right
+		width: 55%
+		ul
+			height: 125px
+			overflow-y: auto
+			border: 1px solid #e8e8e8
+			border-radius: $bd-radius
+			padding: 15px 0 0 20px
+			li
+				margin-bottom: 2px
+				a
+					font-size: 14px
+					&:focus
+						color: $persian-green
+				&:last-child
+					margin-bottom: 15px
+		.mCSB_scrollTools
+			right: 16px
+			.mCSB_draggerRail
+				height: 90%
+	.select_item
+		position: relative
+		label
+			position: absolute
+			left: 22px
+			top: -15px
+			transform: none
+			background-color: #00aea9
+			color: #fff
+			padding: 5px 15px
+			border-radius: $bd-radius
+			font-size: 12px
+			z-index: 1
+		.filter-option-inner-inner
+			color: #040707
+			font-size: 14px
+	.csm_map
+		height: 590px
+		iframe
+			width: 100%
+			height: 100%
+
+.cart_step_loader
+	text-align: center
+	background-color: #fff
+	padding: 180px
+	border-radius: 55px
+	margin-top: 50px
+	box-shadow: 0px 3px 3.96px 0.04px rgba(19, 18, 18, 0.05)
+	img
+		-webkit-animation: spin 2s linear infinite
+		-moz-animation: spin 2s linear infinite
+		-ms-animation: spin 2s linear infinite
+		-o-animation: spin 2s linear infinite
+		animation: spin 2s linear infinite
+		max-width: 150px
+	.loader_title
+		font-size: 36px
+		font-family: $poppins-bold
+		color: $greenish-blue
+		margin-top: 55px
+
+@keyframes spin
+	100%
+		transform: rotate(360deg)
+
+@-webkit-@keyframes spin
+	100%
+		-webkit-transform: rotate(360deg)
+
+@-moz-@keyframes spin
+	100%
+		-moz-transform: rotate(360deg)
+
+.csm_active
+	transform: translateX(-50%)
+	opacity: 1
+	visibility: visible
+
+.s-cart-step-3
+	.cs3_bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 42px
+		.form-section
+			display: flex
+			align-items: center
+			max-width: 462px
+			margin-left: auto
+			margin-right: auto
+			width: 100%
+			.input_item
+				max-width: 390px
+				width: 100%
+				margin-right: 12px
+				margin-bottom: 0
+			.cs3_send
+				border-radius: 50%
+				min-width: 55px
+				height: 55px
+				background-color: #bfbfbf
+				border: none
+				transition: 0.3s ease
+				outline: none
+				&:hover
+					background-color: $greenish-blue
+				svg
+					path
+						fill: #fff
+		.cart_total
+			margin: 0
+			padding-right: 50px
+
+	.payment_methods
+		background-color: #fff
+		padding: 45px 118px
+		border-radius: 55px
+		box-shadow: 0px 3px 3.96px 0.04px rgba(19, 18, 18, 0.05)
+		margin-top: 60px
+		h3
+			font-size: 24px
+			font-family: $poppins-bold
+			text-align: center
+			margin-bottom: 25px
+			color: $greenish-blue
+		.select_item
+			max-width: 390px
+			margin-left: auto
+			margin-right: auto
+			.filter-option-inner-inner
+				color: #000
+				font-size: 14px
+		.payment_links
+			padding: 0
+			margin-top: 28px
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			li
+				list-style-type: none
+				&:nth-child(5n+5)
+					a
+						margin-right: 0
+			a
+				min-width: 160px
+				height: 160px
+				border-radius: 50%
+				border: 4px solid #f8f8f8
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				margin-right: 22px
+				margin-bottom: 22px
+				transition: 0.3s ease
+				&:hover,
+				&:active,
+				&:focus
+					border-color: $persian-green
+
+
+/*--------- Cart step Responsive ---------*/
+@media screen and(max-width: 1200px)
+	.s-cart-step-3 
+		.payment_methods
+			padding: 45px
+			.payment_links
+				justify-content: space-around
+				li
+					a
+						margin-left: auto !important
+						margin-right: auto !important
+
+
+@media screen and(max-width: 1330px)
+	.s-cart-step 
+		.rotate_title
+			display: none
+
+
+@media screen and(max-width: 992px)
+	.s-cart-step 
+		.cart_step_container
+			margin-top: 60px
+		.cart_step_logo
+			padding-top: 50px
+		.features_row
+			flex-wrap: wrap
+			justify-content: center
+			li
+				width: 33.3%
+				margin-bottom: 35px
+				display: flex
+				justify-content: center
+
+	.s-cart-step-2 
+		.cart_step_table
+			.table_header 
+				li
+					&:nth-child(1)
+						width: 50%
+					&:nth-child(2)
+						padding-left: 0
+					&:nth-child(3)
+						width: 20%
+			.table_body 
+				label 
+					> 
+						ul 
+							> 
+								li
+									&:nth-child(1)
+										width: 50%
+		.cart_step_form
+			.csf_row
+				justify-content: space-between 
+			.csf_item
+				width: 48%
+				margin-right: 0
+
+	.cart_step_loader
+		padding: 150px 50px
+
+
+@media screen and(max-width: 768px)
+	.s-cart-step-custom 
+		.cart_step_table
+			padding: 35px
+			.table_header
+				display: none
+			.table_body
+				>
+					li
+						position: relative
+						flex-wrap: wrap
+						>
+							div
+								padding-right: 0 !important
+								margin-bottom: 0 !important
+								&:first-child
+									width: 100%
+									padding-right: 20px !important
+								.fav_thumb_title
+									max-width: none
+								&:last-child
+									position: absolute
+									top: 35px
+									right: 0
+									padding: 0
+
+	.s-cart-step-2 
+		.cart_step_table 
+			.table_header
+				display: none
+			.table_body 
+				label 
+					> 
+						ul
+							flex-wrap: wrap
+							li
+								padding-top: 0
+								padding-bottom: 25px
+								&:first-child
+									width: 100%
+
+		.cart_step_form
+			.csf_item
+				width: 100%
+
+	.cart_step_map
+		.csm_row
+			flex-wrap: wrap
+			padding-bottom: 30px
+		.csm_left,
+		.csm_right
+			width: 100%
+		.csm_left
+			margin-right: 0
+
+	.s-cart-step-3 
+		.cs3_bottom
+			flex-direction: column
+			.form-section
+				order: 1
+			.cart_total
+				padding-right: 0
+				margin-bottom: 15px
+
+
+@media screen and(max-width: 680px)
+	.s-cart-step
+		.features_row
+			li
+				width: 50%
+
+
+@media screen and(max-width: 575px)
+	.cart_step_map
+		h2
+			margin-bottom: 15px
+			padding-left: 15px
+			padding-right: 15px
+		.csm_row
+			padding-left: 15px
+			padding-right: 15px
+
+
+@media screen and(max-width: 480px)
+	.s-cart-step 
+		.cart_step_logo
+			margin-left: 35px
+		.cart_step_table
+			border-radius: $bd-radius
+		.cart_total
+			margin-left: 0
+			max-width: none
+
+		.cart_step_bottom
+			flex-direction: column
+			>
+			.button_gray,
+			.add_cart
+				max-width: none
+
+			.button_gray
+				margin-bottom: 15px
+				margin-right: 0
+		.features_row
+			margin-top: 60px
+			li
+				width: 100%
+
+	.page_back
+		padding-right: 35px
+
+	.s-cart-step-2 
+		.cart_step_table
+			padding: 25px 
+			.table_body 
+				.fav_thumb
+					margin-right: 14px
+		.cart_step_form 
+			.csf_postal_code
+				input
+					border-radius: $bd-radius $bd-radius 0 0
+				.csf_postal_code_find
+					position: static
+					height: auto
+					padding: 12px 20px 12px 20px
+					border-radius: 0 0 $bd-radius $bd-radius
+
+	.cart_step_loader
+		padding: 80px 30px
+		.loader_title
+			margin-top: 30px
+			font-size: 32px
+
+@media screen and(max-width: 420px)
+	.s-cart-step-custom 
+		.cart_step_table
+			padding: 20px
+			.table_body
+				>
+					li
+						>
+							div
+								&:nth-child(4)
+									width: 100%
+							
+
+
+@media screen and(max-width: 390px)
+	.s-cart-step 
+		.cart_step_logo
+			max-width: 140px
+	.cart_step_loader
+		padding: 50px 30px
+		img
+			max-width: 100px
+		.loader_title
+			font-size: 26px
+
+@media screen and(max-width: 370px)
+	.s-cart-step 
+		.cart_step_numbers 
+			span
+				&:nth-last-child(n+2)
+					margin-right: 25px
+
+/*--------- Cart step END ---------*/
+
+
+
+/*--------- All Responsive START ---------*/
+/*--------- Max width ---------*/
+@media screen and(max-width: 1200px)
+	.container
+		padding: 0 20px
+
+@media screen and(max-width: 768px)
+	.s-gutter
+		padding: $s-gutter-min 0
+	.pr_added_modal 
+		.modal-body
+			.added_form_row
+				.input_item
+					max-width: 47%
+
+	.price_range 
+		.input_item
+			padding-left: 0
+			padding-right: 0
+			&::before
+				display: none
+
+	.rotate_title_image 
+		svg
+			transform: none
+			margin-top: 0
+			margin-left: 15px
+
+@media screen and(max-width: 575px)
+	.rotate_title
+		justify-content: center
+		font-size: 52px
+	.pr_added_modal
+		.modal-header
+			padding-left: 25px
+			padding-right: 25px
+			.button_gray
+				margin-bottom: 15px
+				max-width: 100%
+			.add_cart
+				max-width: 100%
+		.modal-body
+			.added_form_row
+				.input_item
+					max-width: 100%
+					margin-right: 0
+
+@media screen and(max-width: 380px)
+	.pr_added_modal 
+		.modal-body
+			padding: 10px 25px 54px 25px
+
+/*--------- Min width ---------*/
+@media (min-width:576px)
+	.modal-dialog
+		margin: 4.75rem auto
+
+/*--------- All Responsive START ---------*/

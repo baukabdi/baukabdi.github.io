@@ -1,0 +1,70 @@
+html
+	margin-top: 0 !important
+
+body
+	font-family: $raleway
+
+h1, h2, h3, h4, h5, h6, p
+	margin: 0
+
+p
+	line-height: 133.5%
+
+.opacity-0
+	opacity: 0
+
+.pb-120
+	padding-bottom: 120px
+
+.pb-70
+	padding-bottom: 70px
+
+.trf-none
+	transform: none !important
+
+.c-title
+	font-family: $gotham
+	text-transform: uppercase
+	font-size: 50px
+	text-align: center
+	font-weight: 300
+
+.min-title
+	font-family: $gotham
+	text-transform: uppercase
+	font-size: 35px
+	font-weight: 300
+	position: relative
+	padding-bottom: 35px
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		width: 50px
+		height: 1px
+		background-color: $black
+
+.social-links
+	display: flex
+	transition: 1s ease
+	a
+		background-color: $dark-light
+		width: 35px
+		height: 35px
+		border-radius: 50%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		margin-right: 20px
+		transition: 0.3s ease-in
+		&:hover
+			background-color: #E8937C
+			box-shadow: 0px 2px 27px rgba(232, 147, 124, 0.73)
+		svg
+			height: 18px
+
+
+#lcl_thumbs_nav .lcl_tn_inner
+	padding-left: 0
