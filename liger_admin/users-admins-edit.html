@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Liger network - Admin panel</title>
+
+	<link rel="stylesheet" href="fonts/Material_design_icons/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div id="my-page">
+
+		<div class="preloader Fixed">
+			<div class="preloader__item">
+				<img src="images/logo.svg" alt="">
+			</div>
+		</div>
+
+		<header class="header" id="my-header" class="hamburger">
+			<div class="header-left">
+				<a href="#my-menu" class="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a class="in-cabinet" href="https://baukabdi.ru/liger_cabinet" target="_blank"><span class="mdi mdi-account"></span>
+					<p>Перейти в кабинет</p>
+				</a>
+			</div>
+
+			<div class="header-right">
+				<div class="dropdown-lang dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<div class="photo">
+						<img src="images/ru.png" alt="">
+					</div>
+					<p class="text">Ru</p>
+				</a>
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/ru.png" alt="">
+						</div>
+						<p class="text">Ru</p>
+					</a>
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/en.png" alt="">
+						</div>
+						<p class="text">En</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-notification">
+				<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-bell"></span></a>
+				<span class="length">3</span>
+
+				<div class="dropdown-menu notification-dropdown">
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a href="all-events.html" class="all-events dropdown-item">Все события</a>
+				</div>
+			</div>
+
+			<div class="dropdown-profile dropdown">
+				<a href="#" class="header-top__profile-item" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div class="avatar">
+					<img src="images/avatar-circle.png" alt="">
+				</div>
+				<p>Julie Cortez</p>
+				<div class="triangle">
+					<span class="mdi mdi-menu-down"></span>
+				</div>
+			</a>
+			<div class="dropdown-menu profile-dropdown" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="my-profile.html">Мой профиль</a>
+				<a class="dropdown-item" href="authorization.html">Выход</a>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="main">
+
+	<div class="main-left">
+	<div class="main-left__content">
+
+		<nav id="my-menu">
+			<ul class="menu menu-has-p">
+				<li>
+					<a href="index.html"><span class="mdi mdi-pulse"></span>
+						<p>Главная</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-basket"></span>
+						<p>Маркетплейс</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketplace-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketplace-events.html">
+								<p>Events</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-shopping"></span>
+						<p>Заказы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="orders-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="orders-tickets.html">
+								<p>Билеты</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-hexagon-multiple"></span>
+						<p>Маркетинг план</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketing-plan-clients.html">
+								<p>Клиенты</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing-plan-packages.html">
+								<p>Пакеты</p>
+							</a>
+						</li>
+						<li>
+							<a href="statutes.html">
+								<p>Статусы</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="verification.html"><span class="mdi mdi-account-card-details"></span>
+						<p>Верификация</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-wallet"></span>
+						<p>Финансы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="finance-transactions.html">
+								<p>Транзакции</p>
+							</a>
+						</li>
+						<li>
+							<a href="finance-withdrawal.html">
+								<p>Вывод средств</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-settings-box"></span>
+						<p>Настройки</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="settings-pages.html">
+								<p>Страницы</p>
+							</a>
+						</li>
+						<li><a href="settings-widgets.html">
+							<p>Виджеты</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-backup-copy.html">
+							<p>Резервная копия</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-menu-editing.html">
+							<p>Редактирование меню</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="settings-faq.html">
+							<p>FAQ</p>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="news.html"><span class="mdi mdi-message-reply-text"></span>
+					<p>Новости</p>
+				</a>
+			</li>
+			<li>
+				<a href="users-admins.html"><span class="mdi mdi-account-multiple"></span>
+					<p>Пользователи (Админы)</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+</div>
+
+	<div class="main-right">
+		<div class="s-users-admins">
+			<div class="top top-custom mb-5">
+				<a href="#finance-password-popup__item" class="accent-button mfp-custom-effect" data-effect="mfp-zoom-in">Сохранить</a>
+			</div>
+
+			<!-- Popup finance START -->
+			<div id="finance-password-popup__item" class="white-popup mfp-with-anim mfp-hide">
+				<h3>Для подверждения действия введите финансовый пароль</h3>
+				<div class="input__wrap">
+					<input type="text">
+					<button class="button">Подвердить</button>
+				</div>
+			</div>
+			<!-- Popup finance END -->
+
+
+			<div class="input__wrap">
+				<div class="input-custom">
+					<label for="user-login">Логин пользователя</label>
+					<input id="user-login" type="text" class="pd-10">
+				</div>
+
+				<div class="input-custom">
+					<label for="user-password">Пароль пользователя</label>
+					<input id="user-password" type="text" class="pd-10">
+				</div>
+
+				<div class="input-custom">
+					<label for="user-email">E-mail пользователя</label>
+					<input id="user-email" type="text" class="pd-10">
+				</div>
+
+				<div class="input-custom">
+					<label for="user-name">Имя пользователя</label>
+					<input id="user-name" type="text" class="pd-10">
+				</div>
+
+				<div class="input-custom">
+					<label for="user-surname">Фамилия пользователя</label>
+					<input id="user-surname" type="text" class="pd-10">
+				</div>
+			</div>
+
+			<div class="users-collapse__wrap">
+				<h4 class="users-collapse__title">Доступы</h4>
+
+				<div class="collapse__wrap" id="users-collapse">
+
+					<!-------- Collapse 1 START -------->
+					<div class="collapse__custom">
+						<div class="collapse__header">
+							<div class="left">Клиенты</div>
+
+							<div class="right">
+								<div class="checkbox__wrap">
+									<div class="checkbox-custom">
+										<input type="checkbox" id="show-1">
+										<label for="show-1">Просмотр</label>
+									</div>
+
+									<div class="checkbox-custom">
+										<input type="checkbox" id="edit-1">
+										<label for="edit-1">Редактирование</label>
+									</div>
+
+									<div class="checkbox-custom">
+										<input type="checkbox" id="delete-1">
+										<label for="delete-1">Удаление</label>
+									</div>
+								</div>
+
+								<span class="show-content-button" data-toggle="collapse" data-target="#users-collapse-1" aria-expanded="true">
+									<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.344 185.344" style="enable-background:new 0 0 185.344 185.344;" xml:space="preserve">
+										<g>
+											<g>
+												<path style="fill:#010002;" d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18
+												c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0
+												c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path>
+											</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+										</span>
+									</div>
+								</div>
+
+								<div class="collapse__body collapse" id="users-collapse-1" data-parent="#users-collapse">
+									<div class="collapse__header">
+										<div class="left">Структура</div>
+
+										<div class="right">
+											<div class="checkbox__wrap">
+												<div class="checkbox-custom">
+													<input type="checkbox" id="show-2">
+													<label for="show-2">Просмотр</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="edit-2">
+													<label for="edit-2">Редактирование</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="delete-2">
+													<label for="delete-2">Удаление</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="collapse__header">
+										<div class="left">Уведомления</div>
+
+										<div class="right">
+											<div class="checkbox__wrap">
+												<div class="checkbox-custom">
+													<input type="checkbox" id="show-3">
+													<label for="show-3">Просмотр</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="edit-3">
+													<label for="edit-3">Редактирование</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="delete-3">
+													<label for="delete-3">Удаление</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="collapse__header">
+										<div class="left">Кошелек</div>
+
+										<div class="right">
+											<div class="checkbox__wrap">
+												<div class="checkbox-custom">
+													<input type="checkbox" id="show-4">
+													<label for="show-4">Просмотр</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="edit-4">
+													<label for="edit-4">Редактирование</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="delete-4">
+													<label for="delete-4">Удаление</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="collapse__header">
+										<div class="left">Статистика</div>
+
+										<div class="right">
+											<div class="checkbox__wrap">
+												<div class="checkbox-custom">
+													<input type="checkbox" id="show-5">
+													<label for="show-5">Просмотр</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="edit-5">
+													<label for="edit-5">Редактирование</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="delete-5">
+													<label for="delete-5">Удаление</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="collapse__header">
+										<div class="left">Личная информация</div>
+
+										<div class="right">
+											<div class="checkbox__wrap">
+												<div class="checkbox-custom">
+													<input type="checkbox" id="show-6">
+													<label for="show-6">Просмотр</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="edit-6">
+													<label for="edit-6">Редактирование</label>
+												</div>
+
+												<div class="checkbox-custom">
+													<input type="checkbox" id="delete-6">
+													<label for="delete-6">Удаление</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-------- Collapse 1 END -------->
+
+							<!-------- Collapse 2 START -------->
+							<div class="collapse__custom">
+								<div class="collapse__header">
+									<div class="left">События</div>
+
+									<div class="right">
+										<div class="checkbox__wrap">
+											<div class="checkbox-custom">
+												<input type="checkbox" id="show-7">
+												<label for="show-7">Просмотр</label>
+											</div>
+
+											<div class="checkbox-custom">
+												<input type="checkbox" id="edit-7">
+												<label for="edit-7">Редактирование</label>
+											</div>
+
+											<div class="checkbox-custom">
+												<input type="checkbox" id="delete-7">
+												<label for="delete-7">Удаление</label>
+											</div>
+										</div>
+
+										<span class="show-content-button" data-toggle="collapse" data-target="#users-collapse-2" aria-expanded="true">
+											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 185.344 185.344" style="enable-background:new 0 0 185.344 185.344;" xml:space="preserve">
+												<g>
+													<g>
+														<path style="fill:#010002;" d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18
+														c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0
+														c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path>
+													</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+												</span>
+											</div>
+										</div>
+
+										<div class="collapse__body collapse" id="users-collapse-2" data-parent="#users-collapse">
+											<div class="collapse__header">
+												<div class="left">Общая информация</div>
+
+												<div class="right">
+													<div class="checkbox__wrap">
+														<div class="checkbox-custom">
+															<input type="checkbox" id="show-8">
+															<label for="show-8">Просмотр</label>
+														</div>
+
+														<div class="checkbox-custom">
+															<input type="checkbox" id="edit-8">
+															<label for="edit-8">Редактирование</label>
+														</div>
+
+														<div class="checkbox-custom">
+															<input type="checkbox" id="delete-8">
+															<label for="delete-8">Удаление</label>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="collapse__header">
+												<div class="left">Цены</div>
+
+												<div class="right">
+													<div class="checkbox__wrap">
+														<div class="checkbox-custom">
+															<input type="checkbox" id="show-9">
+															<label for="show-9">Просмотр</label>
+														</div>
+
+														<div class="checkbox-custom">
+															<input type="checkbox" id="edit-9">
+															<label for="edit-9">Редактирование</label>
+														</div>
+
+														<div class="checkbox-custom">
+															<input type="checkbox" id="delete-9">
+															<label for="delete-9">Удаление</label>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="collapse__header">
+												<div class="left">Билеты</div>
+
+												<div class="right">
+													<div class="checkbox__wrap">
+														<div class="checkbox-custom">
+															<input type="checkbox" id="show-10">
+															<label for="show-10">Просмотр</label>
+														</div>
+
+														<div class="checkbox-custom">
+															<input type="checkbox" id="edit-10">
+															<label for="edit-10">Редактирование</label>
+														</div>
+
+														<div class="checkbox-custom">
+															<input type="checkbox" id="delete-10">
+															<label for="delete-10">Удаление</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Collapse 2 END -------->
+
+									<!-------- Non сollapse 3 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Слитки</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-11">
+														<label for="show-11">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-11">
+														<label for="edit-11">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-11">
+														<label for="delete-11">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 3 END -------->
+
+									<!-------- Non сollapse 4 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Заказы на доставку</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-12">
+														<label for="show-12">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-12">
+														<label for="edit-12">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-12">
+														<label for="delete-12">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 4 END -------->
+
+									<!-------- Non сollapse 5 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Верификации</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-14">
+														<label for="show-14">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-14">
+														<label for="edit-14">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-14">
+														<label for="delete-14">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 5 END -------->
+
+									<!-------- Non сollapse 6 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Пакеты</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-15">
+														<label for="show-15">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-15">
+														<label for="edit-15">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-15">
+														<label for="delete-15">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 6 END -------->
+
+									<!-------- Non сollapse 7 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Информационные страницы</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-16">
+														<label for="show-16">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-16">
+														<label for="edit-16">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-16">
+														<label for="delete-16">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 7 END -------->
+
+									<!-------- Non сollapse 8 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Новости</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-17">
+														<label for="show-17">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-17">
+														<label for="edit-17">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-17">
+														<label for="delete-17">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 8 END -------->
+
+									<!-------- Non сollapse 9 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Виджеты</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-18">
+														<label for="show-18">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-18">
+														<label for="edit-18">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-18">
+														<label for="delete-18">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 9 END -------->
+
+									<!-------- Non сollapse 10 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">FAQ</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-19">
+														<label for="show-19">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-19">
+														<label for="edit-19">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-19">
+														<label for="delete-19">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 10 END -------->
+
+									<!-------- Non сollapse 11 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Транзакции</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-20">
+														<label for="show-20">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-20">
+														<label for="edit-20">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-20">
+														<label for="delete-20">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 11 END -------->
+
+									<!-------- Non сollapse 12 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">События</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-21">
+														<label for="show-21">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-21">
+														<label for="edit-21">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-21">
+														<label for="delete-21">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 12 END -------->
+
+									<!-------- Non сollapse 13 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Партнерская программа</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-22">
+														<label for="show-22">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-22">
+														<label for="edit-22">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-22">
+														<label for="delete-22">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 13 END -------->
+
+									<!-------- Non сollapse 14 START -------->
+									<div class="collapse__custom non-collapse">
+										<div class="collapse__header">
+											<div class="left">Резервные копии</div>
+
+											<div class="right">
+												<div class="checkbox__wrap">
+													<div class="checkbox-custom">
+														<input type="checkbox" id="show-23">
+														<label for="show-23">Просмотр</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="edit-23">
+														<label for="edit-23">Редактирование</label>
+													</div>
+
+													<div class="checkbox-custom">
+														<input type="checkbox" id="delete-23">
+														<label for="delete-23">Удаление</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-------- Non сollapse 14 END -------->
+
+								</div>
+
+								<div class="bottom-buttons">
+									<a href="#finance-password-popup__item" class="decoration mfp-custom-effect" data-effect="mfp-zoom-in">Удалить пользователя</a>
+									<a href="#finance-password-popup__item" class="decoration mfp-custom-effect" data-effect="mfp-zoom-in">Отключить пользователя</a>
+									<a href="#finance-password-popup__item" class="accent-button mfp-custom-effect" data-effect="mfp-zoom-in">Сохранить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+</div>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

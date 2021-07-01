@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Liger network - Admin panel</title>
+
+	<link rel="stylesheet" href="fonts/Material_design_icons/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div id="my-page">
+
+		<div class="preloader Fixed">
+			<div class="preloader__item">
+				<img src="images/logo.svg" alt="">
+			</div>
+		</div>
+
+		<header class="header" id="my-header" class="hamburger">
+			<div class="header-left">
+				<a href="#my-menu" class="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a class="in-cabinet" href="https://baukabdi.ru/liger_cabinet" target="_blank"><span class="mdi mdi-account"></span>
+					<p>Перейти в кабинет</p>
+				</a>
+			</div>
+
+			<div class="header-right">
+				<div class="dropdown-lang dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<div class="photo">
+						<img src="images/ru.png" alt="">
+					</div>
+					<p class="text">Ru</p>
+				</a>
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/ru.png" alt="">
+						</div>
+						<p class="text">Ru</p>
+					</a>
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/en.png" alt="">
+						</div>
+						<p class="text">En</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-notification">
+				<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-bell"></span></a>
+				<span class="length">3</span>
+
+				<div class="dropdown-menu notification-dropdown">
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a href="all-events.html" class="all-events dropdown-item">Все события</a>
+				</div>
+			</div>
+
+			<div class="dropdown-profile dropdown">
+				<a href="#" class="header-top__profile-item" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div class="avatar">
+					<img src="images/avatar-circle.png" alt="">
+				</div>
+				<p>Julie Cortez</p>
+				<div class="triangle">
+					<span class="mdi mdi-menu-down"></span>
+				</div>
+			</a>
+			<div class="dropdown-menu profile-dropdown" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="my-profile.html">Мой профиль</a>
+				<a class="dropdown-item" href="authorization.html">Выход</a>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="main">
+
+	<div class="main-left">
+	<div class="main-left__content">
+
+		<nav id="my-menu">
+			<ul class="menu menu-has-p">
+				<li>
+					<a href="index.html"><span class="mdi mdi-pulse"></span>
+						<p>Главная</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-basket"></span>
+						<p>Маркетплейс</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketplace-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketplace-events.html">
+								<p>Events</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-shopping"></span>
+						<p>Заказы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="orders-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="orders-tickets.html">
+								<p>Билеты</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-hexagon-multiple"></span>
+						<p>Маркетинг план</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketing-plan-clients.html">
+								<p>Клиенты</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing-plan-packages.html">
+								<p>Пакеты</p>
+							</a>
+						</li>
+						<li>
+							<a href="statutes.html">
+								<p>Статусы</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="verification.html"><span class="mdi mdi-account-card-details"></span>
+						<p>Верификация</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-wallet"></span>
+						<p>Финансы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="finance-transactions.html">
+								<p>Транзакции</p>
+							</a>
+						</li>
+						<li>
+							<a href="finance-withdrawal.html">
+								<p>Вывод средств</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-settings-box"></span>
+						<p>Настройки</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="settings-pages.html">
+								<p>Страницы</p>
+							</a>
+						</li>
+						<li><a href="settings-widgets.html">
+							<p>Виджеты</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-backup-copy.html">
+							<p>Резервная копия</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-menu-editing.html">
+							<p>Редактирование меню</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="settings-faq.html">
+							<p>FAQ</p>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="news.html"><span class="mdi mdi-message-reply-text"></span>
+					<p>Новости</p>
+				</a>
+			</li>
+			<li>
+				<a href="users-admins.html"><span class="mdi mdi-account-multiple"></span>
+					<p>Пользователи (Админы)</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+</div>
+
+	<div class="main-right">
+		<div class="s-marketing-plan-clients">
+			<div class="top top-custom">
+				<h2 class="title">John Dillinger</h2>
+				<a href="#finance-password-popup__item" class="accent-button mfp-custom-effect" data-effect="mfp-zoom-in">Сохранить все</a>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="data-custom maw-none h-100">
+						<table class="data-table mt-0 h-100">
+							<tbody>
+								<tr>
+									<td class="key mr-5">Баланс кошелька</td>
+									<td class="key bold">1250 €</td>
+								</tr>
+								<tr>
+									<td class="key mr-5">Снятые средства</td>
+									<td class="key bold">1250 €</td>
+								</tr>
+								<tr>
+									<td class="key mr-5">Доход</td>
+									<td class="key bold">1250 €</td>
+								</tr>
+								<tr>
+									<td class="key mr-5">Баланс в DM</td>
+									<td class="key bold">1250 DM</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="col-lg-3">
+					<div class="data-custom maw-none bg-white pd-15 h-100">
+						<div class="min-logo mb-2">
+							<img class="mr-2" src="images/min-logo.png" alt="">
+							<span class="bold">Серебрянный партнер</span>
+						</div>
+						<hr>
+						<div class="d-flex mb-2">
+							<span class="bold mr-2">1500 €</span> 
+							<p>до статуса "Золотой партнер"</p>
+						</div>
+
+						<div class="d-flex jcsb">
+							<div class="left">
+								<p><span class="mr-2">Бонус</span><span class="bold">700 €</span></p>
+								<p><span class="mr-2">Получен</span><span class="bold">12.10.18</span></p>
+							</div>
+							
+							<div class="right">
+								<p>Товарооборот</p>
+								<p><span class="bold">12 300 €</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="account-non-verification">
+						<p>Аккаунт <span class="bold">НЕ</span> верифицирован</p>
+						<a href="#" class="darken-button">Отправить уведомление</a>
+					</div>
+
+					<div class="d-flex jcsb">
+						<div class="status-colors d-flex jcsb aic">
+							<div class="circle__wrap">
+								<div class="circle__item p-bronze"></div>
+								<p class="number">6</p>
+							</div>
+							<div class="circle__wrap">
+								<div class="circle__item p-silver"></div>
+								<p class="number">2</p>
+							</div>
+							<div class="circle__wrap">
+								<div class="circle__item p-platinum"></div>
+								<p class="number">4</p>
+							</div>
+							<div class="circle__wrap">
+								<div class="circle__item p-gold"></div>
+								<p class="number">6</p>
+							</div>
+							<div class="circle__wrap">
+								<div class="circle__item p-international-director"></div>
+								<p class="number">4</p>
+							</div>
+							<div class="circle__wrap">
+								<div class="circle__item p-boards-of-director"></div>
+								<p class="number">5</p>
+							</div>
+						</div>
+
+						<div class="ticket-slitki">
+							<div class="mb-2 d-flex jcsb">
+								<p>
+									<span class="mdi mdi-ticket"></span>
+									<span class="medium">3 билета</span>
+								</p>
+								<p class="bold">245 DM</p>
+							</div>
+
+							<div class="d-flex jcsb">
+								<p>
+									<span class="mdi mdi-square-inc"></span>
+									<span class="medium">5 слитков на 65 г.</span>
+								</p>
+								<p class="bold">
+									1865 DM
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ########## Tabs START ########## -->
+			<div class="clients-tab__wrap">
+				<div class="clients-tab__button">
+					<li class="tab-button__active"><a href="#tab-shopping-list">Список покупок</a></li>
+					<li><a href="#tab-wallet">Кошелек</a></li>
+					<li><a href="#tab-partners-list">Список партнеров</a></li>
+					<li><a href="#tab-partners-notification">Уведомления</a></li>
+					<li><a href="#tab-partners-statistics">Статистика</a></li>
+					<li><a href="#tab-partners-personal-information">Личная информация</a></li>
+				</div>
+
+
+				<!--------- Tab 1 START --------->
+				<div id="tab-shopping-list" class="clients-tab__content">
+					<table class="tab-shopping-list__table">
+						<thead>
+							<tr class="table-link-title">
+								<td><a href="#">Дата покупки:</a></td>
+								<td><a href="#">Название:</a></td>
+								<td><a href="#">Цена:</a></td>
+								<td><a href="#">Дополнительно:</a></td>
+								<td><a href="#">Действия:</a></td>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Билет на мероприятие "Мировая конференция"</td>
+								<td><span class="bold">75 €</span></td>
+								<td></td>
+								<td><a class="decoration" href="#">Посмотреть билет</a></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Золотой слиток 10 г.</td>
+								<td><span class="bold">373 DM</span></td>
+								<td></td>
+								<td><a class="decoration" href="#">Запрос на доставку</a></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Лицензия "Партнер" на год</td>
+								<td><span class="bold">180 €</span></td>
+								<td>Действителен до 12.05.2019</td>
+								<td><a class="decoration" href="#">Посмотреть билет</a></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Билет на мероприятие "Мировая конференция"</td>
+								<td><span class="bold">75 €</span></td>
+								<td>Действителен до 12.05.2019</td>
+								<td><a class="decoration" href="#">Посмотреть билет</a></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Билет на мероприятие "Мировая конференция"</td>
+								<td><span class="bold">75 €</span></td>
+								<td>Действителен до 12.05.2019</td>
+								<td><a class="decoration" href="#">Посмотреть билет</a></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Золотой слиток 10 г.</td>
+								<td><span class="bold">373 DM</span></td>
+								<td></td>
+								<td><a class="decoration" href="#">Запрос на доставку</a></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Лицензия "Партнер" на год</td>
+								<td><span class="bold">180 €</span></td>
+								<td>Действителен до 12.05.2019</td>
+								<td></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+
+							<tr class="shopping__tr">
+								<td>
+									<span class="bold">12.06.2018</span>
+								</td>
+								<td>Билет на мероприятие "Мировая конференция"</td>
+								<td><span class="bold">75 €</span></td>
+								<td>Действителен до 12.05.2019</td>
+								<td><a class="decoration" href="#">Посмотреть билет</a></td>
+								<td><a href="#" class="mdi mdi-close-circle shopping__delete"></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--------- Tab 1 END --------->
+
+
+				<!--------- Tab 2 START --------->
+				<div id="tab-wallet" class="clients-tab__content hidden">
+					<div class="d-flex tab-flex__wrap">
+						<div class="wallet-input">
+							<div class="wallet-button__wrap">
+								<p>Баланс кошелька:</p>
+								<div class="input-custom">
+									<input class="bold" type="text" value="1250 €">
+									<button>Изменить</button>
+								</div>
+							</div>
+						</div>
+						<div class="wallet-input">
+							<div class="wallet-button__wrap">
+								<p>Доход:</p>
+								<div class="input-custom">
+									<input class="bold" type="text" value="1250 €">
+									<button>Изменить</button>
+								</div>
+							</div>
+						</div>
+						<div class="wallet-input">
+							<div class="wallet-button__wrap">
+								<p>Баланс DM:</p>
+								<div class="input-custom">
+									<input class="bold" type="text" value="1250 DM">
+									<button>Изменить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<table class="tab-shopping-list__table wallet-table">
+						<thead>
+							<tr class="table-link-title">
+								<td><a href="#">#транзакции:</a></td>
+								<td><a href="#">Название транзакции:</a></td>
+								<td><a href="#">Дата:</a></td>
+								<td><a href="#">Цена:</a></td>
+								<td><a href="#">Статус:</a></td>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="waiting bold">В ожидании</span></td>
+							</tr>
+
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="waiting bold">В ожидании</span></td>
+							</tr>
+
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="error bold">Ошибка</span></td>
+							</tr>
+
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="waiting bold">В ожидании</span></td>
+							</tr>
+
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="accepted bold">Подверждён</span></td>
+							</tr>
+
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="accepted bold">Подверждён</span></td>
+							</tr>
+
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="accepted bold">Подверждён</span></td>
+							</tr>
+
+							<tr>
+								<td>
+									<span class="bold">234</span>
+								</td>
+								<td>Покупка золота 5г.</td>
+								<td>25.10.2018   21:45</td>
+								<td><span class="bold">245 DM</span></td>
+								<td><span class="accepted bold">Подверждён</span></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="tab-wallet__bottom">
+						<div class="pagination">
+							<ul class="m-0">
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">...</a></li>
+								<li><a href="#">17</a></li>
+							</ul>
+						</div>
+
+						<a href="#finance-password-popup__item" class="accent-button mfp-custom-effect" data-effect="mfp-zoom-in">Сохранить</a>
+					</div>
+				</div>
+				<!--------- Tab 2 END --------->
+
+				<!--------- Tab 3 START --------->
+				<div id="tab-partners-list" class="clients-tab__content hidden">
+
+					<!-- Popup finance START -->
+					<div id="finance-password-popup__item" class="white-popup mfp-with-anim mfp-hide">
+						<h3>Для подверждения действия введите финансовый пароль</h3>
+						<div class="input__wrap">
+							<input type="text">
+							<button class="button">Подвердить</button>
+						</div>
+					</div>
+					<!-- Popup finance END -->
+
+
+					<!-- Tab 3 Popup START -->
+					<div class="partners-list__popup white-popup mfp-with-anim mfp-hide" id="partners-list__popup">
+						<h4 class="min-title">Вы хотите переместить только партнера или всю ветку?</h4>
+						<p class="mb-3 mt-3 regular">*При перемещении партнера его ветка будет перемещена к вышестоящему партнеру.</p>
+
+						<p class="p-title mb-1 bold">К кому переместить?</p>
+						<div class="dropdown show dropdown-custom-script">
+							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Руслан Иванов
+							</a>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+								<div class="dropdown-search">
+									<input type="search">
+									<button class="mdi mdi-magnify"></button>
+								</div>
+								<a class="dropdown-item bg-blue" href="#">Руслан Иванов</a>
+								<a class="dropdown-item" href="#">Пётр Симонов</a>
+							</div>
+						</div>
+
+						<div class="partners-list-popup-button">
+							<div class="d-flex mt-3">
+								<a href="#" class="dark-light-button mr-3">Переместить <br> всю ветку</a>
+								<a href="#" class="darken-button">Переместить только партнера</a>
+							</div>
+							<a href="#" class="accent-button mt-3">Переместить</a>
+						</div>
+					</div>
+					<!-- Tab 3 Popup END -->
+
+					<h3 class="min-title mt-3">Добавить партнера в структуру</h3>
+
+					<div class="select-wrap__flex top-flex">
+						<div class="select-wrap__left">
+							<div class="left">
+								<p class="p-title">Выберите партнера</p>
+
+								<div class="dropdown show dropdown-custom-script">
+									<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Партнер 1
+									</a>
+
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-search">
+											<input type="search">
+											<button class="mdi mdi-magnify"></button>
+										</div>
+										<a class="dropdown-item bg-blue" href="#">Партнер 1</a>
+										<a class="dropdown-item" href="#">Партнер 2</a>
+										<a class="dropdown-item" href="#">Партнер 3</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="right">
+								<a href="#finance-password-popup__item" class="dark-light-button mfp-custom-effect" data-effect="mfp-zoom-in">Добавить структуру</a>
+							</div>
+						</div>
+
+						<div class="select-wrap__right">
+							<a href="#" class="dark-light-button">Скачать структуру в XML</a>
+						</div>
+					</div>
+
+					<div class="list-table__wrap">
+						<ul>
+							<li class="table__header">
+								<ul>
+									<li>Логин партнера</li>
+									<li>Страна</li>
+									<li>Статус</li>
+									<li>Телеграм</li>
+									<li>К-во партнеров</li>
+								</ul>
+							</li>
+
+							<li class="table__body">
+								<ul class="border-left-accent submenu-1 partner-tree">
+									<li>James Doe</li>
+									<li>United Kingdoom</li>
+									<li>Платиновый</li>
+									<li><a href="#" class="decoration">@jameson.d</a></li>
+									<li>0</li>
+									<li>
+										<a href="#partners-list__popup" data-effect="mfp-move-horizontal" class="mfp-custom-effect"><span class="mdi mdi-menu"></span></a>
+										<span class="mdi mdi-close-circle partner-tree__delete"></span>
+									</li>
+								</ul>
+
+								<ul class="border-left-accent submenu-1 partner-tree">
+									<li>James Doe</li>
+									<li>United Kingdoom</li>
+									<li>Платиновый</li>
+									<li><a href="#" class="decoration">@jameson.d</a></li>
+									<li>0</li>
+									<li>
+										<a href="#partners-list__popup" data-effect="mfp-move-horizontal" class="mfp-custom-effect"><span class="mdi mdi-menu"></span></a>
+										<span class="mdi mdi-close-circle partner-tree__delete"></span>
+									</li>
+								</ul>
+
+								<ul class="border-left-gray submenu-1 mrl-20 partner-tree">
+									<li>James Doe</li>
+									<li>United Kingdoom</li>
+									<li>Платиновый</li>
+									<li><a href="#" class="decoration">@jameson.d</a></li>
+									<li>0</li>
+									<li>
+										<a href="#partners-list__popup" data-effect="mfp-move-horizontal" class="mfp-custom-effect"><span class="mdi mdi-menu"></span></a>
+										<span class="mdi mdi-close-circle partner-tree__delete"></span>
+									</li>
+								</ul>
+
+								<ul class="border-left-dark submenu-1 mrl-40 partner-tree">
+									<li>James Doe</li>
+									<li>United Kingdoom</li>
+									<li>Платиновый</li>
+									<li><a href="#" class="decoration">@jameson.d</a></li>
+									<li>0</li>
+									<li>
+										<a href="#partners-list__popup" data-effect="mfp-move-horizontal" class="mfp-custom-effect"><span class="mdi mdi-menu"></span></a>
+										<span class="mdi mdi-close-circle partner-tree__delete"></span>
+									</li>
+								</ul>
+
+								<ul class="border-left-gray submenu-1 mrl-20 partner-tree">
+									<li>James Doe</li>
+									<li>United Kingdoom</li>
+									<li>Платиновый</li>
+									<li><a href="#" class="decoration">@jameson.d</a></li>
+									<li>0</li>
+									<li>
+										<a href="#partners-list__popup" data-effect="mfp-move-horizontal" class="mfp-custom-effect"><span class="mdi mdi-menu"></span></a>
+										<span class="mdi mdi-close-circle partner-tree__delete"></span>
+									</li>
+								</ul>
+
+								<ul class="border-left-accent submenu-1 partner-tree">
+									<li>James Doe</li>
+									<li>United Kingdoom</li>
+									<li>Платиновый</li>
+									<li><a href="#" class="decoration">@jameson.d</a></li>
+									<li>0</li>
+									<li>
+										<a href="#partners-list__popup" data-effect="mfp-move-horizontal" class="mfp-custom-effect"><span class="mdi mdi-menu"></span></a>
+										<span class="mdi mdi-close-circle partner-tree__delete"></span>
+									</li>
+								</ul>
+
+								<ul class="border-left-gray submenu-1 mrl-20 partner-tree">
+									<li>James Doe</li>
+									<li>United Kingdoom</li>
+									<li>Платиновый</li>
+									<li><a href="#" class="decoration">@jameson.d</a></li>
+									<li>0</li>
+									<li>
+										<a href="#partners-list__popup" data-effect="mfp-move-horizontal" class="mfp-custom-effect"><span class="mdi mdi-menu"></span></a>
+										<span class="mdi mdi-close-circle partner-tree__delete"></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<div class="pagination">
+						<ul>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">...</a></li>
+							<li><a href="#">17</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--------- Tab 3 END --------->
+
+				<!--------- Tab 4 START --------->
+				<div id="tab-partners-notification" class="clients-tab__content hidden">
+					<div class="input__wrap">
+						<h3 class="min-title mt-3">Отправить уведомление</h3>
+						<p class="p-title mb-2">Заголовок:</p>
+						<div class="input__white">
+							<input type="text">
+						</div>
+					</div>
+
+					<div class="input__wrap">
+						<p class="p-title mb-2 mt-4">Уведомление:</p>
+						<textarea></textarea>
+					</div>
+
+					<a href="#" class="accent-button">Отправить</a>
+
+					<div class="comments-text custom-scrollbar">
+						<div class="comments-text__item">
+							<div class="left">
+								<h4 class="bold-min-title mb-3">Уведомление 1</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+							</div>
+							<div class="right">
+								<div class="date">
+									<p>Отправлено:</p>
+									<p class="bold">12.10.2018  22:15</p>
+									<p class="mt-4"><span class="mdi mdi-message-bulleted-off"></span>Не прочитано</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="comments-text__item">
+							<div class="left">
+								<h4 class="bold-min-title mb-3">Уведомление 1</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+							</div>
+							<div class="right">
+								<div class="date">
+									<p>Отправлено:</p>
+									<p class="bold">12.10.2018  22:15</p>
+									<p class="mt-4"><span class="mdi mdi-message-bulleted-off"></span>Не прочитано</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="comments-text__item">
+							<div class="left">
+								<h4 class="bold-min-title mb-3">Уведомление 1</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+							</div>
+							<div class="right">
+								<div class="date">
+									<p>Отправлено:</p>
+									<p class="bold">12.10.2018  22:15</p>
+									<p class="mt-4"><span class="mdi mdi-message-bulleted-off"></span>Не прочитано</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="comments-text__item">
+							<div class="left">
+								<h4 class="bold-min-title mb-3">Уведомление 1</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+							</div>
+							<div class="right">
+								<div class="date">
+									<p>Отправлено:</p>
+									<p class="bold">12.10.2018  22:15</p>
+									<p class="mt-4"><span class="mdi mdi-message-bulleted-off"></span>Не прочитано</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="comments-text__item">
+							<div class="left">
+								<h4 class="bold-min-title mb-3">Уведомление 1</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+							</div>
+							<div class="right">
+								<div class="date">
+									<p>Отправлено:</p>
+									<p class="bold">12.10.2018  22:15</p>
+									<p class="mt-4"><span class="mdi mdi-message-bulleted-off"></span>Не прочитано</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--------- Tab 4 END --------->
+
+				<!--------- Tab 5 START --------->
+				<div id="tab-partners-statistics" class="clients-tab__content statistics hidden">
+					<div class="col-xl-6 col-lg-7 col-md-12">
+						<div class="change-period">
+							<div class="left">
+								<h5>Выберите период</h5> </div>
+								<div class="right">
+									<form>
+										<div class="right__content">
+											<input class="input-date" type="text"> <span class="tire">—</span>
+											<input class="input-date" type="text">
+											<div class="checkbox">
+												<label for="period-checkbox">За весь период</label>
+												<input type="checkbox" id="period-checkbox"> </div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+
+							<div class="statistics__content">
+								<div class="row">
+									<!-- 1 Line START -->
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Всего потрачено:</h5>
+											<p class="bold">2 450 €</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Оборот за период:</h5>
+											<p class="bold">11 550 €</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Получено бонусов €</h5>
+											<p class="bold">750 €</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Заработано DM</h5>
+											<p class="bold">900 DM</p>
+										</div>
+									</div>
+									<!-- 1 Line END -->
+
+									<!-- 2 Line START -->
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Выведено €</h5>
+											<p class="bold">1000 €</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Куплено золота</h5>
+											<p class="bold">20г</p>
+											<hr>
+											<h5>На сумму</h5>
+											<p class="bold">746 DM</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Куплено билетов</h5>
+											<p class="bold">2</p>
+											<hr>
+											<h5>На сумму</h5>
+											<p class="bold">225 DM</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 card-column">
+										<div class="card">
+											<h5>Привлечено партнеров</h5>
+											<p class="bold">12</p>
+										</div>
+									</div>
+									<!-- 2 Line END -->
+								</div>
+							</div>
+
+							<div class="statistics__bottom">
+								<div class="row">
+									<div class="col-lg-12 col-xl-4 dynamic-column">
+										<div class="dynamic">
+											<div class="min-title w-100">
+												<h3>Динамика привлечения пользователей</h3> <span class="line"></span> </div>
+												<div class="dynamic-chart">
+													<canvas id="myChart3" width="574" height="358" style="display: block; width: 574px; height: 358px;" class="chartjs-render-monitor"></canvas>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--------- Tab 5 END --------->
+
+							<!--------- Tab 6 START --------->
+							<div id="tab-partners-personal-information" class="clients-tab__content hidden">
+								<div class="input__wrap">
+									<div class="input__item">
+										<label for="personal-information-name">Имя:</label>
+										<input type="text" id="personal-information-name">
+									</div>
+									<div class="input__item">
+										<label for="personal-information-login">Логин:</label>
+										<input type="text" id="personal-information-login">
+									</div>
+								</div>
+
+								<div class="input__wrap">
+									<div class="input__item">
+										<label for="personal-information-surname">Фамилия:</label>
+										<input type="text" id="personal-information-surname">
+									</div>
+									<div class="input__item">
+										<label for="personal-information-id">ID Аккаунта:</label>
+										<input type="text" id="personal-information-id" value="XD6579764646" class="fw-700">
+									</div>
+								</div>
+
+								<div class="input__wrap">
+									<div class="input__item">
+										<label for="personal-information-email">E-mail:</label>
+										<input type="text" id="personal-information-email">
+									</div>
+									<div class="input__item">
+										<label for="personal-information-telegram">Telegram:</label>
+										<input type="text" id="personal-information-telegram">
+									</div>
+								</div>
+
+								<div class="input__wrap">
+									<div class="input__item">
+										<label for="personal-information-phone">Номер телефона:</label>
+										<input type="text" id="personal-information-phone">
+									</div>
+									<div class="input__item">
+										<label for="personal-information-date-bh">Дата рождения:</label>
+										<input type="text" id="personal-information-date-bh">
+									</div>
+								</div>
+
+								<p class="change-password-title bold mb-2 mt-4">Сменить пароль</p>
+								<div class="input__wrap">
+									<div class="input__item">
+										<label for="personal-information-old-password">Старый пароль:</label>
+										<input type="text" id="personal-information-old-password">
+									</div>
+									<div class="input__item">
+										<label for="personal-information-new-password">Новый пароль:</label>
+										<input type="text" id="personal-information-new-password">
+									</div>
+									<div class="input__item">
+										<label for="personal-information-confirm-new-password">Подвердите новый	пароль:</label>
+										<input type="text" id="personal-information-confirm-new-password">
+									</div>
+								</div>
+
+								<a href="#finance-password-popup__item" class="accent-button mfp-custom-effect" data-effect="mfp-zoom-in">Сохранить</a>
+							</div>
+							<!--------- Tab 6 END --------->
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="js/libs.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+	</html>
+
+
+			<script>
+      //----------------- Diagram Dynamic START -----------------//
+      var ctxDynamic = document.getElementById('myChart3').getContext('2d');
+      var yLabelsDynamic = {
+        0: '0'
+        , 5: '5'
+        , 10: '10'
+        , 15: '15'
+        , 20: '20'
+        , 25: '25'
+        , 30: '30'
+      , }
+      var chartDynamic = new Chart(ctxDynamic, {
+        // The type of chart we want to create
+        type: 'line', // The data for our dataset
+        data: {
+          labels: ['22/12', '23/12', '24/12', '25/12', '26/12', '27/12', '28/12']
+          , datasets: [{
+            label: false
+            , borderColor: '#bba269'
+            , data: [0, 5, 10, 15, 20, 25, 30]
+          , }]
+        , }, // Configuration options go here
+        options: {
+          responsive: true
+          , maintainAspectRatio: false
+          , scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+          }]
+          }
+          , legend: {
+            display: false
+          }
+          , scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+                , callback: function (value, index, values) {
+                  return yLabelsDynamic[value];
+                }
+              }
+          }]
+          }
+        , }
+      });
+      //----------------- Diagram Dynamic END -----------------//
+    </script>

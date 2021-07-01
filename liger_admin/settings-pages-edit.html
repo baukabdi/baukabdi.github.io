@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Liger network - Admin panel</title>
+
+	<link rel="stylesheet" href="fonts/Material_design_icons/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div id="my-page">
+
+		<div class="preloader Fixed">
+			<div class="preloader__item">
+				<img src="images/logo.svg" alt="">
+			</div>
+		</div>
+
+		<header class="header" id="my-header" class="hamburger">
+			<div class="header-left">
+				<a href="#my-menu" class="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a class="in-cabinet" href="https://baukabdi.ru/liger_cabinet" target="_blank"><span class="mdi mdi-account"></span>
+					<p>Перейти в кабинет</p>
+				</a>
+			</div>
+
+			<div class="header-right">
+				<div class="dropdown-lang dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<div class="photo">
+						<img src="images/ru.png" alt="">
+					</div>
+					<p class="text">Ru</p>
+				</a>
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/ru.png" alt="">
+						</div>
+						<p class="text">Ru</p>
+					</a>
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/en.png" alt="">
+						</div>
+						<p class="text">En</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-notification">
+				<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-bell"></span></a>
+				<span class="length">3</span>
+
+				<div class="dropdown-menu notification-dropdown">
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a href="all-events.html" class="all-events dropdown-item">Все события</a>
+				</div>
+			</div>
+
+			<div class="dropdown-profile dropdown">
+				<a href="#" class="header-top__profile-item" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div class="avatar">
+					<img src="images/avatar-circle.png" alt="">
+				</div>
+				<p>Julie Cortez</p>
+				<div class="triangle">
+					<span class="mdi mdi-menu-down"></span>
+				</div>
+			</a>
+			<div class="dropdown-menu profile-dropdown" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="my-profile.html">Мой профиль</a>
+				<a class="dropdown-item" href="authorization.html">Выход</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="main">
+
+	<div class="main-left">
+	<div class="main-left__content">
+
+		<nav id="my-menu">
+			<ul class="menu menu-has-p">
+				<li>
+					<a href="index.html"><span class="mdi mdi-pulse"></span>
+						<p>Главная</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-basket"></span>
+						<p>Маркетплейс</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketplace-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketplace-events.html">
+								<p>Events</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-shopping"></span>
+						<p>Заказы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="orders-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="orders-tickets.html">
+								<p>Билеты</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-hexagon-multiple"></span>
+						<p>Маркетинг план</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketing-plan-clients.html">
+								<p>Клиенты</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing-plan-packages.html">
+								<p>Пакеты</p>
+							</a>
+						</li>
+						<li>
+							<a href="statutes.html">
+								<p>Статусы</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="verification.html"><span class="mdi mdi-account-card-details"></span>
+						<p>Верификация</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-wallet"></span>
+						<p>Финансы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="finance-transactions.html">
+								<p>Транзакции</p>
+							</a>
+						</li>
+						<li>
+							<a href="finance-withdrawal.html">
+								<p>Вывод средств</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-settings-box"></span>
+						<p>Настройки</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="settings-pages.html">
+								<p>Страницы</p>
+							</a>
+						</li>
+						<li><a href="settings-widgets.html">
+							<p>Виджеты</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-backup-copy.html">
+							<p>Резервная копия</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-menu-editing.html">
+							<p>Редактирование меню</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="settings-faq.html">
+							<p>FAQ</p>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="news.html"><span class="mdi mdi-message-reply-text"></span>
+					<p>Новости</p>
+				</a>
+			</li>
+			<li>
+				<a href="users-admins.html"><span class="mdi mdi-account-multiple"></span>
+					<p>Пользователи (Админы)</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+</div>
+
+	<div class="main-right">
+		<!-- Popup finance START -->
+			<div id="finance-password-popup__item" class="white-popup mfp-with-anim mfp-hide">
+				<h3>Для подверждения действия введите финансовый пароль</h3>
+				<div class="input__wrap">
+					<input type="text">
+					<button class="button">Подвердить</button>
+				</div>
+			</div>
+			<!-- Popup finance END -->
+		<div class="s-settings-pages-edit">
+			<div class="top top-custom">
+				<h2 class="title">Условия пользования сайтом</h2>
+				<div class="button__wrap flex aic">
+					<a href="#" class="cancel">Отменить</a>
+					<a href="#finance-password-popup__item" class="accent-button mfp-custom-effect" data-effect="mfp-zoom-in">Сохранить</a>
+				</div>
+			</div>
+
+			<div class="input-wrap d-flex">
+				<div class="input-custom mr-5">
+					<label for="settings-pages-title">Заголовок страницы</label>
+					<input id="settings-pages-title" class="pd-10 w-100" type="text">
+				</div>
+
+
+				<div class="input-custom input-settings-pages-url">
+					<label for="settings-pages-url">URL страницы</label>
+					<div class="clipboard-custom">
+						<input value="https://bdi498.axshare.com" id="settings-pages-url" class="pd-10 w-100 medium" type="text">
+						<button class="mdi mdi-content-copy clipboard-btn" data-clipboard-target="#settings-pages-url"></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-format__wrap">
+				<h4 class="font-size-16 text-format__title">Описание страницы</h4>
+
+				<div class="text-format__item">
+					<div class="text-format__header">
+						<div class="text-format__header_elements">
+							<div class="font-face element__item">
+								<select class="select-custom-bootstrap">
+									<option data-font="sf-ui-display-regular">SF UI Display</option>
+									<option data-font="arial">Arial</option>
+									<option data-font="sans-serif">Sans-serif</option>
+									<option data-font="Times New Roman">Times New Roman</option>
+								</select>
+							</div>
+							<div class="font-size element__item">
+								<select class="select-custom-bootstrap">
+									<option>16</option>
+									<option>18</option>
+									<option>20</option>
+									<option>22</option>
+									<option>24</option>
+									<option>26</option>
+									<option>28</option>
+									<option>30</option>
+									<option>32</option>
+									<option>34</option>
+									<option>36</option>
+								</select>
+							</div>
+							<div class="color element__item">
+								<select class="colorselector" id="colorselector">
+									<option value="100" data-color="#1e252a" selected="selected">dark</option>
+									<option value="101" data-color="#A0522D">sienna</option>
+									<option value="102" data-color="#CD5C5C">indianred</option>
+									<option value="103" data-color="#FF4500">orangered</option>
+									<option value="104" data-color="#DC143C">crimson</option>
+									<option value="105" data-color="#FF8C00">darkorange</option>
+									<option value="106" data-color="#C71585">mediumvioletred</option>
+								</select>
+							</div>
+							<div class="bold element__item element__text_format" data-font-bold="700"><span class="mdi mdi-format-bold"></span></div>
+							<div class="italic element__item element__text_format" data-font-italic="italic"><span class="mdi mdi-format-italic"></span></div>
+							<div class="underline element__item element__text_format" data-font-decoration="underline"><span class="mdi mdi-format-underline"></span></div>
+							<div class="align-left element__item element__text_format font-align__active" data-font-align="left"><span class="mdi mdi-format-align-left"></span></div>
+							<div class="align-center element__item element__text_format" data-font-align="center"><span class="mdi mdi-format-align-center"></span></div>
+							<div class="align-right element__item element__text_format" data-font-align="right"><span class="mdi mdi-format-align-right"></span></div>
+							<div class="past-link element__item element__text_format"><span class="mdi mdi-link-variant"></span></div>
+						</div>
+					</div>
+
+					<div class="text-format__body">
+						<textarea></textarea>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="input-custom__wrap">
+				<p class="input-custom-title fz-18">Главное изображение</p>
+				<div class="input-group mb-3">
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="inputGroupFile01">
+						<label class="custom-file-label" for="inputGroupFile01">Загрузите изображение</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="input-custom__wrap">
+				<div class="radio__wrap">
+					<p class="input-custom-title fz-18">Добавить кнопку</p>
+					<div class="input-flex">
+						<div class="radio__item">
+							<input class="radio__custom" type="radio" id="settings-pages-add-button" name="settings-pages-add-button" checked>
+							<label for="settings-pages-add-button">Ссылка на страницу</label>
+						</div>
+
+						<div class="radio__item">
+							<input class="radio__custom" type="radio" id="settings-pages-form" name="settings-pages-add-button">
+							<label for="settings-pages-form">Форма</label>
+						</div>
+
+						<div class="radio__item">
+							<input class="radio__custom" type="radio" id="settings-pages-pay" name="settings-pages-add-button">
+							<label for="settings-pages-pay">Оплата</label>
+						</div>
+
+						<div class="radio__item">
+							<input class="radio__custom" type="radio" id="settings-pages-file" name="settings-pages-add-button">
+							<label for="settings-pages-file">Файл</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="input-custom__wrap d-flex settings-pages-input-duo">
+				<div class="input-custom mr-5">
+					<label for="settings-pages-text">Надпись на кнопке</label>
+					<input id="settings-pages-text" class="pd-10 w-100" type="text">
+				</div>
+
+				<div class="input-custom">
+					<label for="settings-pages-link">Ссылка</label>
+					<input id="settings-pages-link" class="pd-10 w-100" type="text">
+				</div>
+			</div>
+
+			<div class="bottom-content">
+				<div class="left">
+					<a href="#finance-password-popup__item" data-effect="mfp-zoom-in" class="accent-button mfp-custom-effect">Сохранить событие</a>
+					<a href="#" class="cancel">Отмена</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

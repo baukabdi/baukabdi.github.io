@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Liger network - Admin panel</title>
+
+	<link rel="stylesheet" href="fonts/Material_design_icons/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div id="my-page">
+
+		<div class="preloader Fixed">
+			<div class="preloader__item">
+				<img src="images/logo.svg" alt="">
+			</div>
+		</div>
+
+		<header class="header" id="my-header" class="hamburger">
+			<div class="header-left">
+				<a href="#my-menu" class="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a class="in-cabinet" href="https://baukabdi.ru/liger_cabinet" target="_blank"><span class="mdi mdi-account"></span>
+					<p>Перейти в кабинет</p>
+				</a>
+			</div>
+
+			<div class="header-right">
+				<div class="dropdown-lang dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<div class="photo">
+						<img src="images/ru.png" alt="">
+					</div>
+					<p class="text">Ru</p>
+				</a>
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/ru.png" alt="">
+						</div>
+						<p class="text">Ru</p>
+					</a>
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/en.png" alt="">
+						</div>
+						<p class="text">En</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-notification">
+				<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-bell"></span></a>
+				<span class="length">3</span>
+
+				<div class="dropdown-menu notification-dropdown">
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a href="all-events.html" class="all-events dropdown-item">Все события</a>
+				</div>
+			</div>
+
+			<div class="dropdown-profile dropdown">
+				<a href="#" class="header-top__profile-item" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div class="avatar">
+					<img src="images/avatar-circle.png" alt="">
+				</div>
+				<p>Julie Cortez</p>
+				<div class="triangle">
+					<span class="mdi mdi-menu-down"></span>
+				</div>
+			</a>
+			<div class="dropdown-menu profile-dropdown" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="my-profile.html">Мой профиль</a>
+				<a class="dropdown-item" href="authorization.html">Выход</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="main">
+
+	<div class="main-left">
+	<div class="main-left__content">
+
+		<nav id="my-menu">
+			<ul class="menu menu-has-p">
+				<li>
+					<a href="index.html"><span class="mdi mdi-pulse"></span>
+						<p>Главная</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-basket"></span>
+						<p>Маркетплейс</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketplace-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketplace-events.html">
+								<p>Events</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-shopping"></span>
+						<p>Заказы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="orders-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="orders-tickets.html">
+								<p>Билеты</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-hexagon-multiple"></span>
+						<p>Маркетинг план</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketing-plan-clients.html">
+								<p>Клиенты</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing-plan-packages.html">
+								<p>Пакеты</p>
+							</a>
+						</li>
+						<li>
+							<a href="statutes.html">
+								<p>Статусы</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="verification.html"><span class="mdi mdi-account-card-details"></span>
+						<p>Верификация</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-wallet"></span>
+						<p>Финансы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="finance-transactions.html">
+								<p>Транзакции</p>
+							</a>
+						</li>
+						<li>
+							<a href="finance-withdrawal.html">
+								<p>Вывод средств</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-settings-box"></span>
+						<p>Настройки</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="settings-pages.html">
+								<p>Страницы</p>
+							</a>
+						</li>
+						<li><a href="settings-widgets.html">
+							<p>Виджеты</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-backup-copy.html">
+							<p>Резервная копия</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-menu-editing.html">
+							<p>Редактирование меню</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="settings-faq.html">
+							<p>FAQ</p>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="news.html"><span class="mdi mdi-message-reply-text"></span>
+					<p>Новости</p>
+				</a>
+			</li>
+			<li>
+				<a href="users-admins.html"><span class="mdi mdi-account-multiple"></span>
+					<p>Пользователи (Админы)</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+</div>
+
+	<div class="main-right">
+		<div class="s-finance-transactions">
+			<div class="top top-custom">
+				<h2 class="title">Все транзакции</h2>
+			</div>
+
+
+			<div class="top">
+				<div class="transactions-change-period">
+					<label class="input-title">Выберите период</label>
+					<div class="input__wrap">
+						<div class="input-custom mr-4">
+							<input value="21.05.2018" class="pd-10 w-100 input-date" type="text">
+						</div>
+						<div class="input-custom mr-3">
+							<input value="15.06.2019" class="pd-10 w-100 input-date" type="text">
+						</div>
+						<div class="checkbox__item">
+							<label for="for-the-entire-period">За весь период</label>
+							<input id="for-the-entire-period" type="checkbox">
+						</div>
+					</div>
+				</div>
+
+				<div class="right ml-4">
+					<div class="select__wrap mr-4">
+						<label class="input-title">Фильтровать по статусу</label>
+						<select class="select-custom-bootstrap regular">
+							<option>Все</option>
+							<option>В ожидании</option>
+							<option>Ошибка</option>
+							<option>Подвержден</option>
+						</select>
+					</div>
+					
+					<div class="select__wrap">
+						<label class="input-title">Фильтровать по названию</label>
+						<select class="select-custom-bootstrap regular w-100">
+							<option>Все</option>
+							<option>Покупка золота 5г.</option>
+							<option>Пополнение кошелька</option>
+							<option>Оплата аккаунта "Серебряный партнер"</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+		<table class="table-custom">
+				<thead>
+					<tr class="table-custom-title table-custom-title-link">
+						<td><a href="#">#Транзакции</a></td>
+						<td><a href="#">Название транзакции</a></td>
+						<td><a href="#">Пользователь</a></td>
+						<td><a href="#">Дата</a></td>
+						<td><a href="#">Цена</a></td>
+						<td><a href="#">Статус</a></td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="waiting bold">В ожидании</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Оплата билетов "Самая большая конференция"</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">75 €</div></td>
+						<td><span class="waiting bold">В ожидании</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="waiting bold">В ожидании</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="error bold">Ошибка</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Оплата акаунта "Серебряный партнер"</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">180 €</div></td>
+						<td><span class="accepted bold">Подвержден</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="error bold">Ошибка</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Оплата билетов "Самая большая конференция"</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">75 €</div></td>
+						<td><span class="waiting bold">В ожидании</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="error bold">Ошибка</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Оплата билетов "Самая большая конференция"</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">75 €</div></td>
+						<td><span class="waiting bold">В ожидании</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="accepted bold">Подвержден</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="error bold">Ошибка</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Покупка золота 5 г.</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">25 DM</div></td>
+						<td><span class="waiting bold">В ожидании</span></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">	
+						<td>243</td>
+						<td><span class="bold">Оплата билетов "Самая большая конференция"</span></td>
+						<td><div class="bold">John Dilinger</div></td>
+						<td>25.10.2018   21:45</td>
+						<td><div class="bold">75 €</div></td>
+						<td><span class="waiting bold">В ожидании</span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="pagination flex jcsb">
+				<ul>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#">17</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

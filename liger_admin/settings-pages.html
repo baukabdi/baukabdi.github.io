@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Liger network - Admin panel</title>
+
+	<link rel="stylesheet" href="fonts/Material_design_icons/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div id="my-page">
+
+		<div class="preloader Fixed">
+			<div class="preloader__item">
+				<img src="images/logo.svg" alt="">
+			</div>
+		</div>
+
+		<header class="header" id="my-header" class="hamburger">
+			<div class="header-left">
+				<a href="#my-menu" class="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a class="in-cabinet" href="https://baukabdi.ru/liger_cabinet" target="_blank"><span class="mdi mdi-account"></span>
+					<p>Перейти в кабинет</p>
+				</a>
+			</div>
+
+			<div class="header-right">
+				<div class="dropdown-lang dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<div class="photo">
+						<img src="images/ru.png" alt="">
+					</div>
+					<p class="text">Ru</p>
+				</a>
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/ru.png" alt="">
+						</div>
+						<p class="text">Ru</p>
+					</a>
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/en.png" alt="">
+						</div>
+						<p class="text">En</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-notification">
+				<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-bell"></span></a>
+				<span class="length">3</span>
+
+				<div class="dropdown-menu notification-dropdown">
+					<a class="dropdown-item" href="all-events.php">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.php">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.php">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.php">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a href="all-events.php" class="all-events dropdown-item">Все события</a>
+				</div>
+			</div>
+
+			<div class="dropdown-profile dropdown">
+				<a href="#" class="header-top__profile-item" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div class="avatar">
+					<img src="images/avatar-circle.png" alt="">
+				</div>
+				<p>Julie Cortez</p>
+				<div class="triangle">
+					<span class="mdi mdi-menu-down"></span>
+				</div>
+			</a>
+			<div class="dropdown-menu profile-dropdown" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="my-profile.php">Мой профиль</a>
+				<a class="dropdown-item" href="authorization.php">Выход</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="main">
+
+	<div class="main-left">
+	<div class="main-left__content">
+
+		<nav id="my-menu">
+			<ul class="menu menu-has-p">
+				<li>
+					<a href="index.php"><span class="mdi mdi-pulse"></span>
+						<p>Главная</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-basket"></span>
+						<p>Маркетплейс</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketplace-tovar-slitki.php">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketplace-events.php">
+								<p>Events</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-shopping"></span>
+						<p>Заказы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="orders-tovar-slitki.php">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="orders-tickets.php">
+								<p>Билеты</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-hexagon-multiple"></span>
+						<p>Маркетинг план</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketing-plan-clients.php">
+								<p>Клиенты</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing-plan-packages.php">
+								<p>Пакеты</p>
+							</a>
+						</li>
+						<li>
+							<a href="statutes.php">
+								<p>Статусы</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="verification.php"><span class="mdi mdi-account-card-details"></span>
+						<p>Верификация</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-wallet"></span>
+						<p>Финансы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="finance-transactions.php">
+								<p>Транзакции</p>
+							</a>
+						</li>
+						<li>
+							<a href="finance-withdrawal.php">
+								<p>Вывод средств</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-settings-box"></span>
+						<p>Настройки</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="settings-pages.php">
+								<p>Страницы</p>
+							</a>
+						</li>
+						<li><a href="settings-widgets.php">
+							<p>Виджеты</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-backup-copy.php">
+							<p>Резервная копия</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-menu-editing.php">
+							<p>Редактирование меню</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="settings-faq.php">
+							<p>FAQ</p>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="news.php"><span class="mdi mdi-message-reply-text"></span>
+					<p>Новости</p>
+				</a>
+			</li>
+			<li>
+				<a href="users-admins.php"><span class="mdi mdi-account-multiple"></span>
+					<p>Пользователи (Админы)</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+</div>
+
+	<div class="main-right">
+		<div class="s-settings-pages">
+			<div class="top top-custom">
+				<h2 class="title">Информационные страницы</h2>
+				<a href="settings-pages-edit.php" class="accent-button">Добавить страницу</a>
+			</div>
+
+			<table class="table-custom">
+				<tbody>
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+					<tr class="regular">
+						<td class="first">Условия пользования сайтом</td>
+						<td>21.08.2018</td>
+						<td><a href="settings-pages-edit.php" class="dark-light-button">Редактировать</a></td>
+					</tr>
+
+					<tr class="gutter-10"></tr>
+
+				</tbody>
+			</table>
+
+			<div class="pagination flex jcsb">
+				<ul>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#">17</a></li>
+				</ul>
+
+				<ul>
+					<li><a href="#">10</a></li>
+					<li><a href="#">25</a></li>
+					<li><a href="#">100</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

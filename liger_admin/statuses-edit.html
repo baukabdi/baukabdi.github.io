@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Liger network - Admin panel</title>
+
+	<link rel="stylesheet" href="fonts/Material_design_icons/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div id="my-page">
+
+		<div class="preloader Fixed">
+			<div class="preloader__item">
+				<img src="images/logo.svg" alt="">
+			</div>
+		</div>
+
+		<header class="header" id="my-header" class="hamburger">
+			<div class="header-left">
+				<a href="#my-menu" class="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a class="in-cabinet" href="https://baukabdi.ru/liger_cabinet" target="_blank"><span class="mdi mdi-account"></span>
+					<p>Перейти в кабинет</p>
+				</a>
+			</div>
+
+			<div class="header-right">
+				<div class="dropdown-lang dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<div class="photo">
+						<img src="images/ru.png" alt="">
+					</div>
+					<p class="text">Ru</p>
+				</a>
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/ru.png" alt="">
+						</div>
+						<p class="text">Ru</p>
+					</a>
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/en.png" alt="">
+						</div>
+						<p class="text">En</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-notification">
+				<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-bell"></span></a>
+				<span class="length">3</span>
+
+				<div class="dropdown-menu notification-dropdown">
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a href="all-events.html" class="all-events dropdown-item">Все события</a>
+				</div>
+			</div>
+
+			<div class="dropdown-profile dropdown">
+				<a href="#" class="header-top__profile-item" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div class="avatar">
+					<img src="images/avatar-circle.png" alt="">
+				</div>
+				<p>Julie Cortez</p>
+				<div class="triangle">
+					<span class="mdi mdi-menu-down"></span>
+				</div>
+			</a>
+			<div class="dropdown-menu profile-dropdown" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="my-profile.html">Мой профиль</a>
+				<a class="dropdown-item" href="authorization.html">Выход</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="main">
+
+	<div class="main-left">
+	<div class="main-left__content">
+
+		<nav id="my-menu">
+			<ul class="menu menu-has-p">
+				<li>
+					<a href="index.html"><span class="mdi mdi-pulse"></span>
+						<p>Главная</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-basket"></span>
+						<p>Маркетплейс</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketplace-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketplace-events.html">
+								<p>Events</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-shopping"></span>
+						<p>Заказы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="orders-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="orders-tickets.html">
+								<p>Билеты</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-hexagon-multiple"></span>
+						<p>Маркетинг план</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketing-plan-clients.html">
+								<p>Клиенты</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing-plan-packages.html">
+								<p>Пакеты</p>
+							</a>
+						</li>
+						<li>
+							<a href="statutes.html">
+								<p>Статусы</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="verification.html"><span class="mdi mdi-account-card-details"></span>
+						<p>Верификация</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-wallet"></span>
+						<p>Финансы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="finance-transactions.html">
+								<p>Транзакции</p>
+							</a>
+						</li>
+						<li>
+							<a href="finance-withdrawal.html">
+								<p>Вывод средств</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-settings-box"></span>
+						<p>Настройки</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="settings-pages.html">
+								<p>Страницы</p>
+							</a>
+						</li>
+						<li><a href="settings-widgets.html">
+							<p>Виджеты</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-backup-copy.html">
+							<p>Резервная копия</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-menu-editing.html">
+							<p>Редактирование меню</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="settings-faq.html">
+							<p>FAQ</p>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="news.html"><span class="mdi mdi-message-reply-text"></span>
+					<p>Новости</p>
+				</a>
+			</li>
+			<li>
+				<a href="users-admins.html"><span class="mdi mdi-account-multiple"></span>
+					<p>Пользователи (Админы)</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+</div>
+
+	<div class="main-right">
+		<div class="s-statuses s-marketin">
+			<div class="top top-custom">
+				<h2 class="title">Статусы</h2>
+				<a href="#" class="accent-button">Сохранить</a>
+			</div>
+
+			<div class="input__wrap input__wrap_top">
+				<div class="input-custom mr-4">
+					<label for="status-name">Название статуса</label>
+					<input id="status-name" type="text" class="pd-10">
+				</div>
+
+				<div class="input-custom currency-input">
+					<label for="required-turnover">Необходимый оборот</label>
+					<div class="input-flex d-flex aic">
+						<input id="required-turnover" type="text" class="pd-10 mr-2">
+						<span class="bold">€</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="statuses-file-icon p-0">
+				<p class="mb-2">Иконка статуса</p>
+				<div class="custom-file">
+					<input type="file" class="custom-file-input" id="inputGroupFile01">
+					<label class="custom-file-label" for="inputGroupFile01">Загрузите иконку</label>
+				</div>
+			</div>
+
+			<!-- Popup finance START -->
+			<div id="finance-password-popup__item" class="white-popup mfp-with-anim mfp-hide">
+				<h3>Для подверждения действия введите финансовый пароль</h3>
+				<div class="input__wrap">
+					<input type="text">
+					<button class="button">Подвердить</button>
+				</div>
+			</div>
+			<!-- Popup finance END -->
+
+			<form>
+								<!-- ############ Radio wrap 3 START ############ -->
+				<div class="radio__wrap" id="radio__wrap_third">
+					<div class="left white-bg">
+						<div class="input__wrap">
+							<div class="checkbox__flex mr-5">
+								<input class="checkbox__custom" type="checkbox" id="turnover-bonus">
+								<label for="turnover-bonus" class="radio__label radio__label_left mr-3">Бонус за товарооборот</label>
+							</div>
+						</div>
+
+						<div class="input__wrap mt-4 aife">
+							<div class="input-custom w-50 mr-3">
+								<label for="commodity-circulation">Товарооборот:</label>
+								<input id="commodity-circulation" class="pd-10 w-100" type="text">
+							</div>
+							<label class="bold pb-2">€</label>
+							<div class="input-custom w-50 source-select ml-3">
+								<label>Источник:</label>
+								<select class="select-custom-bootstrap regular">
+									<option value="">Вся структруа</option>
+									<option value="">Личный оборот</option>
+									<option value="">Оборот первой линии</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="input__wrap mt-5">
+							<div class="checkbox__flex mr-5">
+								<input class="checkbox__custom" type="checkbox" id="bonus-change-status">
+								<label for="bonus-change-status" class="radio__label radio__label_left mr-3">Бонус за смену статуса</label>
+							</div>
+						</div>
+
+						<div class="input-custom w-50 source-select mt-4">
+							<label>Статус:</label>
+							<select class="select-custom-bootstrap regular">
+								<option value="">Статус</option>
+								<option value="">Статус</option>
+								<option value="">Статус</option>
+							</select>
+						</div>
+
+						<div class="input__wrap mt-5 maw-none">
+							<div class="checkbox__flex">
+								<input class="checkbox__custom" type="checkbox" id="user-attraction-bonus">
+								<label for="user-attraction-bonus" class="radio__label radio__label_left">Бонус за привлеченных пользователей</label>
+							</div>
+						</div>
+
+						<div class="input__wrap maw-550 mt-5 bonus-user-type">
+							<div class="input-custom w-50 mr-0 source-select">
+								<label>Тип пользователя:</label>
+								<select class="select-custom-bootstrap regular">
+									<option>Всех</option>
+									<option>Клиент</option>
+									<option>Бронзовый партнер</option>
+									<option>Серебрянный партнер</option>
+									<option>Золотой партнер</option>
+								</select>
+							</div>
+							<div class="input-custom w-50 mr-0">
+								<label for="number-of-users">Количество пользователей:</label>
+								<input id="number-of-users" class="pd-10" type="text">
+							</div>
+						</div>
+					</div>
+
+					<div class="right dark-bg clip-path-second">
+						<div class="right-dark-bg">
+							<div class="input-custom w-50 bonus-size__wrap">
+								<label for="bonus-size">Размер бонуса:</label>
+								<input id="bonus-size" class="pd-10 w-100" type="text">
+							</div>
+
+							<div class="input-custom mr-0 mt-4 source-select">
+								<label>Бонус для:</label>
+								<select class="select-custom-bootstrap regular">
+									<option>Всех</option>
+									<option>Клиент</option>
+									<option>Бронзовый партнер</option>
+									<option>Серебрянный партнер</option>
+									<option>Золотой партнер</option>
+								</select>
+							</div>
+
+							<div class="radio__item d-flex period-regular-bonus">
+								<div class="radio__inner mr-5">
+									<div class="radio__flex mr-5">
+										<input class="radio__custom" type="radio" id="bonus-validity-period" name="period-regular-bonus">
+										<label for="bonus-validity-period" class="radio__label radio__label_left">Период действия бонуса</label>
+									</div>
+
+									<div class="input__wrap d-flex aic mt-3">
+										<div class="input-custom w-50 bonus-size__wrap mr-3 w-50">
+											<input class="pd-10 w-100" type="text">
+										</div>
+										<label class="bold">-</label>
+										<div class="input-custom w-50 bonus-size__wrap ml-3 w-50">
+											<input class="pd-10 w-100" type="text">
+										</div>
+									</div>
+								</div>
+
+								<div class="radio__inner">
+									<div class="radio__flex mr-5">
+										<input class="radio__custom" type="radio" id="regular-bonus" name="period-regular-bonus">
+										<label for="regular-bonus" class="radio__label radio__label_left">Регулярный бонус</label>
+									</div>
+
+									<div class="input-custom mr-0 mt-3 source-select">
+										<select class="select-custom-bootstrap regular">
+											<option>Раз в неделю</option>
+											<option>Раз в месяц</option>
+											<option>Раз в квартал</option>
+											<option>Раз в полгода</option>
+											<option>Раз в год</option>
+										</select>
+									</div>
+
+									<a href="#" class="accent-button mt-5 add-bonus-button">Добавить бонус</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="table__wrap">
+					<table class="table__packages">
+						<thead>
+							<tr>
+								<td></td>
+								<td>Товарооборот</td>
+								<td>Размер бонуса</td>
+								<td>Время действия бонуса</td>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="bold left-title">Бонус 1</td>
+								<td class="bold">50 000 €</td>
+								<td class="bold">200 €</td>
+								<td class="bold">27.10.2018 - 27.11.2018</td>
+								<td><span class="mdi mdi-close-circle close"></span></td>
+							</tr>
+
+							<tr>
+								<td class="bold left-title">Бонус 2</td>
+								<td class="bold">50 000 €</td>
+								<td class="bold">200 €</td>
+								<td class="bold">27.10.2018 - 27.11.2018</td>
+								<td><span class="mdi mdi-close-circle close"></span></td>
+							</tr>
+
+							<tr>
+								<td class="bold left-title">Бонус 3</td>
+								<td class="bold">50 000 €</td>
+								<td class="bold">200 €</td>
+								<td class="bold">27.10.2018 - 27.11.2018</td>
+								<td><span class="mdi mdi-close-circle close"></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- ############ Radio wrap 3 END ############ -->
+
+				<div class="bottom-content">
+					<div class="left">
+						<a href="#finance-password-popup__item" data-effect="mfp-zoom-in" class="accent-button mfp-custom-effect">Сохранить</a>
+						<a href="#" class="cancel">Отмена</a>
+					</div>
+					<div class="right">
+						<a href="#"><span class="mdi mdi-format-list-bulleted"></span> Список покупателей</a>
+						<a href="#finance-password-popup__item" class="mfp-custom-effect" data-effect="mfp-zoom-in"><span class="mdi mdi-delete"></span> Удалить товар</a>
+						<a href="#finance-password-popup__item" class="mfp-custom-effect" data-effect="mfp-zoom-in"><span class="mdi mdi-power"></span> Отключить товар</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+
+</div>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

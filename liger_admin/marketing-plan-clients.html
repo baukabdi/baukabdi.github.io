@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Liger network - Admin panel</title>
+
+	<link rel="stylesheet" href="fonts/Material_design_icons/css/materialdesignicons.min.css">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div id="my-page">
+
+		<div class="preloader Fixed">
+			<div class="preloader__item">
+				<img src="images/logo.svg" alt="">
+			</div>
+		</div>
+
+		<header class="header" id="my-header" class="hamburger">
+			<div class="header-left">
+				<a href="#my-menu" class="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a class="in-cabinet" href="https://baukabdi.ru/liger_cabinet" target="_blank"><span class="mdi mdi-account"></span>
+					<p>Перейти в кабинет</p>
+				</a>
+			</div>
+
+			<div class="header-right">
+				<div class="dropdown-lang dropdown show">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<div class="photo">
+						<img src="images/ru.png" alt="">
+					</div>
+					<p class="text">Ru</p>
+				</a>
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/ru.png" alt="">
+						</div>
+						<p class="text">Ru</p>
+					</a>
+					<a class="dropdown-item" href="#">
+						<div class="photo">
+							<img src="images/en.png" alt="">
+						</div>
+						<p class="text">En</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-notification">
+				<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-bell"></span></a>
+				<span class="length">3</span>
+
+				<div class="dropdown-menu notification-dropdown">
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a class="dropdown-item" href="all-events.html">
+						<div class="left">
+							Партнер закрыл статус "Золотой партнер"
+						</div>
+						
+						<div class="right">
+							<div class="date-time">
+								<span class="time">
+									21:45
+								</span>	
+
+								<span class="date">
+									25.10.18
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<a href="all-events.html" class="all-events dropdown-item">Все события</a>
+				</div>
+			</div>
+
+			<div class="dropdown-profile dropdown">
+				<a href="#" class="header-top__profile-item" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div class="avatar">
+					<img src="images/avatar-circle.png" alt="">
+				</div>
+				<p>Julie Cortez</p>
+				<div class="triangle">
+					<span class="mdi mdi-menu-down"></span>
+				</div>
+			</a>
+			<div class="dropdown-menu profile-dropdown" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="my-profile.html">Мой профиль</a>
+				<a class="dropdown-item" href="authorization.html">Выход</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="main">
+
+	<div class="main-left">
+	<div class="main-left__content">
+
+		<nav id="my-menu">
+			<ul class="menu menu-has-p">
+				<li>
+					<a href="index.html"><span class="mdi mdi-pulse"></span>
+						<p>Главная</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-basket"></span>
+						<p>Маркетплейс</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketplace-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketplace-events.html">
+								<p>Events</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-shopping"></span>
+						<p>Заказы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="orders-tovar-slitki.html">
+								<p>Товар (Слитки)</p>
+							</a>
+						</li>
+						<li>
+							<a href="orders-tickets.html">
+								<p>Билеты</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-hexagon-multiple"></span>
+						<p>Маркетинг план</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="marketing-plan-clients.html">
+								<p>Клиенты</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing-plan-packages.html">
+								<p>Пакеты</p>
+							</a>
+						</li>
+						<li>
+							<a href="statutes.html">
+								<p>Статусы</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="verification.html"><span class="mdi mdi-account-card-details"></span>
+						<p>Верификация</p>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-wallet"></span>
+						<p>Финансы</p>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="finance-transactions.html">
+								<p>Транзакции</p>
+							</a>
+						</li>
+						<li>
+							<a href="finance-withdrawal.html">
+								<p>Вывод средств</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a class="click-def" href="#"><span class="mdi mdi-settings-box"></span>
+						<p>Настройки</p>
+					</a>
+					<ul class="submenu ">
+						<li>
+							<a href="settings-pages.html">
+								<p>Страницы</p>
+							</a>
+						</li>
+						<li><a href="settings-widgets.html">
+							<p>Виджеты</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-backup-copy.html">
+							<p>Резервная копия</p>
+						</a>
+					</li>
+					<li>
+						<a href="settings-menu-editing.html">
+							<p>Редактирование меню</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="settings-faq.html">
+							<p>FAQ</p>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="news.html"><span class="mdi mdi-message-reply-text"></span>
+					<p>Новости</p>
+				</a>
+			</li>
+			<li>
+				<a href="users-admins.html"><span class="mdi mdi-account-multiple"></span>
+					<p>Пользователи (Админы)</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>
+</div>
+
+	<div class="main-right">
+		<div class="s-marketing-plan-clients">
+			<div class="top top-custom">
+				<h2 class="title">Клиенты</h2>
+				<a href="marketing-plan-clients-inner.html" class="accent-button">Добавить клиента</a>
+			</div>
+
+			<div class="input-wrap row">
+				<div class="col-lg-3">
+					<div class="input-custom">
+						<label for="clients-search">Поиск</label>
+						<input id="clients-search" class="pd-10 w-100" type="text">
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<div class="select-custom__wrap input-custom">
+						<label>Статус</label>
+						<select class="select-custom-bootstrap w-100">
+							<option value="">Все</option>
+							<option value="">Бронзовый партнер</option>
+							<option value="">Золотой партнер</option>
+							<option value="">Платиновый партнер</option>
+							<option value="">Клиент</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<div class="select-custom__wrap input-custom">
+						<label>Покупка билетов</label>
+						<select class="select-custom-bootstrap w-100">
+							<option value="">Событие 1</option>
+							<option value="">Событие 2</option>
+							<option value="">Событие 3</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<div class="select-custom__wrap input-custom">
+						<label>Покупка слитков</label>
+						<select class="select-custom-bootstrap w-100">
+							<option value="">Золотой слиток 5г.</option>
+							<option value="">Золотой слиток 10г.</option>
+							<option value="">Золотой слиток 25г.</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<label class="mb-2">Баланс кошелька</label>
+					<div class="input-duo">
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+						<div class="tire">-</div>
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<label class="mb-2">Баланс DM</label>
+					<div class="input-duo">
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+						<div class="tire">-</div>
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<label class="mb-2">Доход</label>
+					<div class="input-duo">
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+						<div class="tire">-</div>
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<label class="mb-2">Снятые средства</label>
+					<div class="input-duo">
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+						<div class="tire">-</div>
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<label class="mb-2">К-во партнеров</label>
+					<div class="input-duo">
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+						<div class="tire">-</div>
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 mb-5">
+					<label class="mb-2">К-во клиентов</label>
+					<div class="input-duo">
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+						<div class="tire">-</div>
+						<div class="input-custom w-40">
+							<input id="slitki-edit__weight" class="pd-10 w-100" type="text">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 mb-5">
+					<div class="select-custom__wrap input-custom">
+						<label>Верификация</label>
+						<select class="select-custom-bootstrap w-100">
+							<option value="">Все</option>
+							<option value="">Верифицирован</option>
+							<option value="">Не верифицирован</option>
+							<option value="">Документы не отправлены</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="filter__wrap">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="filter__left">
+							<div class="filter__title">
+								<p>Сортировать:</p>
+							</div>
+							
+							<div class="filter__items">
+								<a href="#" class="bold">По имени</a>
+								<a href="#">По статусу</a>
+								<a href="#">По дате регистрации</a>
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="filter__button">
+							<a href="#" class="darken-button">Фильтровать</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<table class="table-custom">
+				<thead>
+					<tr class="table-custom-title">
+						<td>ID</td>
+						<td>Логин/Статус</td>
+						<td>Баланс кошелька</td>
+						<td>Баланс в DM</td>
+						<td>Верификация</td>
+						<td>Структура</td>
+						<td>Покупки</td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+					<tr class="gutter-10"></tr>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+					<tr class="gutter-10"></tr>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+					<tr class="gutter-10"></tr>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+					<tr class="gutter-10"></tr>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+					<tr class="gutter-10"></tr>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+					<tr class="gutter-10"></tr>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+					<tr class="gutter-10"></tr>
+					<tr class="regular">
+						<td>23</td>
+						<td>
+							<p class="medium mb-1">John Dillinger</p>
+							<p class="silver">Silver partner</p>
+						</td>
+						<td class="medium">1250 €</td>
+						<td class="medium">1250 DM</td>
+						<td class="medium">Пройдена</td>
+						<td>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-bronze"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-silver"></span>
+									<span class="number">2</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-platinum"></span>
+									<span class="number">4</span>
+								</div>
+							</div>
+							<div class="circle__flex">
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-gold"></span>
+									<span class="number">6</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-international-director"></span>
+									<span class="number">4</span>
+								</div>
+								<div class="circle-custom__wrap">
+									<span class="circle-custom__item p-boards-of-director"></span>
+									<span class="number">5</span>
+								</div>
+							</div>
+						</td>
+						<td>
+							<p class="mb-2">
+								<span class="mdi mdi-ticket"></span>
+								<span class="medium">3 билета</span>
+							</p>
+							<p>
+								<span class="mdi mdi-square-inc"></span>
+								<span class="medium">5 слитков на 65 г.</span>
+							</p>
+						</td>
+						<td><a class="dark-light-button table-cancel maw-150-ml-auto" href="marketing-plan-clients-inner.html">Редактировать</a></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="pagination flex jcsb">
+				<ul>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#">17</a></li>
+				</ul>
+
+				<ul>
+					<li><a href="#">10</a></li>
+					<li><a href="#">25</a></li>
+					<li><a href="#">100</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
